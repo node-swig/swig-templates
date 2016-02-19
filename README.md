@@ -1,4 +1,5 @@
-Swig [![Build Status](http://img.shields.io/travis/node-swig/swig/master.svg?style=flat)](http://travis-ci.org/node-swig/swig) [![Dependency Status](http://img.shields.io/gemnasium/node-swig/swig.svg?style=flat)](https://gemnasium.com/node-swig/swig) [![NPM version](http://img.shields.io/npm/v/swig.svg?style=flat)](https://www.npmjs.org/package/swig) [![NPM Downloads](http://img.shields.io/npm/dm/swig.svg?style=flat)](https://www.npmjs.org/package/swig)
+# swig
+[![Build Status](http://img.shields.io/travis/node-swig/swig/master.svg?style=flat)](http://travis-ci.org/node-swig/swig) [![Dependency Status](http://img.shields.io/gemnasium/node-swig/swig.svg?style=flat)](https://gemnasium.com/node-swig/swig) [![NPM version](http://img.shields.io/npm/v/swig.svg?style=flat)](https://www.npmjs.org/package/swig) [![NPM Downloads](http://img.shields.io/npm/dm/swig.svg?style=flat)](https://www.npmjs.org/package/swig)
 
 [Swig](http://node-swig.github.io/swig/) is an awesome, Django/Jinja-like template engine for node.js.
 
