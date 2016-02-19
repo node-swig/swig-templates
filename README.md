@@ -4,7 +4,7 @@
 [Swig](http://node-swig.github.io/swig/) is an awesome, Django/Jinja-like template engine for node.js.
 
 #### seeking maintainers
-Paul Armstrong has [stepped down](https://github.com/paularmstrong/swig/issues/628) as the primary swig maintainer.  Swig is a phenominal project and a template engine that quitely, but strongly, stands tall against the others in a domain full of template engines.  If you are interested in being a collaborator, check out the issues page, and let's discuss how to proceed.  Don't forget to thank Paul and previous swig collabs for their hard an excellent work!
+Paul Armstrong has [stepped down](https://github.com/paularmstrong/swig/issues/628) as the primary swig maintainer.  Swig is a phenominal project and a template engine that quitely, but strongly, stands tall against the others in a domain full of template engines.  If you are interested in being a collaborator, check out the issues page, and let's discuss how to proceed.  Don't forget to thank Paul and previous swig collabs for their hard and excellent work!
 
 Features
 --------
