@@ -105,7 +105,13 @@ describe('bin/swig compile --method-name="foo"', function () {
   it('sets the method name to "foo"', function (done) {
     var p = fixPath(casedir + '/extends_1.test.html');
     runBin('compile ' + p + ' --method-name="foo"', function (err, stdout, stderr) {
-      expect(stdout).to.equal('var foo = function (_swig,_ctx,_filters,_utils,_fn\n/**/) {\n  var _ext = _swig.extensions,\n    _output = "";\n_output += "Hi,\\n\\n";\n_output += "This is the body.";\n_output += "\\n\\nSincerely,\\nMe\\n";\n\n  return _output;\n\n};\n');
+      // Older versions of node compile the template differently than newer version, so either would be a passing test
+      var olderOutput = 'var foo = function (_swig,_ctx,_filters,_utils,_fn) {\n  var _ext = _swig.extensions,\n    _output = "";\n_output += "Hi,\\n\\n";\n_output += "This is the body.";\n_output += "\\n\\nSincerely,\\nMe\\n";\n\n  return _output;\n\n};\n',
+        newerOutput = 'var foo = function (_swig,_ctx,_filters,_utils,_fn\n/**/) {\n  var _ext = _swig.extensions,\n    _output = "";\n_output += "Hi,\\n\\n";\n_output += "This is the body.";\n_output += "\\n\\nSincerely,\\nMe\\n";\n\n  return _output;\n\n};\n';
+      function wasCompiled(check) {
+        return check === olderOutput || check === newerOutput;
+      }
+      expect(wasCompiled(stdout)).to.equal(true);
       done();
     });
   });
