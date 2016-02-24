@@ -33,7 +33,7 @@ done
 echo ''
 echo 'Running JSLint...'
 result=$(make lint)
-if egrep "(^|[^\d])Expected" <<< "$result"; then
+if grep -q Expected <<< "$result"; then
     num=$(grep "Expected" <<< "$result" | wc -l)
     testFail "JSLint: $num"
     echo "$result"
