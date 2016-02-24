@@ -88,6 +88,7 @@ test-browser: FORCE clean browser/test/tests.js
 files := $(shell find . -name '*.js' ! -path "./node_modules/*" ! -path "./dist/*" ! -path "./browser*" ! -path "./docs*" ! -path "./tmp*")
 lint:
 	@${BIN}/jslint ${files} --terse
+	@echo ""
 
 out = tests/coverage.html
 cov-reporter = html-cov
