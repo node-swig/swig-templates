@@ -464,14 +464,14 @@ exports.groupBy = function (input, key) {
     }
 
     var keyname = value[key],
-      newVal = utils.extend({}, value);
-    delete value[key];
+      newValue = utils.extend({}, value);
+    delete newValue[key];
 
     if (!out[keyname]) {
       out[keyname] = [];
     }
 
-    out[keyname].push(value);
+    out[keyname].push(newValue);
   });
 
   return out;
@@ -562,6 +562,38 @@ exports.last = function (input) {
   }
 
   return input[input.length - 1];
+};
+
+/**
+ * Get the number of items in an array, string, or object.
+ *
+ * @example
+ * // my_arr = ['a', 'b', 'c']
+ * {{ my_arr|length }}
+ * // => 3
+ *
+ * @example
+ * // my_str = 'Tacos'
+ * {{ my_str|length }}
+ * // => 5
+ *
+ * @example
+ * // my_obj = {a: 5, b: 20}
+ * {{ my_obj|length }}
+ * // => 2
+ *
+ * @param  {*} input
+ * @return {*}          The length of the input
+ */
+exports.length = function (input) {
+  if (typeof input === 'object' && !utils.isArray(input)) {
+    var keys = utils.keys(input);
+    return keys.length;
+  }
+  if (input.hasOwnProperty('length')) {
+    return input.length;
+  }
+  return '';
 };
 
 /**
@@ -682,9 +714,10 @@ exports.safe.safe = true;
  * @return {*}        Sorted array;
  */
 exports.sort = function (input, reverse) {
-  var out;
+  var out, clone;
   if (utils.isArray(input)) {
-    out = input.sort();
+    clone = utils.extend([], input);
+    out = clone.sort();
   } else {
     switch (typeof input) {
     case 'object':
@@ -3264,7 +3297,7 @@ var utils = require('../utils');
  * @alias import
  *
  * @example
- * {% import './formmacros.html' as forms %}
+ * {% import './formmacros.html' as form %}
  * {{ form.input("text", "name") }}
  * // => <input type="text" name="name">
  *
@@ -3279,11 +3312,14 @@ var utils = require('../utils');
  */
 exports.compile = function (compiler, args) {
   var ctx = args.pop(),
+    allMacros = utils.map(args, function (arg) {
+      return arg.name;
+    }).join('|'),
     out = '_ctx.' + ctx + ' = {};\n  var _output = "";\n',
     replacements = utils.map(args, function (arg) {
       return {
-        ex: new RegExp('_ctx.' + arg.name, 'g'),
-        re: '_ctx.' + ctx + '.' + arg.name
+        ex: new RegExp('_ctx.' + arg.name + '(\\W)(?!' + allMacros + ')', 'g'),
+        re: '_ctx.' + ctx + '.' + arg.name + '$1'
       };
     });
 
@@ -3755,20 +3791,12 @@ var utils = require('../utils');
  *
  */
 exports.compile = function (compiler, args, content, parents, options, blockName) {
-  function stripWhitespace(tokens) {
-    return utils.map(tokens, function (token) {
-      if (token.content || typeof token !== 'string') {
-        token.content = stripWhitespace(token.content);
-        return token;
-      }
+  var out = compiler(content, parents, options, blockName);
+  out += '_output = _output.replace(/^\\s+/, "")\n' +
+         '  .replace(/>\\s+</g, "><")\n' +
+         '  .replace(/\\s+$/, "");\n';
 
-      return token.replace(/^\s+/, '')
-        .replace(/>\s+</g, '><')
-        .replace(/\s+$/, '');
-    });
-  }
-
-  return compiler(stripWhitespace(content), parents, options, blockName);
+  return out;
 };
 
 exports.parse = function (str, line, parser) {

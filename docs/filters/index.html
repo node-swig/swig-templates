@@ -705,12 +705,58 @@
   
 
   
+  <section id="length" class="doc">
+    <h2>
+      length</h2>
+
+    
+<p class="source">Source: <a href="https://github.com/paularmstrong/swig/blob/v1.4.2/lib/filters.js#L374">lib/filters.js#L374</a></p>
+
+
+    
+
+  <p>Get the number of items in an array, string, or object.</p>
+
+
+
+    
+
+    
+    <h3>Returns</h3>
+    
+    <p><samp data-language="js">*</samp>: The length of the input</p>
+    
+    
+
+    
+    <h3>Examples</h3>
+    
+    <pre><code data-language="swig">// my_arr = [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;]
+{{ my_arr|length }}
+// =&gt; 3</code></pre>
+    
+    <pre><code data-language="swig">// my_str = &#39;Tacos&#39;
+{{ my_str|length }}
+// =&gt; 5</code></pre>
+    
+    <pre><code data-language="swig">// my_obj = {a: 5, b: 20}
+{{ my_obj|length }}
+// =&gt; 2</code></pre>
+    
+    
+
+  </section>
+  
+
+  
+
+  
   <section id="lower" class="doc">
     <h2>
       lower</h2>
 
     
-<p class="source">Source: <a href="https://github.com/paularmstrong/swig/blob/v1.4.2/lib/filters.js#L368">lib/filters.js#L368</a></p>
+<p class="source">Source: <a href="https://github.com/paularmstrong/swig/blob/v1.4.2/lib/filters.js#L400">lib/filters.js#L400</a></p>
 
 
     
@@ -751,7 +797,7 @@
       raw</h2>
 
     
-<p class="source">Source: <a href="https://github.com/paularmstrong/swig/blob/v1.4.2/lib/filters.js#L380">lib/filters.js#L380</a></p>
+<p class="source">Source: <a href="https://github.com/paularmstrong/swig/blob/v1.4.2/lib/filters.js#L412">lib/filters.js#L412</a></p>
 
 
     
@@ -777,7 +823,7 @@
       replace(search, replacement, flags)</h2>
 
     
-<p class="source">Source: <a href="https://github.com/paularmstrong/swig/blob/v1.4.2/lib/filters.js#L409">lib/filters.js#L409</a></p>
+<p class="source">Source: <a href="https://github.com/paularmstrong/swig/blob/v1.4.2/lib/filters.js#L441">lib/filters.js#L441</a></p>
 
 
     
@@ -871,7 +917,7 @@
       reverse</h2>
 
     
-<p class="source">Source: <a href="https://github.com/paularmstrong/swig/blob/v1.4.2/lib/filters.js#L425">lib/filters.js#L425</a></p>
+<p class="source">Source: <a href="https://github.com/paularmstrong/swig/blob/v1.4.2/lib/filters.js#L457">lib/filters.js#L457</a></p>
 
 
     
@@ -907,7 +953,7 @@
       safe</h2>
 
     
-<p class="source">Source: <a href="https://github.com/paularmstrong/swig/blob/v1.4.2/lib/filters.js#L440">lib/filters.js#L440</a></p>
+<p class="source">Source: <a href="https://github.com/paularmstrong/swig/blob/v1.4.2/lib/filters.js#L472">lib/filters.js#L472</a></p>
 
 
     
@@ -945,7 +991,7 @@
       sort(reverse)</h2>
 
     
-<p class="source">Source: <a href="https://github.com/paularmstrong/swig/blob/v1.4.2/lib/filters.js#L470">lib/filters.js#L470</a></p>
+<p class="source">Source: <a href="https://github.com/paularmstrong/swig/blob/v1.4.2/lib/filters.js#L502">lib/filters.js#L502</a></p>
 
 
     
@@ -1020,12 +1066,16 @@
   
 
   
+
+  
+
+  
   <section id="striptags" class="doc">
     <h2>
       striptags</h2>
 
     
-<p class="source">Source: <a href="https://github.com/paularmstrong/swig/blob/v1.4.2/lib/filters.js#L506">lib/filters.js#L506</a></p>
+<p class="source">Source: <a href="https://github.com/paularmstrong/swig/blob/v1.4.2/lib/filters.js#L539">lib/filters.js#L539</a></p>
 
 
     
@@ -1063,7 +1113,7 @@
       title</h2>
 
     
-<p class="source">Source: <a href="https://github.com/paularmstrong/swig/blob/v1.4.2/lib/filters.js#L531">lib/filters.js#L531</a></p>
+<p class="source">Source: <a href="https://github.com/paularmstrong/swig/blob/v1.4.2/lib/filters.js#L564">lib/filters.js#L564</a></p>
 
 
     
@@ -1105,7 +1155,7 @@
       uniq</h2>
 
     
-<p class="source">Source: <a href="https://github.com/paularmstrong/swig/blob/v1.4.2/lib/filters.js#L553">lib/filters.js#L553</a></p>
+<p class="source">Source: <a href="https://github.com/paularmstrong/swig/blob/v1.4.2/lib/filters.js#L586">lib/filters.js#L586</a></p>
 
 
     
@@ -1145,7 +1195,7 @@
       upper</h2>
 
     
-<p class="source">Source: <a href="https://github.com/paularmstrong/swig/blob/v1.4.2/lib/filters.js#L585">lib/filters.js#L585</a></p>
+<p class="source">Source: <a href="https://github.com/paularmstrong/swig/blob/v1.4.2/lib/filters.js#L618">lib/filters.js#L618</a></p>
 
 
     
@@ -1187,7 +1237,7 @@
       url_encode</h2>
 
     
-<p class="source">Source: <a href="https://github.com/paularmstrong/swig/blob/v1.4.2/lib/filters.js#L605">lib/filters.js#L605</a></p>
+<p class="source">Source: <a href="https://github.com/paularmstrong/swig/blob/v1.4.2/lib/filters.js#L638">lib/filters.js#L638</a></p>
 
 
     
@@ -1225,7 +1275,7 @@
       url_decode</h2>
 
     
-<p class="source">Source: <a href="https://github.com/paularmstrong/swig/blob/v1.4.2/lib/filters.js#L624">lib/filters.js#L624</a></p>
+<p class="source">Source: <a href="https://github.com/paularmstrong/swig/blob/v1.4.2/lib/filters.js#L657">lib/filters.js#L657</a></p>
 
 
     
@@ -1405,6 +1455,14 @@
 
   
   <li>
+    <a href="#length">length</a>
+  </li>
+  
+
+  
+
+  
+  <li>
     <a href="#lower">lower</a>
   </li>
   
@@ -1445,6 +1503,10 @@
   <li>
     <a href="#sort">sort</a>
   </li>
+  
+
+  
+
   
 
   
@@ -1539,7 +1601,7 @@
 
 <footer class="content">
   <hr class="small">
-  <p>Swig is copyright &copy;2014 <a href="http://paularmstrongdesigns.com">Paul Armstrong</a>, licensed for use under the permissive MIT Open Source License.</p>
+  <p>Swig is copyright &copy;2016 <a href="http://paularmstrongdesigns.com">Paul Armstrong</a>, licensed for use under the permissive MIT Open Source License.</p>
   <a class="forkme" href="https://github.com/paularmstrong/swig">Fork me on GitHub</a>
 </footer>
 
