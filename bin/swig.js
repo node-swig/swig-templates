@@ -68,7 +68,7 @@ var command,
   out = function (file, str) {
     console.log(str);
   },
-  efn = function () {},
+  efn = function () { return; },
   anonymous,
   files,
   fn;

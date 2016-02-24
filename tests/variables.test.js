@@ -89,8 +89,8 @@ describe('Variables', function () {
     a: 1,
     foo: '<blah>',
     chalupa: function () { return { bar: function () { return 'chalupas'; }}; },
-    c: function (b) { return (b) ? 'barfoo' : 'foobar'; },
-    d: function (c) { return; },
+    c: function (b) { return b ? 'barfoo' : 'foobar'; },
+    d: function () { return; },
     e: { f: function () { return 'eeeee'; } },
     food: { a: 'tacos' },
     g: { '0': { q: { c: { b: { foo: 'hi!' }}}}},
@@ -112,7 +112,6 @@ describe('Variables', function () {
   });
 
   describe('can throw errors when parsing', function () {
-    var oDefaults;
     beforeEach(resetOptions);
     afterEach(resetOptions);
 

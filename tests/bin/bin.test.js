@@ -80,9 +80,9 @@ describe('bin/swig compile + run', function () {
   rimraf.sync(tmp);
   it(key, function (done) {
     runBin('compile ' + p + ' -j ' + locals + ' -o ' + tmp, function (err, stdout, stderr) {
-      var p = fixPath(__dirname + '/../tmp/' + test),
-        locals = fixPath(bindir + '/bin.locals.js');
-      runBin('run ' + p + ' -c ' + locals, function (err, stdout, stdrr) {
+      var testP = fixPath(__dirname + '/../tmp/' + test),
+        binLocals = fixPath(bindir + '/bin.locals.js');
+      runBin('run ' + testP + ' -c ' + binLocals, function (err, stdout, stdrr) {
         expect(stdout.replace(/\n$/, '')).to.equal(expectation);
         rimraf.sync(tmp);
         done();
@@ -120,9 +120,9 @@ describe('bin/swig compile --method-name="foo"', function () {
 describe('bin/swig compile & run from swig', function () {
   it('can be run', function (done) {
     var expectation = fs.readFileSync(casedir + '/extends_1.expectation.html', 'utf8'),
-      p = fixPath(casedir + '/extends_1.test.html');
-    runBin('compile ' + p + ' --wrap-start="var foo = "', function (err, stdout, stderr) {
-      var foo;
+      p = fixPath(casedir + '/extends_1.test.html'),
+      foo = null;
+    runBin('compile ' + p + ' --wrap-start="foo = "', function (err, stdout, stderr) {
       eval(stdout);
       expect(swig.run(foo)).to.equal(expectation);
       done();

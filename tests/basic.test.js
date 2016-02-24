@@ -153,7 +153,7 @@ describe('options', function () {
     });
 
     it('throws on anything else', function () {
-      expect(function () { var s = new Swig({ cache: 'dookie' }); })
+      expect(function () { return new Swig({ cache: 'dookie' }); })
         .to.throwError();
 
       expect(function () { swig.setDefaults({ cache: { a: 1, b: 2 } }); })
