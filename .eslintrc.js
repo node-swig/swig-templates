@@ -7,10 +7,6 @@ module.exports = {
         "es6": true
     },
     "rules": {
-        "linebreak-style": [
-            2,
-            "unix"
-        ]
-
+        "no-unused-vars": [2, {"vars": "local", "args": "none"}]
     }
 };

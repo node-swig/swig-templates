@@ -49,8 +49,9 @@
   },
   "scripts": {
     "prepublish": "npm prune && make build",
-    "test": "&& make test reporter=spec && make test-browser && make coverage cov-reporter=travis-cov",
+    "test": "make test reporter=spec && make test-browser && make coverage cov-reporter=travis-cov",
     "lint": "eslint lib/ tests/",
+    "lintfix": "eslint --fix lib/ tests/",
     "validate": "npm ls",
     "travis-cov": {
       "threshold": 95
