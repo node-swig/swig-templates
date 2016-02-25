@@ -57,6 +57,6 @@ describe('Templates', function () {
   it('throw with filename reporting', function () {
     expect(function () {
       swig.compileFile(__dirname + '/cases-error/report-filename.test.html')();
-    }).to.throwError(/in file .*swig\/tests\/cases-error\/report-filename-partial\.html/);
+    }).to.throwError(/in file .*tests\/cases-error\/report-filename-partial\.html/);
   });
 });

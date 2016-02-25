@@ -2,7 +2,7 @@ var swig = require('../lib/swig'),
   expect = require('expect.js'),
   path = require('path'),
   fs = require('fs'),
-  efn = function () {};
+  efn = function () { return; };
 
 
 describe('swig.loaders', function () {
@@ -98,8 +98,7 @@ describe('swig.loaders', function () {
     });
 
     it('will run asynchronously', function (done) {
-      var t = { 'content.html': 'Hello {{ name }}!' },
-        s = new swig.Swig({ loader: swig.loaders.fs(__dirname + '/cases') });
+      var s = new swig.Swig({ loader: swig.loaders.fs(__dirname + '/cases') });
       s.renderFile('macros.html', {}, function (err, out) {
         expect(out).to.equal(macroExpectation);
         done();
