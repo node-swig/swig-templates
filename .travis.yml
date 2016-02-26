@@ -1,5 +1,5 @@
 language: node_js
-script: "make lint && make test reporter=spec && make test-browser reporter=spec && make coverage cov-reporter=travis-cov"
+script: "npm run lint && make test reporter=spec && make test-browser reporter=spec && make coverage cov-reporter=travis-cov"
 node_js:
   - "stable"
   - "4.2"
