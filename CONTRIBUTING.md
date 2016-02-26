@@ -8,7 +8,7 @@ Checklist
 
 1. **Setup:** Before you begin, run `make` from your command line to ensure all dependencies are met.
 2. **Test:** Always write new test cases. `make test` and `make test-browser`.
-3. **Lint:** Ensure coding-standards are followed. `make lint`.
+3. **Lint:** Ensure coding-standards are followed. `npm run lint`.
 4. **Explain:** In your pull request, very clearly explain the use-case or problem that you are solving.
 
 _Pull requests that fail to add test coverage, break tests, or fail linting standards will not be accepted._
