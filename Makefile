@@ -85,6 +85,11 @@ test:
 test-browser: FORCE clean browser/test/tests.js
 	@${BIN}/mocha-phantomjs browser/test/index.html --reporter ${reporter}
 
+files := $(shell find . -name '*.js' ! -path "./node_modules/*" ! -path "./dist/*" ! -path "./browser*" ! -path "./docs*" ! -path "./tmp*")
+lint:
+	@${BIN}/jslint ${files} --terse
+	@echo ""
+
 out = tests/coverage.html
 cov-reporter = html-cov
 coverage:
