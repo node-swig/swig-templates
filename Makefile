@@ -85,6 +85,10 @@ test:
 test-browser: FORCE clean browser/test/tests.js
 	@${BIN}/mocha-phantomjs browser/test/index.html --reporter ${reporter}
 
+lint:
+	@${BIN}/eslint lib/ tests/
+	@echo ""
+
 out = tests/coverage.html
 cov-reporter = html-cov
 coverage:
