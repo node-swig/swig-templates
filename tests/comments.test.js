@@ -1,7 +1,5 @@
-var swig = require('../lib/swig'),
-  expect = require('expect.js'),
-  _ = require('lodash'),
-  Swig = swig.Swig;
+var swig = require('../lib/swig');
+var expect = require('expect.js');
 
 describe('Comments', function () {
   it('are ignored and removed from output', function () {

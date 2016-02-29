@@ -1,5 +1,4 @@
-
-function parse(str, line, parser, types) {
+function parse() {
   return true;
 }
 

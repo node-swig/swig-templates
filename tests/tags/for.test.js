@@ -1,7 +1,6 @@
 var swig = require('../../lib/swig'),
   expect = require('expect.js'),
-  _ = require('lodash'),
-  Swig = swig.Swig;
+  _ = require('lodash');
 
 var cases = [
   { input: '{% for a in b %}{{ a }}{% endfor %}', out: '123' },
