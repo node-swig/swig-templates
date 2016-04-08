@@ -179,3 +179,15 @@ describe('bin/swig custom options', function () {
     });
   });
 });
+
+describe('bin/swig output options', function () {
+  it('change output to dir that already exists', function (done) {
+    var p = fixPath(casedir + '/extends_1.test.html');
+    rimraf.sync(tmp);
+    fs.mkdirSync(tmp);
+    runBin('compile ' + p + ' -o ' + tmp, function (err, stdout, stderr) {
+      expect(err).to.be(null);
+      done();
+    });
+  });
+});
