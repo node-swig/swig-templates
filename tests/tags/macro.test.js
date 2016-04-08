@@ -1,7 +1,5 @@
 var swig = require('../../lib/swig'),
-  expect = require('expect.js'),
-  _ = require('lodash'),
-  Swig = swig.Swig;
+  expect = require('expect.js');
 
 describe('Tag: macro', function () {
   it('{% macro tacos() %}', function () {

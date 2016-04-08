@@ -3,8 +3,7 @@ var fs = require('fs'),
   file = require('file'),
   swig = require('../lib/swig'),
   expect = require('expect.js'),
-  _ = require('lodash'),
-  Swig = swig.Swig;
+  _ = require('lodash');
 
 function isTest(f) {
   return (/\.test\.html$/).test(f);
