@@ -1,6 +1,6 @@
 {
-  "name": "swig",
-  "version": "1.4.2",
+  "name": "swig-templates",
+  "version": "2.0.0",
   "description": "A simple, powerful, and extendable templating engine for node.js and browsers, similar to Django, Jinja2, and Twig.",
   "keywords": [
     "template",
@@ -14,9 +14,8 @@
   ],
   "repository": {
     "type": "git",
-    "url": "http://github.com/paularmstrong/swig.git"
+    "url": "http://github.com/node-swig/swig-templates.git"
   },
-  "author": "Paul Armstrong <paul@paularmstrongdesigns.com>",
   "dependencies": {
     "uglify-js": "2.4.24",
     "optimist": "~0.6"
@@ -62,7 +61,7 @@
     }
   },
   "bugs": {
-    "url": "https://github.com/paularmstrong/swig/issues"
+    "url": "https://github.com/node-swig/swig-templates/issues"
   },
   "pre-commit": [
     "validate",
