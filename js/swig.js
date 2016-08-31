@@ -1,4 +1,4 @@
-/*! Swig v1.4.2 | https://paularmstrong.github.com/swig | @license https://github.com/paularmstrong/swig/blob/master/LICENSE */
+/*! Swig v2.0.0 | https://paularmstrong.github.com/swig | @license https://github.com/paularmstrong/swig/blob/master/LICENSE */
 /*! DateZ (c) 2011 Tomo Universalis | @license https://github.com/TomoUniversalis/DateZ/blob/master/LISENCE */
 ;(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 var swig = require('../lib/swig');
@@ -338,7 +338,7 @@ exports.date = function (input, format, offset, abbr) {
  * @return {*}          `input` or `def` value.
  */
 exports["default"] = function (input, def) {
-  return (typeof input !== 'undefined' && (input || typeof input === 'number')) ? input : def;
+  return (input !== undefined && (input || typeof input === 'number')) ? input : def;
 };
 
 /**
@@ -1203,7 +1203,7 @@ module.exports = function (basepath, encoding) {
   var ret = {};
 
   encoding = encoding || 'utf8';
-  basepath = (basepath) ? path.normalize(basepath) : null;
+  basepath = basepath ? path.normalize(basepath) : null;
 
   /**
    * Resolves <var>to</var> to an absolute path or unique identifier. This is used for building correct, normalized, and absolute paths to a given template.
@@ -1216,7 +1216,7 @@ module.exports = function (basepath, encoding) {
     if (basepath) {
       from = basepath;
     } else {
-      from = (from) ? path.dirname(from) : process.cwd();
+      from = from ? path.dirname(from) : process.cwd();
     }
     return path.resolve(from, to);
   };
@@ -1320,7 +1320,7 @@ var path = require('path'),
 module.exports = function (mapping, basepath) {
   var ret = {};
 
-  basepath = (basepath) ? path.normalize(basepath) : null;
+  basepath = basepath ? path.normalize(basepath) : null;
 
   /**
    * Resolves <var>to</var> to an absolute path or unique identifier. This is used for building correct, normalized, and absolute paths to a given template.
@@ -1333,7 +1333,7 @@ module.exports = function (mapping, basepath) {
     if (basepath) {
       from = basepath;
     } else {
-      from = (from) ? path.dirname(from) : '/';
+      from = from ? path.dirname(from) : '/';
     }
     return path.resolve(from, to);
   };
@@ -1847,11 +1847,11 @@ exports.parse = function (swig, source, opts, tags, filters) {
    * @private
    */
   function parseVariable(str, line) {
-    var tokens = lexer.read(utils.strip(str)),
+    var lexedTokens = lexer.read(utils.strip(str)),
       parser,
       out;
 
-    parser = new TokenParser(tokens, filters, escape, line, opts.filename);
+    parser = new TokenParser(lexedTokens, filters, escape, line, opts.filename);
     out = parser.parse().join('');
 
     if (parser.state.length) {
@@ -1879,7 +1879,7 @@ exports.parse = function (swig, source, opts, tags, filters) {
    * @private
    */
   function parseTag(str, line) {
-    var tokens, parser, chunks, tagName, tag, args, last;
+    var lexedTokens, parser, chunks, tagName, tag, args, last;
 
     if (utils.startsWith(str, 'end')) {
       last = stack[stack.length - 1];
@@ -1912,8 +1912,8 @@ exports.parse = function (swig, source, opts, tags, filters) {
       utils.throwError('Unexpected tag "' + str + '"', line, opts.filename);
     }
 
-    tokens = lexer.read(utils.strip(chunks.join(' ')));
-    parser = new TokenParser(tokens, filters, false, line, opts.filename);
+    lexedTokens = lexer.read(utils.strip(chunks.join(' ')));
+    parser = new TokenParser(lexedTokens, filters, false, line, opts.filename);
     tag = tags[tagName];
 
     /**
@@ -2018,7 +2018,7 @@ exports.parse = function (swig, source, opts, tags, filters) {
       }
     // Is a content string?
     } else if (inRaw || (!utils.startsWith(chunk, cmtOpen) && !utils.endsWith(chunk, cmtClose))) {
-      token = (stripNext) ? chunk.replace(/^\s*/, '') : chunk;
+      token = stripNext ? chunk.replace(/^\s*/, '') : chunk;
       stripNext = false;
     } else if (utils.startsWith(chunk, cmtOpen) && utils.endsWith(chunk, cmtClose)) {
       return;
@@ -2054,7 +2054,7 @@ exports.parse = function (swig, source, opts, tags, filters) {
     }
 
     lines = chunk.match(/\n/g);
-    line += (lines) ? lines.length : 0;
+    line += lines ? lines.length : 0;
   });
 
   return {
@@ -2216,7 +2216,7 @@ function validateOptions(options) {
     }
     utils.each(options[key], function (a, i) {
       if (a.length < 2) {
-        throw new Error('Option "' + key + '" ' + ((i) ? 'open ' : 'close ') + 'control must be at least 2 characters. Saw "' + a + '" instead.');
+        throw new Error('Option "' + key + '" ' + (i ? 'open ' : 'close ') + 'control must be at least 2 characters. Saw "' + a + '" instead.');
       }
     });
   });
@@ -2453,16 +2453,16 @@ exports.Swig = function (opts) {
     validateOptions(options);
 
     var locals = getLocals(options),
-      opts = {},
+      opt = {},
       k;
 
     for (k in options) {
       if (options.hasOwnProperty(k) && k !== 'locals') {
-        opts[k] = options[k];
+        opt[k] = options[k];
       }
     }
 
-    options = utils.extend({}, self.options, opts);
+    options = utils.extend({}, self.options, opt);
     options.locals = locals;
 
     return parser.parse(this, source, options, tags, filters);
@@ -2599,8 +2599,7 @@ exports.Swig = function (opts) {
   this.precompile = function (source, options) {
     var tokens = self.parse(source, options),
       parents = getParents(tokens, options),
-      tpl,
-      err;
+      tpl;
 
     if (parents.length) {
       // Remap the templates first-parent's tokens using this template's blocks.
@@ -2989,7 +2988,7 @@ exports.parse = function (str, line, parser, types, stack) {
  *
  * @param {string} parentFile  Relative path to the file that this template extends.
  */
-exports.compile = function () {};
+exports.compile = function () { return; };
 
 exports.parse = function () {
   return true;
@@ -3248,7 +3247,7 @@ exports.compile = function (compiler, args, content, parents, options, blockName
 };
 
 exports.parse = function (str, line, parser, types) {
-  if (typeof str === "undefined") {
+  if (str === undefined) {
     throw new Error('No conditional statement provided on line ' + line + '.');
   }
 
@@ -3774,8 +3773,6 @@ exports.parse = function (str, line, parser, types) {
 exports.block = true;
 
 },{}],25:[function(require,module,exports){
-var utils = require('../utils');
-
 /**
  * Attempts to remove whitespace between HTML tags. Use at your own risk.
  *
@@ -3809,7 +3806,7 @@ exports.parse = function (str, line, parser) {
 
 exports.ends = true;
 
-},{"../utils":26}],26:[function(require,module,exports){
+},{}],26:[function(require,module,exports){
 var isArray;
 
 /**
@@ -3877,7 +3874,7 @@ exports.each = function (obj, fn) {
  * @return {boolean}
  */
 exports.isArray = isArray = (Array.hasOwnProperty('isArray')) ? Array.isArray : function (obj) {
-  return (obj) ? (typeof obj === 'object' && Object.prototype.toString.call(obj).indexOf() !== -1) : false;
+  return obj ? (typeof obj === 'object' && Object.prototype.toString.call(obj).indexOf() !== -1) : false;
 };
 
 /**
@@ -3902,7 +3899,7 @@ exports.some = function (obj, fn) {
   } else {
     exports.each(obj, function (value, index) {
       result = fn(value, index, obj);
-      return !(result);
+      return !result;
     });
   }
   return !!result;
