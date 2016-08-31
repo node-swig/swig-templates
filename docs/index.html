@@ -15,7 +15,7 @@
 
   
 
-<link rel="stylesheet" href="/swig/css/swig.css">
+<link rel="stylesheet" href="/swig-templates/css/swig.css">
 
 
 
@@ -28,13 +28,13 @@
 <header class="header">
   <div class="content row">
     <hgroup class="span7">
-      <h1><a href="/swig/">Swig</a></h1>
+      <h1><a href="/swig-templates/">Swig</a></h1>
       <h2>A Node.js and Browser-based JavaScript Template Engine</h2>
     </hgroup>
     
     <nav class="span5">
       <ul class="mainNav">
-        <li><a href="/swig/docs/">Documentation</a></li>
+        <li><a href="/swig-templates/docs/">Documentation</a></li>
         <li><a href="https://github.com/paularmstrong/swig/">Code</a></li>
       </ul>
     </nav>
@@ -60,7 +60,7 @@
 <section id="usage" class="doc">
   <h2>Basic Usage</h2>
 
-  <p>Swig has multiple ways to compile and render templates. Check the <a href="/swig/docs/api/">API documentation</a> for more detailed information and usage.</p>
+  <p>Swig has multiple ways to compile and render templates. Check the <a href="/swig-templates/docs/api/">API documentation</a> for more detailed information and usage.</p>
 
   <pre><code data-language="js">var swig = require('swig');
 
@@ -99,19 +99,19 @@ console.log(swig.render('{% if foo %}Hooray!{% endif %}', { locals: { foo: true 
   <p>If a variable is not defined, don't worry, your template won't explode. Instead, an empty-string will be output in its place. However, falsy values like <code data-language="js">null, false, 0</code> will be rendered as they are.</p>
 
   <h3>Filters</h3>
-  <p>Variables can be modified using using special, chainable control structures called <a href="/swig/docs/filters/">Filters</a>:</p>
+  <p>Variables can be modified using using special, chainable control structures called <a href="/swig-templates/docs/filters/">Filters</a>:</p>
 
   <pre><code data-language="swig">{{ name|title }} was born on {{ birthday|date('F jS, Y') }}</code>
 // => <samp>Jane was born on July 6th, 1985</samp></pre>
 
   <h3 id="variable-functions">Functions</h3>
-  <p>Variables can also be JavaScript functions. It is important to note that, regardless of your <a href="/swig/docs/api/#SwigOpts">autoescape setting</a>, functions will <em>not</em> be auto-escaped.</p>
+  <p>Variables can also be JavaScript functions. It is important to note that, regardless of your <a href="/swig-templates/docs/api/#SwigOpts">autoescape setting</a>, functions will <em>not</em> be auto-escaped.</p>
 
   <pre><code data-language="js">var locals = { mystuff: function mystuff() { return '<p>Things!</p>'; } };
 swig.render('{{ mystuff() }}', { locals: locals });
 // => &lt;p&gt;Things!&lt;/p&gt;</code></pre>
 
-  <p>If you want to enforce escaping output on functions, just pipe them to the <a href="/swig/docs/filters/#escape">escape filter</a>.</p>
+  <p>If you want to enforce escaping output on functions, just pipe them to the <a href="/swig-templates/docs/filters/#escape">escape filter</a>.</p>
 
   <pre><code data-language="swig">{{ mystuff()|escape }}
 // => &amp;lt;p&amp;gt;Things&amp;lt;/p&amp;gt;</code></pre>
@@ -143,7 +143,7 @@ swig.render('{{ mystuff() }}', { locals: locals });
   {% endif the above will render if foo == true %}
 {% endblock burritos %}</code></pre>
 
-  <p>View the <a href="/swig/docs/tags/">Tags documentation</a> for a full list of tags and usage instructions.</p>
+  <p>View the <a href="/swig-templates/docs/tags/">Tags documentation</a> for a full list of tags and usage instructions.</p>
 </section>
 
 <section id="comments" class="doc">
@@ -249,7 +249,7 @@ console.log('Application Started on http://localhost:1337/');
 <nav>
   <ol class="sidenav">
     <li>
-      <a href="/swig/docs/">Getting Started</a>
+      <a href="/swig-templates/docs/">Getting Started</a>
       
 <ol>
   <li><a href="#install">Installation</a></li>
@@ -263,34 +263,34 @@ console.log('Application Started on http://localhost:1337/');
 
     </li>
     <li>
-      <a href="/swig/docs/api/">Swig API</a>
+      <a href="/swig-templates/docs/api/">Swig API</a>
       
     </li>
     <li>
-      <a href="/swig/docs/filters/">Filters</a>
+      <a href="/swig-templates/docs/filters/">Filters</a>
       
     </li>
     <li>
-      <a href="/swig/docs/tags/">Tags</a>
+      <a href="/swig-templates/docs/tags/">Tags</a>
       
     </li>
     <li>
-      <a href="/swig/docs/loaders/">Template Loaders</a>
+      <a href="/swig-templates/docs/loaders/">Template Loaders</a>
       
     </li>
     <li>
-      <a href="/swig/docs/cli/">Command-Line</a>
+      <a href="/swig-templates/docs/cli/">Command-Line</a>
       
     </li>
     <li>
-      <a href="/swig/docs/browser/">Browser Usage</a>
+      <a href="/swig-templates/docs/browser/">Browser Usage</a>
       
     </li>
     <li>
-      <a href="/swig/docs/extending/">Extending Swig</a>
+      <a href="/swig-templates/docs/extending/">Extending Swig</a>
       
     </li>
-    <li><a href="/swig/docs/previous/">Older Versions</a></li>
+    <li><a href="/swig-templates/docs/previous/">Older Versions</a></li>
   </ol>
 </nav>
 </div>
@@ -305,8 +305,8 @@ console.log('Application Started on http://localhost:1337/');
 
 
   
-<script src="/swig/js/lib/rainbow.min.js"></script>
-<script src="/swig/js/master.js"></script>
+<script src="/swig-templates/js/lib/rainbow.min.js"></script>
+<script src="/swig-templates/js/master.js"></script>
 
 </body>
 </html>
