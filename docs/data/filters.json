@@ -1,0 +1,2753 @@
+[
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                4,
+                30
+            ],
+            "filename": "filters.js",
+            "lineno": 1,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000002",
+                "name": "utils",
+                "type": "CallExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "utils",
+        "longname": "utils",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                34,
+                76
+            ],
+            "filename": "filters.js",
+            "lineno": 2,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000007",
+                "name": "dateFormatter",
+                "type": "CallExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "dateFormatter",
+        "longname": "dateFormatter",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "/**\n * Helper method to recursively run a filter across an object/array and apply it to all of the object/array's values.\n * @param  {*} input\n * @return {*}\n * @private\n */",
+        "meta": {
+            "range": [
+                253,
+                618
+            ],
+            "filename": "filters.js",
+            "lineno": 10,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000012",
+                "name": "iterateFilter",
+                "type": "FunctionDeclaration",
+                "paramnames": [
+                    "input"
+                ]
+            },
+            "vars": {
+                "self": "iterateFilter~self",
+                "out": "iterateFilter~out",
+                "": null
+            }
+        },
+        "description": "Helper method to recursively run a filter across an object/array and apply it to all of the object/array's values.",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "*"
+                    ]
+                },
+                "name": "input"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "*"
+                    ]
+                }
+            }
+        ],
+        "access": "private",
+        "name": "iterateFilter",
+        "longname": "iterateFilter",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                291,
+                302
+            ],
+            "filename": "filters.js",
+            "lineno": 11,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000017",
+                "name": "self",
+                "type": "ThisExpression",
+                "value": "this"
+            }
+        },
+        "undocumented": true,
+        "name": "self",
+        "longname": "iterateFilter~self",
+        "kind": "member",
+        "memberof": "iterateFilter",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                308,
+                316
+            ],
+            "filename": "filters.js",
+            "lineno": 12,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000020",
+                "name": "out",
+                "type": "ObjectExpression",
+                "value": "{}"
+            }
+        },
+        "undocumented": true,
+        "name": "out",
+        "longname": "iterateFilter~out",
+        "kind": "member",
+        "memberof": "iterateFilter",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                538,
+                576
+            ],
+            "filename": "filters.js",
+            "lineno": 22,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000063",
+                "name": "out[undefined]",
+                "type": "CallExpression",
+                "funcscope": "iterateFilter",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "undefined]",
+        "longname": "iterateFilter~out.undefined]",
+        "kind": "member",
+        "memberof": "iterateFilter~out",
+        "scope": "static"
+    },
+    {
+        "comment": "/**\n * Backslash-escape characters that need to be escaped.\n *\n * @example\n * {{ \"\\\"quoted string\\\"\"|addslashes }}\n * // => \\\"quoted string\\\"\n *\n * @param  {*}  input\n * @return {*}        Backslash-escaped string.\n */",
+        "meta": {
+            "range": [
+                839,
+                1075
+            ],
+            "filename": "filters.js",
+            "lineno": 40,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000077",
+                "name": "exports.addslashes",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "input"
+                ]
+            },
+            "vars": {
+                "out": "addslashes~out"
+            }
+        },
+        "description": "Backslash-escape characters that need to be escaped.",
+        "examples": [
+            "{{ \"\\\"quoted string\\\"\"|addslashes }}\n// => \\\"quoted string\\\""
+        ],
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "*"
+                    ]
+                },
+                "name": "input"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "*"
+                    ]
+                },
+                "description": "Backslash-escaped string."
+            }
+        ],
+        "name": "addslashes",
+        "longname": "addslashes",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                885,
+                941
+            ],
+            "filename": "filters.js",
+            "lineno": 41,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000085",
+                "name": "out",
+                "type": "CallExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "out",
+        "longname": "addslashes~out",
+        "kind": "member",
+        "memberof": "addslashes",
+        "scope": "inner"
+    },
+    {
+        "comment": "/**\n * Upper-case the first letter of the input and lower-case the rest.\n *\n * @example\n * {{ \"i like Burritos\"|capitalize }}\n * // => I like burritos\n *\n * @param  {*} input  If given an array or object, each string member will be run through the filter individually.\n * @return {*}        Returns the same type as the input.\n */",
+        "meta": {
+            "range": [
+                1409,
+                1656
+            ],
+            "filename": "filters.js",
+            "lineno": 59,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000120",
+                "name": "exports.capitalize",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "input"
+                ]
+            },
+            "vars": {
+                "out": "capitalize~out"
+            }
+        },
+        "description": "Upper-case the first letter of the input and lower-case the rest.",
+        "examples": [
+            "{{ \"i like Burritos\"|capitalize }}\n// => I like burritos"
+        ],
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "*"
+                    ]
+                },
+                "description": "If given an array or object, each string member will be run through the filter individually.",
+                "name": "input"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "*"
+                    ]
+                },
+                "description": "Returns the same type as the input."
+            }
+        ],
+        "name": "capitalize",
+        "longname": "capitalize",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                1455,
+                1511
+            ],
+            "filename": "filters.js",
+            "lineno": 60,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000128",
+                "name": "out",
+                "type": "CallExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "out",
+        "longname": "capitalize~out",
+        "kind": "member",
+        "memberof": "capitalize",
+        "scope": "inner"
+    },
+    {
+        "comment": "/**\n * Format a date or Date-compatible string.\n *\n * @example\n * // now = new Date();\n * {{ now|date('Y-m-d') }}\n * // => 2013-08-14\n * @example\n * // now = new Date();\n * {{ now|date('jS \\o\\f F') }}\n * // => 4th of July\n *\n * @param  {?(string|date)}   input\n * @param  {string}           format  PHP-style date format compatible string. Escape characters with <code>\\</code> for string literals.\n * @param  {number=}          offset  Timezone offset from GMT in minutes.\n * @param  {string=}          abbr    Timezone abbreviation. Used for output only.\n * @return {string}                   Formatted date string.\n */",
+        "meta": {
+            "range": [
+                2281,
+                2804
+            ],
+            "filename": "filters.js",
+            "lineno": 86,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000170",
+                "name": "exports.date",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "input",
+                    "format",
+                    "offset",
+                    "abbr"
+                ]
+            },
+            "vars": {
+                "l": "date~l",
+                "date": "date~date",
+                "cur": "date~cur",
+                "i": "date~i",
+                "out": "date~out"
+            }
+        },
+        "description": "Format a date or Date-compatible string.",
+        "examples": [
+            "// now = new Date();\n{{ now|date('Y-m-d') }}\n// => 2013-08-14",
+            "// now = new Date();\n{{ now|date('jS \\o\\f F') }}\n// => 4th of July"
+        ],
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string",
+                        "date"
+                    ]
+                },
+                "nullable": true,
+                "name": "input"
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "description": "PHP-style date format compatible string. Escape characters with <code>\\</code> for string literals.",
+                "name": "format"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "optional": true,
+                "description": "Timezone offset from GMT in minutes.",
+                "name": "offset"
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "optional": true,
+                "description": "Timezone abbreviation. Used for output only.",
+                "name": "abbr"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "description": "Formatted date string."
+            }
+        ],
+        "name": "date",
+        "longname": "date",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                2343,
+                2360
+            ],
+            "filename": "filters.js",
+            "lineno": 87,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000181",
+                "name": "l",
+                "type": "MemberExpression",
+                "value": "format.length"
+            }
+        },
+        "undocumented": true,
+        "name": "l",
+        "longname": "date~l",
+        "kind": "member",
+        "memberof": "date",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                2366,
+                2403
+            ],
+            "filename": "filters.js",
+            "lineno": 88,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000186",
+                "name": "date",
+                "type": "NewExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "date",
+        "longname": "date~date",
+        "kind": "member",
+        "memberof": "date",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                2409,
+                2412
+            ],
+            "filename": "filters.js",
+            "lineno": 89,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000193",
+                "name": "cur"
+            }
+        },
+        "undocumented": true,
+        "name": "cur",
+        "longname": "date~cur",
+        "kind": "member",
+        "memberof": "date",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                2418,
+                2423
+            ],
+            "filename": "filters.js",
+            "lineno": 90,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000195",
+                "name": "i",
+                "type": "Literal",
+                "value": 0
+            }
+        },
+        "undocumented": true,
+        "name": "i",
+        "longname": "date~i",
+        "kind": "member",
+        "memberof": "date",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                2429,
+                2437
+            ],
+            "filename": "filters.js",
+            "lineno": 91,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000198",
+                "name": "out",
+                "type": "Literal",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "out",
+        "longname": "date~out",
+        "kind": "member",
+        "memberof": "date",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                2520,
+                2526
+            ],
+            "filename": "filters.js",
+            "lineno": 97,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000216",
+                "name": "i",
+                "type": "Literal",
+                "funcscope": "date",
+                "value": 1,
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "i",
+        "longname": "date~i",
+        "kind": "member",
+        "memberof": "date",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                2534,
+                2556
+            ],
+            "filename": "filters.js",
+            "lineno": 98,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000221",
+                "name": "cur",
+                "type": "CallExpression",
+                "funcscope": "date",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "cur",
+        "longname": "date~cur",
+        "kind": "member",
+        "memberof": "date",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                2588,
+                2594
+            ],
+            "filename": "filters.js",
+            "lineno": 100,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000234",
+                "name": "i",
+                "type": "Literal",
+                "funcscope": "date",
+                "value": 1,
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "i",
+        "longname": "date~i",
+        "kind": "member",
+        "memberof": "date",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                2602,
+                2641
+            ],
+            "filename": "filters.js",
+            "lineno": 101,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000238",
+                "name": "out",
+                "type": "ConditionalExpression",
+                "funcscope": "date",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "out",
+        "longname": "date~out",
+        "kind": "member",
+        "memberof": "date",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                2701,
+                2746
+            ],
+            "filename": "filters.js",
+            "lineno": 103,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000258",
+                "name": "out",
+                "type": "CallExpression",
+                "funcscope": "date",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "out",
+        "longname": "date~out",
+        "kind": "member",
+        "memberof": "date",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                2767,
+                2777
+            ],
+            "filename": "filters.js",
+            "lineno": 105,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000269",
+                "name": "out",
+                "type": "Identifier",
+                "funcscope": "date",
+                "value": "cur",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "out",
+        "longname": "date~out",
+        "kind": "member",
+        "memberof": "date",
+        "scope": "inner"
+    },
+    {
+        "comment": "/**\n * If the input is `undefined`, `null`, or `false`, a default return value can be specified.\n *\n * @example\n * {{ null_value|default('Tacos') }}\n * // => Tacos\n *\n * @example\n * {{ \"Burritos\"|default(\"Tacos\") }}\n * // => Burritos\n *\n * @param  {*}  input\n * @param  {*}  def     Value to return if `input` is `undefined`, `null`, or `false`.\n * @return {*}          `input` or `def` value.\n */",
+        "meta": {
+            "range": [
+                3205,
+                3337
+            ],
+            "filename": "filters.js",
+            "lineno": 126,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000275",
+                "name": "exports[\"default\"]",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "input",
+                    "def"
+                ]
+            }
+        },
+        "description": "If the input is `undefined`, `null`, or `false`, a default return value can be specified.",
+        "examples": [
+            "{{ null_value|default('Tacos') }}\n// => Tacos",
+            "{{ \"Burritos\"|default(\"Tacos\") }}\n// => Burritos"
+        ],
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "*"
+                    ]
+                },
+                "name": "input"
+            },
+            {
+                "type": {
+                    "names": [
+                        "*"
+                    ]
+                },
+                "description": "Value to return if `input` is `undefined`, `null`, or `false`.",
+                "name": "def"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "*"
+                    ]
+                },
+                "description": "`input` or `def` value."
+            }
+        ],
+        "name": ".\"default\"",
+        "longname": ".\"default\"",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "/**\n * Force escape the output of the variable. Optionally use `e` as a shortcut filter name. This filter will be applied by default if autoescape is turned on.\n *\n * @example\n * {{ \"<blah>\"|escape }}\n * // => &lt;blah&gt;\n *\n * @example\n * {{ \"<blah>\"|e(\"js\") }}\n * // => \\u003Cblah\\u003E\n *\n * @param  {*} input\n * @param  {string} [type='html']   If you pass the string js in as the type, output will be escaped so that it is safe for JavaScript execution.\n * @return {string}         Escaped string.\n */",
+        "meta": {
+            "range": [
+                3848,
+                4927
+            ],
+            "filename": "filters.js",
+            "lineno": 145,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000298",
+                "name": "exports.escape",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "input",
+                    "type"
+                ]
+            },
+            "vars": {
+                "out": "escape~out",
+                "inp": "escape~inp",
+                "i": "escape~i",
+                "code": "escape~code"
+            }
+        },
+        "description": "Force escape the output of the variable. Optionally use `e` as a shortcut filter name. This filter will be applied by default if autoescape is turned on.",
+        "examples": [
+            "{{ \"<blah>\"|escape }}\n// => &lt;blah&gt;",
+            "{{ \"<blah>\"|e(\"js\") }}\n// => \\u003Cblah\\u003E"
+        ],
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "*"
+                    ]
+                },
+                "name": "input"
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "optional": true,
+                "defaultvalue": "'html'",
+                "description": "If you pass the string js in as the type, output will be escaped so that it is safe for JavaScript execution.",
+                "name": "type"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "description": "Escaped string."
+            }
+        ],
+        "name": "escape",
+        "longname": "escape",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                3896,
+                3948
+            ],
+            "filename": "filters.js",
+            "lineno": 146,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000307",
+                "name": "out",
+                "type": "CallExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "out",
+        "longname": "escape~out",
+        "kind": "member",
+        "memberof": "escape",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                3954,
+                3965
+            ],
+            "filename": "filters.js",
+            "lineno": 147,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000317",
+                "name": "inp",
+                "type": "Identifier",
+                "value": "input"
+            }
+        },
+        "undocumented": true,
+        "name": "inp",
+        "longname": "escape~inp",
+        "kind": "member",
+        "memberof": "escape",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                3971,
+                3976
+            ],
+            "filename": "filters.js",
+            "lineno": 148,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000320",
+                "name": "i",
+                "type": "Literal",
+                "value": 0
+            }
+        },
+        "undocumented": true,
+        "name": "i",
+        "longname": "escape~i",
+        "kind": "member",
+        "memberof": "escape",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                3982,
+                3986
+            ],
+            "filename": "filters.js",
+            "lineno": 149,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000323",
+                "name": "code"
+            }
+        },
+        "undocumented": true,
+        "name": "code",
+        "longname": "escape~code",
+        "kind": "member",
+        "memberof": "escape",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                4097,
+                4105
+            ],
+            "filename": "filters.js",
+            "lineno": 159,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000341",
+                "name": "out",
+                "type": "Literal",
+                "funcscope": "escape",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "out",
+        "longname": "escape~out",
+        "kind": "member",
+        "memberof": "escape",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                4143,
+                4178
+            ],
+            "filename": "filters.js",
+            "lineno": 163,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000349",
+                "name": "inp",
+                "type": "CallExpression",
+                "funcscope": "escape",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "inp",
+        "longname": "escape~inp",
+        "kind": "member",
+        "memberof": "escape",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                4208,
+                4214
+            ],
+            "filename": "filters.js",
+            "lineno": 164,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000364",
+                "name": "i",
+                "type": "Literal",
+                "funcscope": "escape",
+                "value": 1,
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "i",
+        "longname": "escape~i",
+        "kind": "member",
+        "memberof": "escape",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                4224,
+                4248
+            ],
+            "filename": "filters.js",
+            "lineno": 165,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000369",
+                "name": "code",
+                "type": "CallExpression",
+                "funcscope": "escape",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "code",
+        "longname": "escape~code",
+        "kind": "member",
+        "memberof": "escape",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                4281,
+                4319
+            ],
+            "filename": "filters.js",
+            "lineno": 167,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000382",
+                "name": "code",
+                "type": "CallExpression",
+                "funcscope": "escape",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "code",
+        "longname": "escape~code",
+        "kind": "member",
+        "memberof": "escape",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                4329,
+                4373
+            ],
+            "filename": "filters.js",
+            "lineno": 168,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000393",
+                "name": "code",
+                "type": "ConditionalExpression",
+                "funcscope": "escape",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "code",
+        "longname": "escape~code",
+        "kind": "member",
+        "memberof": "escape",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                4383,
+                4404
+            ],
+            "filename": "filters.js",
+            "lineno": 169,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000406",
+                "name": "out",
+                "type": "BinaryExpression",
+                "funcscope": "escape",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "out",
+        "longname": "escape~out",
+        "kind": "member",
+        "memberof": "escape",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                4429,
+                4442
+            ],
+            "filename": "filters.js",
+            "lineno": 171,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000413",
+                "name": "out",
+                "type": "MemberExpression",
+                "funcscope": "escape",
+                "value": "inp[undefined]",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "out",
+        "longname": "escape~out",
+        "kind": "member",
+        "memberof": "escape",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                4929,
+                4955
+            ],
+            "filename": "filters.js",
+            "lineno": 191,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000489",
+                "name": "exports.e",
+                "type": "MemberExpression",
+                "value": "exports.escape",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "e",
+        "longname": "e",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "/**\n * Get the first item in an array or character in a string. All other objects will attempt to return the first value available.\n *\n * @example\n * // my_arr = ['a', 'b', 'c']\n * {{ my_arr|first }}\n * // => a\n *\n * @example\n * // my_val = 'Tacos'\n * {{ my_val|first }}\n * // T\n *\n * @param  {*} input\n * @return {*}        The first item of the array or first character of the string input.\n */",
+        "meta": {
+            "range": [
+                5355,
+                5607
+            ],
+            "filename": "filters.js",
+            "lineno": 209,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000497",
+                "name": "exports.first",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "input"
+                ]
+            },
+            "vars": {
+                "keys": "first~keys"
+            }
+        },
+        "description": "Get the first item in an array or character in a string. All other objects will attempt to return the first value available.",
+        "examples": [
+            "// my_arr = ['a', 'b', 'c']\n{{ my_arr|first }}\n// => a",
+            "// my_val = 'Tacos'\n{{ my_val|first }}\n// T"
+        ],
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "*"
+                    ]
+                },
+                "name": "input"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "*"
+                    ]
+                },
+                "description": "The first item of the array or first character of the string input."
+            }
+        ],
+        "name": "first",
+        "longname": "first",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                5458,
+                5482
+            ],
+            "filename": "filters.js",
+            "lineno": 211,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000518",
+                "name": "keys",
+                "type": "CallExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "keys",
+        "longname": "first~keys",
+        "kind": "member",
+        "memberof": "first",
+        "scope": "inner"
+    },
+    {
+        "comment": "/**\n * Group an array of objects by a common key. If an array is not provided, the input value will be returned untouched.\n *\n * @example\n * // people = [{ age: 23, name: 'Paul' }, { age: 26, name: 'Jane' }, { age: 23, name: 'Jim' }];\n * {% for agegroup in people|groupBy('age') %}\n *   <h2>{{ loop.key }}</h2>\n *   <ul>\n *     {% for person in agegroup %}\n *     <li>{{ person.name }}</li>\n *     {% endfor %}\n *   </ul>\n * {% endfor %}\n *\n * @param  {*}      input Input object.\n * @param  {string} key   Key to group by.\n * @return {object}       Grouped arrays by given key.\n */",
+        "meta": {
+            "range": [
+                6193,
+                6615
+            ],
+            "filename": "filters.js",
+            "lineno": 240,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000549",
+                "name": "exports.groupBy",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "input",
+                    "key"
+                ]
+            },
+            "vars": {
+                "out": "groupBy~out",
+                "": null
+            }
+        },
+        "description": "Group an array of objects by a common key. If an array is not provided, the input value will be returned untouched.",
+        "examples": [
+            "// people = [{ age: 23, name: 'Paul' }, { age: 26, name: 'Jane' }, { age: 23, name: 'Jim' }];\n{% for agegroup in people|groupBy('age') %}\n  <h2>{{ loop.key }}</h2>\n  <ul>\n    {% for person in agegroup %}\n    <li>{{ person.name }}</li>\n    {% endfor %}\n  </ul>\n{% endfor %}"
+        ],
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "*"
+                    ]
+                },
+                "description": "Input object.",
+                "name": "input"
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "description": "Key to group by.",
+                "name": "key"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                },
+                "description": "Grouped arrays by given key."
+            }
+        ],
+        "name": "groupBy",
+        "longname": "groupBy",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                6295,
+                6303
+            ],
+            "filename": "filters.js",
+            "lineno": 245,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000568",
+                "name": "out",
+                "type": "ObjectExpression",
+                "value": "{}"
+            }
+        },
+        "undocumented": true,
+        "name": "out",
+        "longname": "groupBy~out",
+        "kind": "member",
+        "memberof": "groupBy",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                6412,
+                6432
+            ],
+            "filename": "filters.js",
+            "lineno": 252,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000590",
+                "name": "keyname",
+                "type": "MemberExpression",
+                "value": "value[undefined]"
+            }
+        },
+        "undocumented": true,
+        "name": "keyname",
+        "longname": "<anonymous>~keyname",
+        "kind": "member",
+        "memberof": "<anonymous>",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                6440,
+                6474
+            ],
+            "filename": "filters.js",
+            "lineno": 253,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000595",
+                "name": "newValue",
+                "type": "CallExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "newValue",
+        "longname": "<anonymous>~newValue",
+        "kind": "member",
+        "memberof": "<anonymous>",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                6534,
+                6551
+            ],
+            "filename": "filters.js",
+            "lineno": 257,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000615",
+                "name": "out[undefined]",
+                "type": "ArrayExpression",
+                "funcscope": "groupBy",
+                "value": "[]",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "undefined]",
+        "longname": "groupBy~out.undefined]",
+        "kind": "member",
+        "memberof": "groupBy~out",
+        "scope": "static"
+    },
+    {
+        "comment": "/**\n * Join the input with a string.\n *\n * @example\n * // my_array = ['foo', 'bar', 'baz']\n * {{ my_array|join(', ') }}\n * // => foo, bar, baz\n *\n * @example\n * // my_key_object = { a: 'foo', b: 'bar', c: 'baz' }\n * {{ my_key_object|join(' and ') }}\n * // => foo and bar and baz\n *\n * @param  {*}  input\n * @param  {string} glue    String value to join items together.\n * @return {string}\n */",
+        "meta": {
+            "range": [
+                7011,
+                7288
+            ],
+            "filename": "filters.js",
+            "lineno": 283,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000631",
+                "name": "exports.join",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "input",
+                    "glue"
+                ]
+            },
+            "vars": {
+                "out": "join~out",
+                "": null
+            }
+        },
+        "description": "Join the input with a string.",
+        "examples": [
+            "// my_array = ['foo', 'bar', 'baz']\n{{ my_array|join(', ') }}\n// => foo, bar, baz",
+            "// my_key_object = { a: 'foo', b: 'bar', c: 'baz' }\n{{ my_key_object|join(' and ') }}\n// => foo and bar and baz"
+        ],
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "*"
+                    ]
+                },
+                "name": "input"
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "description": "String value to join items together.",
+                "name": "glue"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                }
+            }
+        ],
+        "name": "join",
+        "longname": "join",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                7158,
+                7166
+            ],
+            "filename": "filters.js",
+            "lineno": 289,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000659",
+                "name": "out",
+                "type": "ArrayExpression",
+                "value": "[]"
+            }
+        },
+        "undocumented": true,
+        "name": "out",
+        "longname": "join~out",
+        "kind": "member",
+        "memberof": "join",
+        "scope": "inner"
+    },
+    {
+        "comment": "/**\n * Return a string representation of an JavaScript object.\n *\n * Backwards compatible with swig@0.x.x using `json_encode`.\n *\n * @example\n * // val = { a: 'b' }\n * {{ val|json }}\n * // => {\"a\":\"b\"}\n *\n * @example\n * // val = { a: 'b' }\n * {{ val|json(4) }}\n * // => {\n * //        \"a\": \"b\"\n * //    }\n *\n * @param  {*}    input\n * @param  {number}  [indent]  Number of spaces to indent for pretty-formatting.\n * @return {string}           A valid JSON string.\n */",
+        "meta": {
+            "range": [
+                7759,
+                7853
+            ],
+            "filename": "filters.js",
+            "lineno": 319,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000686",
+                "name": "exports.json",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "input",
+                    "indent"
+                ]
+            }
+        },
+        "description": "Return a string representation of an JavaScript object.\n\nBackwards compatible with swig@0.x.x using `json_encode`.",
+        "examples": [
+            "// val = { a: 'b' }\n{{ val|json }}\n// => {\"a\":\"b\"}",
+            "// val = { a: 'b' }\n{{ val|json(4) }}\n// => {\n//        \"a\": \"b\"\n//    }"
+        ],
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "*"
+                    ]
+                },
+                "name": "input"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "optional": true,
+                "description": "Number of spaces to indent for pretty-formatting.",
+                "name": "indent"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "description": "A valid JSON string."
+            }
+        ],
+        "name": "json",
+        "longname": "json",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                7855,
+                7889
+            ],
+            "filename": "filters.js",
+            "lineno": 322,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000705",
+                "name": "exports.json_encode",
+                "type": "MemberExpression",
+                "value": "exports.json",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "json_encode",
+        "longname": "json_encode",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "/**\n * Get the last item in an array or character in a string. All other objects will attempt to return the last value available.\n *\n * @example\n * // my_arr = ['a', 'b', 'c']\n * {{ my_arr|last }}\n * // => c\n *\n * @example\n * // my_val = 'Tacos'\n * {{ my_val|last }}\n * // s\n *\n * @param  {*} input\n * @return {*}          The last item of the array or last character of the string.input.\n */",
+        "meta": {
+            "range": [
+                8285,
+                8577
+            ],
+            "filename": "filters.js",
+            "lineno": 340,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000713",
+                "name": "exports.last",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "input"
+                ]
+            },
+            "vars": {
+                "keys": "last~keys"
+            }
+        },
+        "description": "Get the last item in an array or character in a string. All other objects will attempt to return the last value available.",
+        "examples": [
+            "// my_arr = ['a', 'b', 'c']\n{{ my_arr|last }}\n// => c",
+            "// my_val = 'Tacos'\n{{ my_val|last }}\n// s"
+        ],
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "*"
+                    ]
+                },
+                "name": "input"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "*"
+                    ]
+                },
+                "description": "The last item of the array or last character of the string.input."
+            }
+        ],
+        "name": "last",
+        "longname": "last",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                8387,
+                8411
+            ],
+            "filename": "filters.js",
+            "lineno": 342,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000734",
+                "name": "keys",
+                "type": "CallExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "keys",
+        "longname": "last~keys",
+        "kind": "member",
+        "memberof": "last",
+        "scope": "inner"
+    },
+    {
+        "comment": "/**\n * Get the number of items in an array, string, or object.\n *\n * @example\n * // my_arr = ['a', 'b', 'c']\n * {{ my_arr|length }}\n * // => 3\n *\n * @example\n * // my_str = 'Tacos'\n * {{ my_str|length }}\n * // => 5\n *\n * @example\n * // my_obj = {a: 5, b: 20}\n * {{ my_obj|length }}\n * // => 2\n *\n * @param  {*} input\n * @return {*}          The length of the input\n */",
+        "meta": {
+            "range": [
+                8949,
+                9190
+            ],
+            "filename": "filters.js",
+            "lineno": 374,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000776",
+                "name": "exports.length",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "input"
+                ]
+            },
+            "vars": {
+                "keys": "length~keys"
+            }
+        },
+        "description": "Get the number of items in an array, string, or object.",
+        "examples": [
+            "// my_arr = ['a', 'b', 'c']\n{{ my_arr|length }}\n// => 3",
+            "// my_str = 'Tacos'\n{{ my_str|length }}\n// => 5",
+            "// my_obj = {a: 5, b: 20}\n{{ my_obj|length }}\n// => 2"
+        ],
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "*"
+                    ]
+                },
+                "name": "input"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "*"
+                    ]
+                },
+                "description": "The length of the input"
+            }
+        ],
+        "name": "length",
+        "longname": "length",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                9053,
+                9077
+            ],
+            "filename": "filters.js",
+            "lineno": 376,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000797",
+                "name": "keys",
+                "type": "CallExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "keys",
+        "longname": "length~keys",
+        "kind": "member",
+        "memberof": "length",
+        "scope": "inner"
+    },
+    {
+        "comment": "/**\n * Return the input in all lowercase letters.\n *\n * @example\n * {{ \"FOOBAR\"|lower }}\n * // => foobar\n *\n * @example\n * // myObj = { a: 'FOO', b: 'BAR' }\n * {{ myObj|lower|join('') }}\n * // => foobar\n *\n * @param  {*}  input\n * @return {*}          Returns the same type as the input.\n */",
+        "meta": {
+            "range": [
+                9485,
+                9669
+            ],
+            "filename": "filters.js",
+            "lineno": 400,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000822",
+                "name": "exports.lower",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "input"
+                ]
+            },
+            "vars": {
+                "out": "lower~out"
+            }
+        },
+        "description": "Return the input in all lowercase letters.",
+        "examples": [
+            "{{ \"FOOBAR\"|lower }}\n// => foobar",
+            "// myObj = { a: 'FOO', b: 'BAR' }\n{{ myObj|lower|join('') }}\n// => foobar"
+        ],
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "*"
+                    ]
+                },
+                "name": "input"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "*"
+                    ]
+                },
+                "description": "Returns the same type as the input."
+            }
+        ],
+        "name": "lower",
+        "longname": "lower",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                9526,
+                9577
+            ],
+            "filename": "filters.js",
+            "lineno": 401,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000830",
+                "name": "out",
+                "type": "CallExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "out",
+        "longname": "lower~out",
+        "kind": "member",
+        "memberof": "lower",
+        "scope": "inner"
+    },
+    {
+        "comment": "/**\n * Deprecated in favor of <a href=\"#safe\">safe</a>.\n */",
+        "meta": {
+            "range": [
+                9732,
+                9796
+            ],
+            "filename": "filters.js",
+            "lineno": 412,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000856",
+                "name": "exports.raw",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "input"
+                ]
+            }
+        },
+        "description": "Deprecated in favor of <a href=\"#safe\">safe</a>.",
+        "name": "raw",
+        "longname": "raw",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                9798,
+                9821
+            ],
+            "filename": "filters.js",
+            "lineno": 415,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000870",
+                "name": "exports.raw.safe",
+                "type": "Literal",
+                "value": true,
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "safe",
+        "longname": "raw.safe",
+        "kind": "member",
+        "memberof": "raw",
+        "scope": "static"
+    },
+    {
+        "comment": "/**\n * Returns a new string with the matched search pattern replaced by the given replacement string. Uses JavaScript's built-in String.replace() method.\n *\n * @example\n * // my_var = 'foobar';\n * {{ my_var|replace('o', 'e', 'g') }}\n * // => feebar\n *\n * @example\n * // my_var = \"farfegnugen\";\n * {{ my_var|replace('^f', 'p') }}\n * // => parfegnugen\n *\n * @example\n * // my_var = 'a1b2c3';\n * {{ my_var|replace('\\w', '0', 'g') }}\n * // => 010203\n *\n * @param  {string} input\n * @param  {string} search      String or pattern to replace from the input.\n * @param  {string} replacement String to replace matched pattern.\n * @param  {string} [flags]      Regular Expression flags. 'g': global match, 'i': ignore case, 'm': match over multiple lines\n * @return {string}             Replaced string.\n */",
+        "meta": {
+            "range": [
+                10623,
+                10766
+            ],
+            "filename": "filters.js",
+            "lineno": 441,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000878",
+                "name": "exports.replace",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "input",
+                    "search",
+                    "replacement",
+                    "flags"
+                ]
+            },
+            "vars": {
+                "r": "replace~r"
+            }
+        },
+        "description": "Returns a new string with the matched search pattern replaced by the given replacement string. Uses JavaScript's built-in String.replace() method.",
+        "examples": [
+            "// my_var = 'foobar';\n{{ my_var|replace('o', 'e', 'g') }}\n// => feebar",
+            "// my_var = \"farfegnugen\";\n{{ my_var|replace('^f', 'p') }}\n// => parfegnugen",
+            "// my_var = 'a1b2c3';\n{{ my_var|replace('\\w', '0', 'g') }}\n// => 010203"
+        ],
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "name": "input"
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "description": "String or pattern to replace from the input.",
+                "name": "search"
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "description": "String to replace matched pattern.",
+                "name": "replacement"
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "optional": true,
+                "description": "Regular Expression flags. 'g': global match, 'i': ignore case, 'm': match over multiple lines",
+                "name": "flags"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "description": "Replaced string."
+            }
+        ],
+        "name": "replace",
+        "longname": "replace",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                10694,
+                10723
+            ],
+            "filename": "filters.js",
+            "lineno": 442,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000889",
+                "name": "r",
+                "type": "NewExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "r",
+        "longname": "replace~r",
+        "kind": "member",
+        "memberof": "replace",
+        "scope": "inner"
+    },
+    {
+        "comment": "/**\n * Reverse sort the input. This is an alias for <code data-language=\"swig\">{{ input|sort(true) }}</code>.\n *\n * @example\n * // val = [1, 2, 3];\n * {{ val|reverse }}\n * // => 3,2,1\n *\n * @param  {array}  input\n * @return {array}        Reversed array. The original input object is returned if it was not an array.\n */",
+        "meta": {
+            "range": [
+                11090,
+                11164
+            ],
+            "filename": "filters.js",
+            "lineno": 457,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000903",
+                "name": "exports.reverse",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "input"
+                ]
+            }
+        },
+        "description": "Reverse sort the input. This is an alias for <code data-language=\"swig\">{{ input|sort(true) }}</code>.",
+        "examples": [
+            "// val = [1, 2, 3];\n{{ val|reverse }}\n// => 3,2,1"
+        ],
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "array"
+                    ]
+                },
+                "name": "input"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "array"
+                    ]
+                },
+                "description": "Reversed array. The original input object is returned if it was not an array."
+            }
+        ],
+        "name": "reverse",
+        "longname": "reverse",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "/**\n * Forces the input to not be auto-escaped. Use this only on content that you know is safe to be rendered on your page.\n *\n * @example\n * // my_var = \"<p>Stuff</p>\";\n * {{ my_var|safe }}\n * // => <p>Stuff</p>\n *\n * @param  {*}  input\n * @return {*}          The input exactly how it was given, regardless of autoescaping status.\n */",
+        "meta": {
+            "range": [
+                11504,
+                11628
+            ],
+            "filename": "filters.js",
+            "lineno": 472,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000918",
+                "name": "exports.safe",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "input"
+                ]
+            }
+        },
+        "description": "Forces the input to not be auto-escaped. Use this only on content that you know is safe to be rendered on your page.",
+        "examples": [
+            "// my_var = \"<p>Stuff</p>\";\n{{ my_var|safe }}\n// => <p>Stuff</p>"
+        ],
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "*"
+                    ]
+                },
+                "name": "input"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "*"
+                    ]
+                },
+                "description": "The input exactly how it was given, regardless of autoescaping status."
+            }
+        ],
+        "name": "safe",
+        "longname": "safe",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                11630,
+                11654
+            ],
+            "filename": "filters.js",
+            "lineno": 476,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000928",
+                "name": "exports.safe.safe",
+                "type": "Literal",
+                "value": true,
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "safe",
+        "longname": "safe.safe",
+        "kind": "member",
+        "memberof": "safe",
+        "scope": "static"
+    },
+    {
+        "comment": "/**\n * Sort the input in an ascending direction.\n * If given an object, will return the keys as a sorted array.\n * If given a string, each character will be sorted individually.\n *\n * @example\n * // val = [2, 6, 4];\n * {{ val|sort }}\n * // => 2,4,6\n *\n * @example\n * // val = 'zaq';\n * {{ val|sort }}\n * // => aqz\n *\n * @example\n * // val = { bar: 1, foo: 2 }\n * {{ val|sort(true) }}\n * // => foo,bar\n *\n * @param  {*} input\n * @param {boolean} [reverse=false] Output is given reverse-sorted if true.\n * @return {*}        Sorted array;\n */",
+        "meta": {
+            "range": [
+                12198,
+                12699
+            ],
+            "filename": "filters.js",
+            "lineno": 502,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000936",
+                "name": "exports.sort",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "input",
+                    "reverse"
+                ]
+            },
+            "vars": {
+                "out": "sort~out",
+                "clone": "sort~clone"
+            }
+        },
+        "description": "Sort the input in an ascending direction.\nIf given an object, will return the keys as a sorted array.\nIf given a string, each character will be sorted individually.",
+        "examples": [
+            "// val = [2, 6, 4];\n{{ val|sort }}\n// => 2,4,6",
+            "// val = 'zaq';\n{{ val|sort }}\n// => aqz",
+            "// val = { bar: 1, foo: 2 }\n{{ val|sort(true) }}\n// => foo,bar"
+        ],
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "*"
+                    ]
+                },
+                "name": "input"
+            },
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "optional": true,
+                "defaultvalue": false,
+                "description": "Output is given reverse-sorted if true.",
+                "name": "reverse"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "*"
+                    ]
+                },
+                "description": "Sorted array;"
+            }
+        ],
+        "name": "sort",
+        "longname": "sort",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                12247,
+                12250
+            ],
+            "filename": "filters.js",
+            "lineno": 503,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000945",
+                "name": "out"
+            }
+        },
+        "undocumented": true,
+        "name": "out",
+        "longname": "sort~out",
+        "kind": "member",
+        "memberof": "sort",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                12252,
+                12257
+            ],
+            "filename": "filters.js",
+            "lineno": 503,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000947",
+                "name": "clone"
+            }
+        },
+        "undocumented": true,
+        "name": "clone",
+        "longname": "sort~clone",
+        "kind": "member",
+        "memberof": "sort",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                12293,
+                12324
+            ],
+            "filename": "filters.js",
+            "lineno": 505,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000957",
+                "name": "clone",
+                "type": "CallExpression",
+                "funcscope": "sort",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "clone",
+        "longname": "sort~clone",
+        "kind": "member",
+        "memberof": "sort",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                12330,
+                12348
+            ],
+            "filename": "filters.js",
+            "lineno": 506,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000966",
+                "name": "out",
+                "type": "CallExpression",
+                "funcscope": "sort",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "out",
+        "longname": "sort~out",
+        "kind": "member",
+        "memberof": "sort",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                12414,
+                12444
+            ],
+            "filename": "filters.js",
+            "lineno": 510,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000979",
+                "name": "out",
+                "type": "CallExpression",
+                "funcscope": "sort",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "out",
+        "longname": "sort~out",
+        "kind": "member",
+        "memberof": "sort",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                12484,
+                12505
+            ],
+            "filename": "filters.js",
+            "lineno": 513,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000993",
+                "name": "out",
+                "type": "CallExpression",
+                "funcscope": "sort",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "out",
+        "longname": "sort~out",
+        "kind": "member",
+        "memberof": "sort",
+        "scope": "inner"
+    },
+    {
+        "comment": "/**\n * Strip HTML tags.\n *\n * @example\n * // stuff = '<p>foobar</p>';\n * {{ stuff|striptags }}\n * // => foobar\n *\n * @param  {*}  input\n * @return {*}        Returns the same object as the input, but with all string values stripped of tags.\n */",
+        "meta": {
+            "range": [
+                12947,
+                13154
+            ],
+            "filename": "filters.js",
+            "lineno": 539,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001036",
+                "name": "exports.striptags",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "input"
+                ]
+            },
+            "vars": {
+                "out": "striptags~out"
+            }
+        },
+        "description": "Strip HTML tags.",
+        "examples": [
+            "// stuff = '<p>foobar</p>';\n{{ stuff|striptags }}\n// => foobar"
+        ],
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "*"
+                    ]
+                },
+                "name": "input"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "*"
+                    ]
+                },
+                "description": "Returns the same object as the input, but with all string values stripped of tags."
+            }
+        ],
+        "name": "striptags",
+        "longname": "striptags",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                12992,
+                13047
+            ],
+            "filename": "filters.js",
+            "lineno": 540,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001044",
+                "name": "out",
+                "type": "CallExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "out",
+        "longname": "striptags~out",
+        "kind": "member",
+        "memberof": "striptags",
+        "scope": "inner"
+    },
+    {
+        "comment": "/**\n * Capitalizes every word given and lower-cases all other letters.\n *\n * @example\n * // my_str = 'this is soMe text';\n * {{ my_str|title }}\n * // => This Is Some Text\n *\n * @example\n * // my_arr = ['hi', 'this', 'is', 'an', 'array'];\n * {{ my_arr|title|join(' ') }}\n * // => Hi This Is An Array\n *\n * @param  {*}  input\n * @return {*}        Returns the same object as the input, but with all words in strings title-cased.\n */",
+        "meta": {
+            "range": [
+                13588,
+                13868
+            ],
+            "filename": "filters.js",
+            "lineno": 564,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001072",
+                "name": "exports.title",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "input"
+                ]
+            },
+            "vars": {
+                "out": "title~out",
+                "": null
+            }
+        },
+        "description": "Capitalizes every word given and lower-cases all other letters.",
+        "examples": [
+            "// my_str = 'this is soMe text';\n{{ my_str|title }}\n// => This Is Some Text",
+            "// my_arr = ['hi', 'this', 'is', 'an', 'array'];\n{{ my_arr|title|join(' ') }}\n// => Hi This Is An Array"
+        ],
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "*"
+                    ]
+                },
+                "name": "input"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "*"
+                    ]
+                },
+                "description": "Returns the same object as the input, but with all words in strings title-cased."
+            }
+        ],
+        "name": "title",
+        "longname": "title",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                13629,
+                13680
+            ],
+            "filename": "filters.js",
+            "lineno": 565,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001080",
+                "name": "out",
+                "type": "CallExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "out",
+        "longname": "title~out",
+        "kind": "member",
+        "memberof": "title",
+        "scope": "inner"
+    },
+    {
+        "comment": "/**\n * Remove all duplicate items from an array.\n *\n * @example\n * // my_arr = [1, 2, 3, 4, 4, 3, 2, 1];\n * {{ my_arr|uniq|join(',') }}\n * // => 1,2,3,4\n *\n * @param  {array}  input\n * @return {array}        Array with unique items. If input was not an array, the original item is returned untouched.\n */",
+        "meta": {
+            "range": [
+                14176,
+                14424
+            ],
+            "filename": "filters.js",
+            "lineno": 586,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001128",
+                "name": "exports.uniq",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "input"
+                ]
+            },
+            "vars": {
+                "result": "uniq~result",
+                "": null
+            }
+        },
+        "description": "Remove all duplicate items from an array.",
+        "examples": [
+            "// my_arr = [1, 2, 3, 4, 4, 3, 2, 1];\n{{ my_arr|uniq|join(',') }}\n// => 1,2,3,4"
+        ],
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "array"
+                    ]
+                },
+                "name": "input"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "array"
+                    ]
+                },
+                "description": "Array with unique items. If input was not an array, the original item is returned untouched."
+            }
+        ],
+        "name": "uniq",
+        "longname": "uniq",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                14216,
+                14222
+            ],
+            "filename": "filters.js",
+            "lineno": 587,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001136",
+                "name": "result"
+            }
+        },
+        "undocumented": true,
+        "name": "result",
+        "longname": "uniq~result",
+        "kind": "member",
+        "memberof": "uniq",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                14288,
+                14299
+            ],
+            "filename": "filters.js",
+            "lineno": 593,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001152",
+                "name": "result",
+                "type": "ArrayExpression",
+                "funcscope": "uniq",
+                "value": "[]",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "result",
+        "longname": "uniq~result",
+        "kind": "member",
+        "memberof": "uniq",
+        "scope": "inner"
+    },
+    {
+        "comment": "/**\n * Convert the input to all uppercase letters. If an object or array is provided, all values will be uppercased.\n *\n * @example\n * // my_str = 'tacos';\n * {{ my_str|upper }}\n * // => TACOS\n *\n * @example\n * // my_arr = ['tacos', 'burritos'];\n * {{ my_arr|upper|join(' & ') }}\n * // => TACOS & BURRITOS\n *\n * @param  {*}  input\n * @return {*}        Returns the same type as the input, with all strings upper-cased.\n */",
+        "meta": {
+            "range": [
+                14850,
+                15034
+            ],
+            "filename": "filters.js",
+            "lineno": 618,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001183",
+                "name": "exports.upper",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "input"
+                ]
+            },
+            "vars": {
+                "out": "upper~out"
+            }
+        },
+        "description": "Convert the input to all uppercase letters. If an object or array is provided, all values will be uppercased.",
+        "examples": [
+            "// my_str = 'tacos';\n{{ my_str|upper }}\n// => TACOS",
+            "// my_arr = ['tacos', 'burritos'];\n{{ my_arr|upper|join(' & ') }}\n// => TACOS & BURRITOS"
+        ],
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "*"
+                    ]
+                },
+                "name": "input"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "*"
+                    ]
+                },
+                "description": "Returns the same type as the input, with all strings upper-cased."
+            }
+        ],
+        "name": "upper",
+        "longname": "upper",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                14891,
+                14942
+            ],
+            "filename": "filters.js",
+            "lineno": 619,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001191",
+                "name": "out",
+                "type": "CallExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "out",
+        "longname": "upper~out",
+        "kind": "member",
+        "memberof": "upper",
+        "scope": "inner"
+    },
+    {
+        "comment": "/**\n * URL-encode a string. If an object or array is passed, all values will be URL-encoded.\n *\n * @example\n * // my_str = 'param=1&anotherParam=2';\n * {{ my_str|url_encode }}\n * // => param%3D1%26anotherParam%3D2\n *\n * @param  {*} input\n * @return {*}       URL-encoded string.\n */",
+        "meta": {
+            "range": [
+                15320,
+                15508
+            ],
+            "filename": "filters.js",
+            "lineno": 638,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001217",
+                "name": "exports.url_encode",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "input"
+                ]
+            },
+            "vars": {
+                "out": "url_encode~out"
+            }
+        },
+        "description": "URL-encode a string. If an object or array is passed, all values will be URL-encoded.",
+        "examples": [
+            "// my_str = 'param=1&anotherParam=2';\n{{ my_str|url_encode }}\n// => param%3D1%26anotherParam%3D2"
+        ],
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "*"
+                    ]
+                },
+                "name": "input"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "*"
+                    ]
+                },
+                "description": "URL-encoded string."
+            }
+        ],
+        "name": "url_encode",
+        "longname": "url_encode",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                15366,
+                15422
+            ],
+            "filename": "filters.js",
+            "lineno": 639,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001225",
+                "name": "out",
+                "type": "CallExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "out",
+        "longname": "url_encode~out",
+        "kind": "member",
+        "memberof": "url_encode",
+        "scope": "inner"
+    },
+    {
+        "comment": "/**\n * URL-decode a string. If an object or array is passed, all values will be URL-decoded.\n *\n * @example\n * // my_str = 'param%3D1%26anotherParam%3D2';\n * {{ my_str|url_decode }}\n * // => param=1&anotherParam=2\n *\n * @param  {*} input\n * @return {*}       URL-decoded string.\n */",
+        "meta": {
+            "range": [
+                15794,
+                15982
+            ],
+            "filename": "filters.js",
+            "lineno": 657,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001247",
+                "name": "exports.url_decode",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "input"
+                ]
+            },
+            "vars": {
+                "out": "url_decode~out"
+            }
+        },
+        "description": "URL-decode a string. If an object or array is passed, all values will be URL-decoded.",
+        "examples": [
+            "// my_str = 'param%3D1%26anotherParam%3D2';\n{{ my_str|url_decode }}\n// => param=1&anotherParam=2"
+        ],
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "*"
+                    ]
+                },
+                "name": "input"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "*"
+                    ]
+                },
+                "description": "URL-decoded string."
+            }
+        ],
+        "name": "url_decode",
+        "longname": "url_decode",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                15840,
+                15896
+            ],
+            "filename": "filters.js",
+            "lineno": 658,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001255",
+                "name": "out",
+                "type": "CallExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "out",
+        "longname": "url_decode~out",
+        "kind": "member",
+        "memberof": "url_decode",
+        "scope": "inner"
+    },
+    {
+        "kind": "package",
+        "longname": "package:undefined",
+        "files": [
+            "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib/filters.js"
+        ]
+    }
+]

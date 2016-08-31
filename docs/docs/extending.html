@@ -1,7 +1,11 @@
-{% extends "./layout.html" %}
-{% import "./includes/macros.html" as docmacro %}
+---
+title: Swig - Extending Swig
+data:
+  ext: data/extending.json
+---
 
-{% block title %}{% parent %} &raquo; Extending Swig{% endblock %}
+{% import "./_includes/macros.html" as docmacro %}
+{% extends '../_layouts/documentation.html' %}
 
 {% block content %}
 
@@ -10,7 +14,7 @@
 <section id="filters">
   <h2>Custom Filters</h2>
 
-  {% for t in ext %}
+  {% for t in data.ext %}
   {% if t.kind === 'typedef' and t.undocumented !== true and t.name === 'Filter' %}
   <section class="doc">
     {{ docmacro.description(t) }}

@@ -1,7 +1,11 @@
-{% extends "./layout.html" %}
-{% import "./includes/macros.html" as docmacro %}
+---
+title: Swig - Filters
+data:
+  filters: data/filters.json
+---
 
-{% block title %}{% parent %} &raquo; Filters{% endblock %}
+{% import "./_includes/macros.html" as docmacro %}
+{% extends '../_layouts/documentation.html' %}
 
 {% block content %}
 <h1 id="built-in">Filters</h1>
@@ -18,7 +22,7 @@
 
 <hr>
 
-{% for fn in filters %}
+{% for fn in data.filters %}
   {% if fn.access !== "private" and fn.kind === 'function' and fn.undocumented !== true %}
   <section id="{{ fn.name|replace('"', '', 'g') }}" class="doc">
     <h2>
@@ -81,12 +85,11 @@
   </section>
   {% endif %}
 {% endfor %}
-
 {% endblock %}
 
 {% block filtersubnav %}
 <ol>
-{% for fn in filters %}
+{% for fn in data.filters %}
   {% if fn.access !== "private" and fn.kind === 'function' %}
   <li>
     <a href="#{{ fn.name|replace('"', '', 'g') }}">{{ fn.name|replace('"', '', 'g') }}</a>

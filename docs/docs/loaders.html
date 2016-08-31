@@ -1,12 +1,16 @@
-{% extends "./layout.html" %}
-{% import "./includes/macros.html" as docmacro %}
+---
+title: Swig - Template Loaders
+data:
+  loaders: data/loaders.json
+---
 
-{% block title %}{% parent %} &raquo; Template Loaders{% endblock %}
+{% import "./_includes/macros.html" as docmacro %}
+{% extends '../_layouts/documentation.html' %}
 
 {% block content %}
 <h1>Template Loaders</h1>
 
-  {% set members = loaders|groupBy('memberof') %}
+  {% set members = data.loaders|groupBy('memberof') %}
 
   <section id="builtin" class="doc">
     <h2>Built-In Loaders</h2>
@@ -52,7 +56,7 @@
   </section>
 
   <section id="custom" class="doc">
-    {% set customloader = loaders|groupBy('kind')['namespace'][0] %}
+    {% set customloader = data.loaders|groupBy('kind')['namespace'][0] %}
     <h2>Custom Loaders</h2>
 
     {{ docmacro.description(customloader) }}

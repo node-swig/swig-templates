@@ -1,20 +1,19 @@
-{% extends "./layout.html" %}
-{% import "./includes/macros.html" as docmacro %}
+---
+title: Swig - Tags
+data:
+  tags: data/tags.json
+---
 
-{% block title %}{% parent %} &raquo; Tags{% endblock %}
+{% extends '../_layouts/documentation.html' %}
 
 {% block content %}
 <h1 id="tags">Tags</h1>
 
-{% for fn in tags %}
+{% for fn in data.tags %}
   {% if fn.access !== "private" and fn.kind === 'function' and fn.undocumented !== true %}
   <section id="{{ fn.name }}" class="doc">
     <h2>{{ fn.name }}</h2>
-
-    {{ docmacro.source(fn) }}
-
-    {{ docmacro.description(fn) }}
-
+    <p>{{ fn.description|replace('\n', '</p><p>', 'g')|safe }}</p>
     {% if fn.params.length %}
     <h3>Parameters</h3>
     <table>
@@ -30,7 +29,7 @@
       <tbody>
       {% for param in fn.params %}
         <tr>
-          <td><var data-language="js">{{ param.name }}</var></td>
+          <td><code data-language="js">{{ param.name }}</code></td>
           <td><code data-language="js">{{ param.type.names|join(" or ") }}</code></td>
           <td>{% if param.optional === true %}✔{% endif %}</td>
           <td><code data-language="js">{{ param.defaultvalue }}</code></td>
@@ -61,7 +60,7 @@
 
 {% block tagsubnav %}
 <ol>
-  {% for fn in tags %}
+  {% for fn in data.tags %}
   {% if fn.access !== "private" and fn.kind === 'function' and fn.undocumented !== true %}
     <li>
       <a href="#{{ fn.name }}">{{ fn.name }}</a>

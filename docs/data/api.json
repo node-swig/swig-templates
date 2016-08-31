@@ -1,0 +1,4401 @@
+[
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                4,
+                30
+            ],
+            "filename": "swig.js",
+            "lineno": 1,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000002",
+                "name": "utils",
+                "type": "CallExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "utils",
+        "longname": "utils",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                34,
+                59
+            ],
+            "filename": "swig.js",
+            "lineno": 2,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000007",
+                "name": "_tags",
+                "type": "CallExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "_tags",
+        "longname": "_tags",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                63,
+                94
+            ],
+            "filename": "swig.js",
+            "lineno": 3,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000012",
+                "name": "_filters",
+                "type": "CallExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "_filters",
+        "longname": "_filters",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                98,
+                126
+            ],
+            "filename": "swig.js",
+            "lineno": 4,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000017",
+                "name": "parser",
+                "type": "CallExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "parser",
+        "longname": "parser",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                130,
+                172
+            ],
+            "filename": "swig.js",
+            "lineno": 5,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000022",
+                "name": "dateformatter",
+                "type": "CallExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "dateformatter",
+        "longname": "dateformatter",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                176,
+                206
+            ],
+            "filename": "swig.js",
+            "lineno": 6,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000027",
+                "name": "loaders",
+                "type": "CallExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "loaders",
+        "longname": "loaders",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "/**\n * Swig version number as a string.\n * @example\n * if (swig.version === \"1.4.2\") { ... }\n *\n * @type {String}\n */",
+        "meta": {
+            "range": [
+                327,
+                352
+            ],
+            "filename": "swig.js",
+            "lineno": 15,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000033",
+                "name": "exports.version",
+                "type": "Literal",
+                "value": "1.4.2",
+                "paramnames": []
+            }
+        },
+        "description": "Swig version number as a string.",
+        "examples": [
+            "if (swig.version === \"1.4.2\") { ... }"
+        ],
+        "type": {
+            "names": [
+                "String"
+            ]
+        },
+        "name": "version",
+        "longname": "version",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "/**\n * Swig Options Object. This object can be passed to many of the API-level Swig methods to control various aspects of the engine. All keys are optional.\n * @typedef {Object} SwigOpts\n * @property {boolean} autoescape  Controls whether or not variable output will automatically be escaped for safe HTML output. Defaults to <code data-language=\"js\">true</code>. Functions executed in variable statements will not be auto-escaped. Your application/functions should take care of their own auto-escaping.\n * @property {array}   varControls Open and close controls for variables. Defaults to <code data-language=\"js\">['{{', '}}']</code>.\n * @property {array}   tagControls Open and close controls for tags. Defaults to <code data-language=\"js\">['{%', '%}']</code>.\n * @property {array}   cmtControls Open and close controls for comments. Defaults to <code data-language=\"js\">['{#', '#}']</code>.\n * @property {object}  locals      Default variable context to be passed to <strong>all</strong> templates.\n * @property {CacheOptions} cache Cache control for templates. Defaults to saving in <code data-language=\"js\">'memory'</code>. Send <code data-language=\"js\">false</code> to disable. Send an object with <code data-language=\"js\">get</code> and <code data-language=\"js\">set</code> functions to customize.\n * @property {TemplateLoader} loader The method that Swig will use to load templates. Defaults to <var>swig.loaders.fs</var>.\n */",
+        "meta": {
+            "range": [
+                355,
+                1788
+            ],
+            "filename": "swig.js",
+            "lineno": 17,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {}
+        },
+        "description": "Swig Options Object. This object can be passed to many of the API-level Swig methods to control various aspects of the engine. All keys are optional.",
+        "kind": "typedef",
+        "name": "SwigOpts",
+        "type": {
+            "names": [
+                "Object"
+            ]
+        },
+        "properties": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "description": "Controls whether or not variable output will automatically be escaped for safe HTML output. Defaults to <code data-language=\"js\">true</code>. Functions executed in variable statements will not be auto-escaped. Your application/functions should take care of their own auto-escaping.",
+                "name": "autoescape"
+            },
+            {
+                "type": {
+                    "names": [
+                        "array"
+                    ]
+                },
+                "description": "Open and close controls for variables. Defaults to <code data-language=\"js\">['{{', '}}']</code>.",
+                "name": "varControls"
+            },
+            {
+                "type": {
+                    "names": [
+                        "array"
+                    ]
+                },
+                "description": "Open and close controls for tags. Defaults to <code data-language=\"js\">['{%', '%}']</code>.",
+                "name": "tagControls"
+            },
+            {
+                "type": {
+                    "names": [
+                        "array"
+                    ]
+                },
+                "description": "Open and close controls for comments. Defaults to <code data-language=\"js\">['{#', '#}']</code>.",
+                "name": "cmtControls"
+            },
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                },
+                "description": "Default variable context to be passed to <strong>all</strong> templates.",
+                "name": "locals"
+            },
+            {
+                "type": {
+                    "names": [
+                        "CacheOptions"
+                    ]
+                },
+                "description": "Cache control for templates. Defaults to saving in <code data-language=\"js\">'memory'</code>. Send <code data-language=\"js\">false</code> to disable. Send an object with <code data-language=\"js\">get</code> and <code data-language=\"js\">set</code> functions to customize.",
+                "name": "cache"
+            },
+            {
+                "type": {
+                    "names": [
+                        "TemplateLoader"
+                    ]
+                },
+                "description": "The method that Swig will use to load templates. Defaults to <var>swig.loaders.fs</var>.",
+                "name": "loader"
+            }
+        ],
+        "longname": "SwigOpts",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                1793,
+                3398
+            ],
+            "filename": "swig.js",
+            "lineno": 28,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000039",
+                "name": "defaultOptions",
+                "type": "ObjectExpression",
+                "value": "{\"autoescape\":true,\"varControls\":\"\",\"tagControls\":\"\",\"cmtControls\":\"\",\"locals\":\"\",\"cache\":\"memory\",\"loader\":\"\"}"
+            }
+        },
+        "undocumented": true,
+        "name": "defaultOptions",
+        "longname": "defaultOptions",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                1816,
+                1832
+            ],
+            "filename": "swig.js",
+            "lineno": 29,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000042",
+                "name": "autoescape",
+                "type": "Literal",
+                "value": true
+            }
+        },
+        "undocumented": true,
+        "name": "autoescape",
+        "longname": "defaultOptions.autoescape",
+        "kind": "member",
+        "memberof": "defaultOptions",
+        "scope": "static"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                1838,
+                1863
+            ],
+            "filename": "swig.js",
+            "lineno": 30,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000044",
+                "name": "varControls",
+                "type": "ArrayExpression",
+                "value": "[\"{{\",\"}}\"]"
+            }
+        },
+        "undocumented": true,
+        "name": "varControls",
+        "longname": "defaultOptions.varControls",
+        "kind": "member",
+        "memberof": "defaultOptions",
+        "scope": "static"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                1869,
+                1894
+            ],
+            "filename": "swig.js",
+            "lineno": 31,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000048",
+                "name": "tagControls",
+                "type": "ArrayExpression",
+                "value": "[\"{%\",\"%}\"]"
+            }
+        },
+        "undocumented": true,
+        "name": "tagControls",
+        "longname": "defaultOptions.tagControls",
+        "kind": "member",
+        "memberof": "defaultOptions",
+        "scope": "static"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                1900,
+                1925
+            ],
+            "filename": "swig.js",
+            "lineno": 32,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000052",
+                "name": "cmtControls",
+                "type": "ArrayExpression",
+                "value": "[\"{#\",\"#}\"]"
+            }
+        },
+        "undocumented": true,
+        "name": "cmtControls",
+        "longname": "defaultOptions.cmtControls",
+        "kind": "member",
+        "memberof": "defaultOptions",
+        "scope": "static"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                1931,
+                1941
+            ],
+            "filename": "swig.js",
+            "lineno": 33,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000056",
+                "name": "locals",
+                "type": "ObjectExpression",
+                "value": "{}"
+            }
+        },
+        "undocumented": true,
+        "name": "locals",
+        "longname": "defaultOptions.locals",
+        "kind": "member",
+        "memberof": "defaultOptions",
+        "scope": "static"
+    },
+    {
+        "comment": "/**\n     * Cache control for templates. Defaults to saving all templates into memory.\n     * @typedef {boolean|string|object} CacheOptions\n     * @example\n     * // Default\n     * swig.setDefaults({ cache: 'memory' });\n     * @example\n     * // Disables caching in Swig.\n     * swig.setDefaults({ cache: false });\n     * @example\n     * // Custom cache storage and retrieval\n     * swig.setDefaults({\n     *   cache: {\n     *     get: function (key) { ... },\n     *     set: function (key, val) { ... }\n     *   }\n     * });\n     */",
+        "meta": {
+            "range": [
+                1947,
+                2479
+            ],
+            "filename": "swig.js",
+            "lineno": 34,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {}
+        },
+        "description": "Cache control for templates. Defaults to saving all templates into memory.",
+        "kind": "typedef",
+        "name": "CacheOptions",
+        "type": {
+            "names": [
+                "boolean",
+                "string",
+                "object"
+            ]
+        },
+        "examples": [
+            "// Default\nswig.setDefaults({ cache: 'memory' });",
+            "// Disables caching in Swig.\nswig.setDefaults({ cache: false });",
+            "// Custom cache storage and retrieval\nswig.setDefaults({\n  cache: {\n    get: function (key) { ... },\n    set: function (key, val) { ... }\n  }\n});"
+        ],
+        "longname": "CacheOptions",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                2484,
+                2499
+            ],
+            "filename": "swig.js",
+            "lineno": 52,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000058",
+                "name": "cache",
+                "type": "Literal",
+                "value": "memory"
+            }
+        },
+        "undocumented": true,
+        "name": "cache",
+        "longname": "defaultOptions.cache",
+        "kind": "member",
+        "memberof": "defaultOptions",
+        "scope": "static"
+    },
+    {
+        "comment": "/**\n     * Configure Swig to use either the <var>swig.loaders.fs</var> or <var>swig.loaders.memory</var> template loader. Or, you can write your own!\n     * For more information, please see the <a href=\"../loaders/\">Template Loaders documentation</a>.\n     * @typedef {class} TemplateLoader\n     * @example\n     * // Default, FileSystem loader\n     * swig.setDefaults({ loader: swig.loaders.fs() });\n     * @example\n     * // FileSystem loader allowing a base path\n     * // With this, you don't use relative URLs in your template references\n     * swig.setDefaults({ loader: swig.loaders.fs(__dirname + '/templates') });\n     * @example\n     * // Memory Loader\n     * swig.setDefaults({ loader: swig.loaders.memory({\n     *   layout: '{% block foo %}{% endblock %}',\n     *   page1: '{% extends \"layout\" %}{% block foo %}Tacos!{% endblock %}'\n     * })});\n     */",
+        "meta": {
+            "range": [
+                2505,
+                3369
+            ],
+            "filename": "swig.js",
+            "lineno": 53,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {}
+        },
+        "description": "Configure Swig to use either the <var>swig.loaders.fs</var> or <var>swig.loaders.memory</var> template loader. Or, you can write your own!\nFor more information, please see the <a href=\"../loaders/\">Template Loaders documentation</a>.",
+        "kind": "typedef",
+        "name": "TemplateLoader",
+        "type": {
+            "names": [
+                "class"
+            ]
+        },
+        "examples": [
+            "// Default, FileSystem loader\nswig.setDefaults({ loader: swig.loaders.fs() });",
+            "// FileSystem loader allowing a base path\n// With this, you don't use relative URLs in your template references\nswig.setDefaults({ loader: swig.loaders.fs(__dirname + '/templates') });",
+            "// Memory Loader\nswig.setDefaults({ loader: swig.loaders.memory({\n  layout: '{% block foo %}{% endblock %}',\n  page1: '{% extends \"layout\" %}{% block foo %}Tacos!{% endblock %}'\n})});"
+        ],
+        "longname": "TemplateLoader",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                3374,
+                3394
+            ],
+            "filename": "swig.js",
+            "lineno": 71,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000060",
+                "name": "loader",
+                "type": "CallExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "loader",
+        "longname": "defaultOptions.loader",
+        "kind": "member",
+        "memberof": "defaultOptions",
+        "scope": "static"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                3402,
+                3417
+            ],
+            "filename": "swig.js",
+            "lineno": 73,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000065",
+                "name": "defaultInstance"
+            }
+        },
+        "undocumented": true,
+        "name": "defaultInstance",
+        "longname": "defaultInstance",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "/**\n * Empty function, used in templates.\n * @return {string} Empty string\n * @private\n */",
+        "meta": {
+            "range": [
+                3511,
+                3540
+            ],
+            "filename": "swig.js",
+            "lineno": 80,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000067",
+                "name": "efn",
+                "type": "FunctionDeclaration",
+                "paramnames": []
+            }
+        },
+        "description": "Empty function, used in templates.",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "description": "Empty string"
+            }
+        ],
+        "access": "private",
+        "name": "efn",
+        "longname": "efn",
+        "kind": "function",
+        "scope": "global",
+        "params": []
+    },
+    {
+        "comment": "/**\n * Validate the Swig options object.\n * @param  {?SwigOpts} options Swig options object.\n * @return {undefined}      This method will throw errors if anything is wrong.\n * @private\n */",
+        "meta": {
+            "range": [
+                3731,
+                5192
+            ],
+            "filename": "swig.js",
+            "lineno": 88,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000072",
+                "name": "validateOptions",
+                "type": "FunctionDeclaration",
+                "paramnames": [
+                    "options"
+                ]
+            },
+            "vars": {
+                "": null
+            }
+        },
+        "description": "Validate the Swig options object.",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "SwigOpts"
+                    ]
+                },
+                "nullable": true,
+                "description": "Swig options object.",
+                "name": "options"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "undefined"
+                    ]
+                },
+                "description": "This method will throw errors if anything is wrong."
+            }
+        ],
+        "access": "private",
+        "name": "validateOptions",
+        "longname": "validateOptions",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "/**\n * Set defaults for the base and all new Swig environments.\n *\n * @example\n * swig.setDefaults({ cache: false });\n * // => Disables Cache\n *\n * @example\n * swig.setDefaults({ locals: { now: function () { return new Date(); } }});\n * // => sets a globally accessible method for all template\n * //    contexts, allowing you to print the current date\n * // => {{ now()|date('F jS, Y') }}\n *\n * @param  {SwigOpts} [options={}] Swig options object.\n * @return {undefined}\n */",
+        "meta": {
+            "range": [
+                5669,
+                5817
+            ],
+            "filename": "swig.js",
+            "lineno": 143,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000276",
+                "name": "exports.setDefaults",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "options"
+                ]
+            },
+            "vars": {
+                "defaultInstance.options": "defaultInstance.options"
+            }
+        },
+        "description": "Set defaults for the base and all new Swig environments.",
+        "examples": [
+            "swig.setDefaults({ cache: false });\n// => Disables Cache",
+            "swig.setDefaults({ locals: { now: function () { return new Date(); } }});\n// => sets a globally accessible method for all template\n//    contexts, allowing you to print the current date\n// => {{ now()|date('F jS, Y') }}"
+        ],
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "SwigOpts"
+                    ]
+                },
+                "optional": true,
+                "defaultvalue": "{}",
+                "description": "Swig options object.",
+                "name": "options"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "undefined"
+                    ]
+                }
+            }
+        ],
+        "name": "setDefaults",
+        "longname": "setDefaults",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                5742,
+                5814
+            ],
+            "filename": "swig.js",
+            "lineno": 145,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000288",
+                "name": "defaultInstance.options",
+                "type": "CallExpression",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "options",
+        "longname": "defaultInstance.options",
+        "kind": "member",
+        "memberof": "defaultInstance",
+        "scope": "static"
+    },
+    {
+        "comment": "/**\n * Set the default TimeZone offset for date formatting via the date filter. This is a global setting and will affect all Swig environments, old or new.\n * @param  {number} offset Offset from GMT, in minutes.\n * @return {undefined}\n */",
+        "meta": {
+            "range": [
+                6059,
+                6144
+            ],
+            "filename": "swig.js",
+            "lineno": 153,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000301",
+                "name": "exports.setDefaultTZOffset",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "offset"
+                ]
+            },
+            "vars": {
+                "dateformatter.tzOffset": "dateformatter.tzOffset"
+            }
+        },
+        "description": "Set the default TimeZone offset for date formatting via the date filter. This is a global setting and will affect all Swig environments, old or new.",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "Offset from GMT, in minutes.",
+                "name": "offset"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "undefined"
+                    ]
+                }
+            }
+        ],
+        "name": "setDefaultTZOffset",
+        "longname": "setDefaultTZOffset",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                6110,
+                6141
+            ],
+            "filename": "swig.js",
+            "lineno": 154,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000309",
+                "name": "dateformatter.tzOffset",
+                "type": "Identifier",
+                "value": "offset",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "tzOffset",
+        "longname": "dateformatter.tzOffset",
+        "kind": "member",
+        "memberof": "dateformatter",
+        "scope": "static"
+    },
+    {
+        "comment": "/**\n * Create a new, separate Swig compile/render environment.\n *\n * @example\n * var swig = require('swig');\n * var myswig = new swig.Swig({varControls: ['<%=', '%>']});\n * myswig.render('Tacos are <%= tacos =>!', { locals: { tacos: 'delicious' }});\n * // => Tacos are delicious!\n * swig.render('Tacos are <%= tacos =>!', { locals: { tacos: 'delicious' }});\n * // => 'Tacos are <%= tacos =>!'\n *\n * @param  {SwigOpts} [opts={}] Swig options object.\n * @return {object}      New Swig environment.\n */",
+        "meta": {
+            "range": [
+                6647,
+                23478
+            ],
+            "filename": "swig.js",
+            "lineno": 171,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000315",
+                "name": "exports.Swig",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "opts"
+                ]
+            },
+            "vars": {
+                "this.options": null,
+                "this.cache": null,
+                "this.extensions": null,
+                "self": "Swig~self",
+                "tags": "Swig~tags",
+                "filters": "Swig~filters",
+                "getLocals": "Swig~getLocals",
+                "shouldCache": "Swig~shouldCache",
+                "cacheGet": "Swig~cacheGet",
+                "cacheSet": "Swig~cacheSet",
+                "this.invalidateCache": null,
+                "": null,
+                "this.setFilter": null,
+                "this.setTag": null,
+                "this.setExtension": null,
+                "this.parse": null,
+                "this.parseFile": null,
+                "remapBlocks": "Swig~remapBlocks",
+                "importNonBlocks": "Swig~importNonBlocks",
+                "getParents": "Swig~getParents",
+                "this.precompile": null,
+                "this.render": null,
+                "this.renderFile": null,
+                "this.compile": null,
+                "this.compileFile": null,
+                "this.run": null
+            }
+        },
+        "description": "Create a new, separate Swig compile/render environment.",
+        "examples": [
+            "var swig = require('swig');\nvar myswig = new swig.Swig({varControls: ['<%=', '%>']});\nmyswig.render('Tacos are <%= tacos =>!', { locals: { tacos: 'delicious' }});\n// => Tacos are delicious!\nswig.render('Tacos are <%= tacos =>!', { locals: { tacos: 'delicious' }});\n// => 'Tacos are <%= tacos =>!'"
+        ],
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "SwigOpts"
+                    ]
+                },
+                "optional": true,
+                "defaultvalue": "{}",
+                "description": "Swig options object.",
+                "name": "opts"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                },
+                "description": "New Swig environment."
+            }
+        ],
+        "name": "Swig",
+        "longname": "Swig",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                6707,
+                6766
+            ],
+            "filename": "swig.js",
+            "lineno": 173,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000327",
+                "name": "this.options",
+                "type": "CallExpression",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "options",
+        "longname": "options",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                6770,
+                6785
+            ],
+            "filename": "swig.js",
+            "lineno": 174,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000341",
+                "name": "this.cache",
+                "type": "ObjectExpression",
+                "value": "{}",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "cache",
+        "longname": "cache",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                6789,
+                6809
+            ],
+            "filename": "swig.js",
+            "lineno": 175,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000347",
+                "name": "this.extensions",
+                "type": "ObjectExpression",
+                "value": "{}",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "extensions",
+        "longname": "extensions",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                6817,
+                6828
+            ],
+            "filename": "swig.js",
+            "lineno": 176,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000353",
+                "name": "self",
+                "type": "ThisExpression",
+                "value": "this"
+            }
+        },
+        "undocumented": true,
+        "name": "self",
+        "longname": "Swig~self",
+        "kind": "member",
+        "memberof": "Swig",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                6834,
+                6846
+            ],
+            "filename": "swig.js",
+            "lineno": 177,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000356",
+                "name": "tags",
+                "type": "Identifier",
+                "value": "_tags"
+            }
+        },
+        "undocumented": true,
+        "name": "tags",
+        "longname": "Swig~tags",
+        "kind": "member",
+        "memberof": "Swig",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                6852,
+                6870
+            ],
+            "filename": "swig.js",
+            "lineno": 178,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000359",
+                "name": "filters",
+                "type": "Identifier",
+                "value": "_filters"
+            }
+        },
+        "undocumented": true,
+        "name": "filters",
+        "longname": "Swig~filters",
+        "kind": "member",
+        "memberof": "Swig",
+        "scope": "inner"
+    },
+    {
+        "comment": "/**\n   * Get combined locals context.\n   * @param  {?SwigOpts} [options] Swig options object.\n   * @return {object}         Locals context.\n   * @private\n   */",
+        "meta": {
+            "range": [
+                7037,
+                7216
+            ],
+            "filename": "swig.js",
+            "lineno": 186,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000362",
+                "name": "getLocals",
+                "type": "FunctionDeclaration",
+                "paramnames": [
+                    "options"
+                ]
+            }
+        },
+        "description": "Get combined locals context.",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "SwigOpts"
+                    ]
+                },
+                "optional": true,
+                "nullable": true,
+                "description": "Swig options object.",
+                "name": "options"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                },
+                "description": "Locals context."
+            }
+        ],
+        "access": "private",
+        "name": "getLocals",
+        "longname": "Swig~getLocals",
+        "kind": "function",
+        "memberof": "Swig",
+        "scope": "inner"
+    },
+    {
+        "comment": "/**\n   * Determine whether caching is enabled via the options provided and/or defaults\n   * @param  {SwigOpts} [options={}] Swig Options Object\n   * @return {boolean}\n   * @private\n   */",
+        "meta": {
+            "range": [
+                7409,
+                7560
+            ],
+            "filename": "swig.js",
+            "lineno": 200,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000395",
+                "name": "shouldCache",
+                "type": "FunctionDeclaration",
+                "paramnames": [
+                    "options"
+                ]
+            },
+            "vars": {
+                "options": "Swig~shouldCache~options"
+            }
+        },
+        "description": "Determine whether caching is enabled via the options provided and/or defaults",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "SwigOpts"
+                    ]
+                },
+                "optional": true,
+                "defaultvalue": "{}",
+                "description": "Swig Options Object",
+                "name": "options"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                }
+            }
+        ],
+        "access": "private",
+        "name": "shouldCache",
+        "longname": "Swig~shouldCache",
+        "kind": "function",
+        "memberof": "Swig",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                7445,
+                7468
+            ],
+            "filename": "swig.js",
+            "lineno": 201,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000400",
+                "name": "options",
+                "type": "LogicalExpression",
+                "funcscope": "Swig~shouldCache",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "options",
+        "longname": "Swig~shouldCache~options",
+        "kind": "member",
+        "memberof": "Swig~shouldCache",
+        "scope": "inner"
+    },
+    {
+        "comment": "/**\n   * Get compiled template from the cache.\n   * @param  {string} key           Name of template.\n   * @return {object|undefined}     Template function and tokens.\n   * @private\n   */",
+        "meta": {
+            "range": [
+                7753,
+                7963
+            ],
+            "filename": "swig.js",
+            "lineno": 211,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000423",
+                "name": "cacheGet",
+                "type": "FunctionDeclaration",
+                "paramnames": [
+                    "key",
+                    "options"
+                ]
+            }
+        },
+        "description": "Get compiled template from the cache.",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "description": "Name of template.",
+                "name": "key"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "object",
+                        "undefined"
+                    ]
+                },
+                "description": "Template function and tokens."
+            }
+        ],
+        "access": "private",
+        "name": "cacheGet",
+        "longname": "Swig~cacheGet",
+        "kind": "function",
+        "memberof": "Swig",
+        "scope": "inner"
+    },
+    {
+        "comment": "/**\n   * Store a template in the cache.\n   * @param  {string} key Name of template.\n   * @param  {object} val Template function and tokens.\n   * @return {undefined}\n   * @private\n   */",
+        "meta": {
+            "range": [
+                8154,
+                8380
+            ],
+            "filename": "swig.js",
+            "lineno": 230,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000459",
+                "name": "cacheSet",
+                "type": "FunctionDeclaration",
+                "paramnames": [
+                    "key",
+                    "options",
+                    "val"
+                ]
+            },
+            "vars": {
+                "self.cache[undefined]": "Swig~self.cache[undefined]"
+            }
+        },
+        "description": "Store a template in the cache.",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "description": "Name of template.",
+                "name": "key"
+            },
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                },
+                "description": "Template function and tokens.",
+                "name": "val"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "undefined"
+                    ]
+                }
+            }
+        ],
+        "access": "private",
+        "name": "cacheSet",
+        "longname": "Swig~cacheSet",
+        "kind": "function",
+        "memberof": "Swig",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                8295,
+                8316
+            ],
+            "filename": "swig.js",
+            "lineno": 236,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000481",
+                "name": "self.cache[undefined]",
+                "type": "Identifier",
+                "value": "val",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "cache[undefined]",
+        "longname": "Swig~self.cache[undefined]",
+        "kind": "member",
+        "memberof": "Swig~self",
+        "scope": "static"
+    },
+    {
+        "comment": "/**\n   * Clears the in-memory template cache.\n   *\n   * @example\n   * swig.invalidateCache();\n   *\n   * @return {undefined}\n   */",
+        "meta": {
+            "range": [
+                8516,
+                8628
+            ],
+            "filename": "swig.js",
+            "lineno": 251,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000501",
+                "name": "this.invalidateCache",
+                "type": "FunctionExpression",
+                "paramnames": []
+            },
+            "vars": {
+                "self.cache": "Swig~self.cache"
+            }
+        },
+        "description": "Clears the in-memory template cache.",
+        "examples": [
+            "swig.invalidateCache();"
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "undefined"
+                    ]
+                }
+            }
+        ],
+        "name": "invalidateCache",
+        "longname": "invalidateCache",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                8602,
+                8617
+            ],
+            "filename": "swig.js",
+            "lineno": 253,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000517",
+                "name": "self.cache",
+                "type": "ObjectExpression",
+                "funcscope": "Swig",
+                "value": "{}",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "cache",
+        "longname": "Swig~self.cache",
+        "kind": "member",
+        "memberof": "Swig~self",
+        "scope": "static"
+    },
+    {
+        "comment": "/**\n   * Add a custom filter for swig variables.\n   *\n   * @example\n   * function replaceMs(input) { return input.replace(/m/g, 'f'); }\n   * swig.setFilter('replaceMs', replaceMs);\n   * // => {{ \"onomatopoeia\"|replaceMs }}\n   * // => onofatopeia\n   *\n   * @param {string}    name    Name of filter, used in templates. <strong>Will</strong> overwrite previously defined filters, if using the same name.\n   * @param {function}  method  Function that acts against the input. See <a href=\"/docs/filters/#custom\">Custom Filters</a> for more information.\n   * @return {undefined}\n   */",
+        "meta": {
+            "range": [
+                9215,
+                9408
+            ],
+            "filename": "swig.js",
+            "lineno": 270,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000523",
+                "name": "this.setFilter",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "name",
+                    "method"
+                ]
+            },
+            "vars": {
+                "filters[undefined]": "Swig~filters.undefined]"
+            }
+        },
+        "description": "Add a custom filter for swig variables.",
+        "examples": [
+            "function replaceMs(input) { return input.replace(/m/g, 'f'); }\nswig.setFilter('replaceMs', replaceMs);\n// => {{ \"onomatopoeia\"|replaceMs }}\n// => onofatopeia"
+        ],
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "description": "Name of filter, used in templates. <strong>Will</strong> overwrite previously defined filters, if using the same name.",
+                "name": "name"
+            },
+            {
+                "type": {
+                    "names": [
+                        "function"
+                    ]
+                },
+                "description": "Function that acts against the input. See <a href=\"/docs/filters/#custom\">Custom Filters</a> for more information.",
+                "name": "method"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "undefined"
+                    ]
+                }
+            }
+        ],
+        "name": "setFilter",
+        "longname": "setFilter",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                9381,
+                9403
+            ],
+            "filename": "swig.js",
+            "lineno": 274,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000546",
+                "name": "filters[undefined]",
+                "type": "Identifier",
+                "funcscope": "Swig",
+                "value": "method",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "undefined]",
+        "longname": "Swig~filters.undefined]",
+        "kind": "member",
+        "memberof": "Swig~filters",
+        "scope": "static"
+    },
+    {
+        "comment": "/**\n   * Add a custom tag. To expose your own extensions to compiled template code, see <code data-language=\"js\">swig.setExtension</code>.\n   *\n   * For a more in-depth explanation of writing custom tags, see <a href=\"../extending/#tags\">Custom Tags</a>.\n   *\n   * @example\n   * var tacotag = require('./tacotag');\n   * swig.setTag('tacos', tacotag.parse, tacotag.compile, tacotag.ends, tacotag.blockLevel);\n   * // => {% tacos %}Make this be tacos.{% endtacos %}\n   * // => Tacos tacos tacos tacos.\n   *\n   * @param  {string} name      Tag name.\n   * @param  {function} parse   Method for parsing tokens.\n   * @param  {function} compile Method for compiling renderable output.\n   * @param  {boolean} [ends=false]     Whether or not this tag requires an <i>end</i> tag.\n   * @param  {boolean} [blockLevel=false] If false, this tag will not be compiled outside of <code>block</code> tags when extending a parent template.\n   * @return {undefined}\n   */",
+        "meta": {
+            "range": [
+                10367,
+                10821
+            ],
+            "filename": "swig.js",
+            "lineno": 295,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000552",
+                "name": "this.setTag",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "name",
+                    "parse",
+                    "compile",
+                    "ends",
+                    "blockLevel"
+                ]
+            },
+            "vars": {
+                "tags[undefined]": "Swig~tags.undefined]"
+            }
+        },
+        "description": "Add a custom tag. To expose your own extensions to compiled template code, see <code data-language=\"js\">swig.setExtension</code>.\n\nFor a more in-depth explanation of writing custom tags, see <a href=\"../extending/#tags\">Custom Tags</a>.",
+        "examples": [
+            "var tacotag = require('./tacotag');\nswig.setTag('tacos', tacotag.parse, tacotag.compile, tacotag.ends, tacotag.blockLevel);\n// => {% tacos %}Make this be tacos.{% endtacos %}\n// => Tacos tacos tacos tacos."
+        ],
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "description": "Tag name.",
+                "name": "name"
+            },
+            {
+                "type": {
+                    "names": [
+                        "function"
+                    ]
+                },
+                "description": "Method for parsing tokens.",
+                "name": "parse"
+            },
+            {
+                "type": {
+                    "names": [
+                        "function"
+                    ]
+                },
+                "description": "Method for compiling renderable output.",
+                "name": "compile"
+            },
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "optional": true,
+                "defaultvalue": false,
+                "description": "Whether or not this tag requires an <i>end</i> tag.",
+                "name": "ends"
+            },
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "optional": true,
+                "defaultvalue": false,
+                "description": "If false, this tag will not be compiled outside of <code>block</code> tags when extending a parent template.",
+                "name": "blockLevel"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "undefined"
+                    ]
+                }
+            }
+        ],
+        "name": "setTag",
+        "longname": "setTag",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                10699,
+                10816
+            ],
+            "filename": "swig.js",
+            "lineno": 304,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000592",
+                "name": "tags[undefined]",
+                "type": "ObjectExpression",
+                "funcscope": "Swig",
+                "value": "{\"parse\":\"\",\"compile\":\"\",\"ends\":\"\",\"block\":\"\"}",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "undefined]",
+        "longname": "Swig~tags.undefined]",
+        "kind": "member",
+        "memberof": "Swig~tags",
+        "scope": "static"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                10720,
+                10732
+            ],
+            "filename": "swig.js",
+            "lineno": 305,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000597",
+                "name": "parse",
+                "type": "Identifier",
+                "value": "parse"
+            }
+        },
+        "undocumented": true,
+        "name": "parse",
+        "longname": "Swig~tags.undefined].parse",
+        "kind": "member",
+        "memberof": "Swig~tags.undefined]",
+        "scope": "static"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                10740,
+                10756
+            ],
+            "filename": "swig.js",
+            "lineno": 306,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000599",
+                "name": "compile",
+                "type": "Identifier",
+                "value": "compile"
+            }
+        },
+        "undocumented": true,
+        "name": "compile",
+        "longname": "Swig~tags.undefined].compile",
+        "kind": "member",
+        "memberof": "Swig~tags.undefined]",
+        "scope": "static"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                10764,
+                10783
+            ],
+            "filename": "swig.js",
+            "lineno": 307,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000601",
+                "name": "ends",
+                "type": "LogicalExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "ends",
+        "longname": "Swig~tags.undefined].ends",
+        "kind": "member",
+        "memberof": "Swig~tags.undefined]",
+        "scope": "static"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                10791,
+                10810
+            ],
+            "filename": "swig.js",
+            "lineno": 308,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000605",
+                "name": "block",
+                "type": "UnaryExpression",
+                "value": "!!blockLevel"
+            }
+        },
+        "undocumented": true,
+        "name": "block",
+        "longname": "Swig~tags.undefined].block",
+        "kind": "member",
+        "memberof": "Swig~tags.undefined]",
+        "scope": "static"
+    },
+    {
+        "comment": "/**\n   * Add extensions for custom tags. This allows any custom tag to access a globally available methods via a special globally available object, <var>_ext</var>, in templates.\n   *\n   * @example\n   * swig.setExtension('trans', function (v) { return translate(v); });\n   * function compileTrans(compiler, args, content, parent, options) {\n   *   return '_output += _ext.trans(' + args[0] + ');'\n   * };\n   * swig.setTag('trans', parseTrans, compileTrans, true);\n   *\n   * @param  {string} name   Key name of the extension. Accessed via <code data-language=\"js\">_ext[name]</code>.\n   * @param  {*}      object The method, value, or object that should be available via the given name.\n   * @return {undefined}\n   */",
+        "meta": {
+            "range": [
+                11544,
+                11629
+            ],
+            "filename": "swig.js",
+            "lineno": 326,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000610",
+                "name": "this.setExtension",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "name",
+                    "object"
+                ]
+            },
+            "vars": {
+                "self.extensions[undefined]": "Swig~self.extensions[undefined]"
+            }
+        },
+        "description": "Add extensions for custom tags. This allows any custom tag to access a globally available methods via a special globally available object, <var>_ext</var>, in templates.",
+        "examples": [
+            "swig.setExtension('trans', function (v) { return translate(v); });\nfunction compileTrans(compiler, args, content, parent, options) {\n  return '_output += _ext.trans(' + args[0] + ');'\n};\nswig.setTag('trans', parseTrans, compileTrans, true);"
+        ],
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "description": "Key name of the extension. Accessed via <code data-language=\"js\">_ext[name]</code>.",
+                "name": "name"
+            },
+            {
+                "type": {
+                    "names": [
+                        "*"
+                    ]
+                },
+                "description": "The method, value, or object that should be available via the given name.",
+                "name": "object"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "undefined"
+                    ]
+                }
+            }
+        ],
+        "name": "setExtension",
+        "longname": "setExtension",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                11594,
+                11624
+            ],
+            "filename": "swig.js",
+            "lineno": 327,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000619",
+                "name": "self.extensions[undefined]",
+                "type": "Identifier",
+                "funcscope": "Swig",
+                "value": "object",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "extensions[undefined]",
+        "longname": "Swig~self.extensions[undefined]",
+        "kind": "member",
+        "memberof": "Swig~self",
+        "scope": "static"
+    },
+    {
+        "comment": "/**\n   * Parse a given source string into tokens.\n   *\n   * @param  {string} source  Swig template source.\n   * @param  {SwigOpts} [options={}] Swig options object.\n   * @return {object} parsed  Template tokens object.\n   * @private\n   */",
+        "meta": {
+            "range": [
+                11875,
+                12284
+            ],
+            "filename": "swig.js",
+            "lineno": 338,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000627",
+                "name": "this.parse",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "source",
+                    "options"
+                ]
+            },
+            "vars": {
+                "locals": "parse~locals",
+                "opt": "parse~opt",
+                "k": "parse~k",
+                "opt[undefined]": "parse~opt.undefined]",
+                "options": "parse~options",
+                "options.locals": "parse~options.locals"
+            }
+        },
+        "description": "Parse a given source string into tokens.",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "description": "Swig template source.",
+                "name": "source"
+            },
+            {
+                "type": {
+                    "names": [
+                        "SwigOpts"
+                    ]
+                },
+                "optional": true,
+                "defaultvalue": "{}",
+                "description": "Swig options object.",
+                "name": "options"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                },
+                "description": "parsed  Template tokens object."
+            }
+        ],
+        "access": "private",
+        "name": "parse",
+        "longname": "parse",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                11956,
+                11983
+            ],
+            "filename": "swig.js",
+            "lineno": 341,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000640",
+                "name": "locals",
+                "type": "CallExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "locals",
+        "longname": "parse~locals",
+        "kind": "member",
+        "memberof": "parse",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                11991,
+                11999
+            ],
+            "filename": "swig.js",
+            "lineno": 342,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000645",
+                "name": "opt",
+                "type": "ObjectExpression",
+                "value": "{}"
+            }
+        },
+        "undocumented": true,
+        "name": "opt",
+        "longname": "parse~opt",
+        "kind": "member",
+        "memberof": "parse",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                12007,
+                12008
+            ],
+            "filename": "swig.js",
+            "lineno": 343,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000648",
+                "name": "k"
+            }
+        },
+        "undocumented": true,
+        "name": "k",
+        "longname": "parse~k",
+        "kind": "member",
+        "memberof": "parse",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                12101,
+                12120
+            ],
+            "filename": "swig.js",
+            "lineno": 347,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000666",
+                "name": "opt[undefined]",
+                "type": "MemberExpression",
+                "funcscope": "parse",
+                "value": "options[undefined]",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "undefined]",
+        "longname": "parse~opt.undefined]",
+        "kind": "member",
+        "memberof": "parse~opt",
+        "scope": "static"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                12141,
+                12186
+            ],
+            "filename": "swig.js",
+            "lineno": 351,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000674",
+                "name": "options",
+                "type": "CallExpression",
+                "funcscope": "parse",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "options",
+        "longname": "parse~options",
+        "kind": "member",
+        "memberof": "parse",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                12192,
+                12215
+            ],
+            "filename": "swig.js",
+            "lineno": 352,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000686",
+                "name": "options.locals",
+                "type": "Identifier",
+                "funcscope": "parse",
+                "value": "locals",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "locals",
+        "longname": "parse~options.locals",
+        "kind": "member",
+        "memberof": "parse~options",
+        "scope": "static"
+    },
+    {
+        "comment": "/**\n   * Parse a given file into tokens.\n   *\n   * @param  {string} pathname  Full path to file to parse.\n   * @param  {SwigOpts} [options={}]   Swig options object.\n   * @return {object} parsed    Template tokens object.\n   * @private\n   */",
+        "meta": {
+            "range": [
+                12533,
+                12904
+            ],
+            "filename": "swig.js",
+            "lineno": 365,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000702",
+                "name": "this.parseFile",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "pathname",
+                    "options"
+                ]
+            },
+            "vars": {
+                "src": "parseFile~src",
+                "options": "parseFile~options",
+                "pathname": "parseFile~pathname"
+            }
+        },
+        "description": "Parse a given file into tokens.",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "description": "Full path to file to parse.",
+                "name": "pathname"
+            },
+            {
+                "type": {
+                    "names": [
+                        "SwigOpts"
+                    ]
+                },
+                "optional": true,
+                "defaultvalue": "{}",
+                "description": "Swig options object.",
+                "name": "options"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                },
+                "description": "parsed    Template tokens object."
+            }
+        ],
+        "access": "private",
+        "name": "parseFile",
+        "longname": "parseFile",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                12589,
+                12592
+            ],
+            "filename": "swig.js",
+            "lineno": 366,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000711",
+                "name": "src"
+            }
+        },
+        "undocumented": true,
+        "name": "src",
+        "longname": "parseFile~src",
+        "kind": "member",
+        "memberof": "parseFile",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                12621,
+                12633
+            ],
+            "filename": "swig.js",
+            "lineno": 369,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000718",
+                "name": "options",
+                "type": "ObjectExpression",
+                "funcscope": "parseFile",
+                "value": "{}",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "options",
+        "longname": "parseFile~options",
+        "kind": "member",
+        "memberof": "parseFile",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                12646,
+                12715
+            ],
+            "filename": "swig.js",
+            "lineno": 372,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000722",
+                "name": "pathname",
+                "type": "CallExpression",
+                "funcscope": "parseFile",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "pathname",
+        "longname": "parseFile~pathname",
+        "kind": "member",
+        "memberof": "parseFile",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                12722,
+                12762
+            ],
+            "filename": "swig.js",
+            "lineno": 374,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000737",
+                "name": "src",
+                "type": "CallExpression",
+                "funcscope": "parseFile",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "src",
+        "longname": "parseFile~src",
+        "kind": "member",
+        "memberof": "parseFile",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                12800,
+                12855
+            ],
+            "filename": "swig.js",
+            "lineno": 377,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000755",
+                "name": "options",
+                "type": "CallExpression",
+                "funcscope": "parseFile",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "options",
+        "longname": "parseFile~options",
+        "kind": "member",
+        "memberof": "parseFile",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                12825,
+                12843
+            ],
+            "filename": "swig.js",
+            "lineno": 377,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000762",
+                "name": "filename",
+                "type": "Identifier",
+                "value": "pathname"
+            }
+        },
+        "undocumented": true,
+        "name": "filename",
+        "longname": "filename",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "/**\n   * Re-Map blocks within a list of tokens to the template's block objects.\n   * @param  {array}  tokens   List of tokens for the parent object.\n   * @param  {object} template Current template that needs to be mapped to the  parent's block and token list.\n   * @return {array}\n   * @private\n   */",
+        "meta": {
+            "range": [
+                13212,
+                13595
+            ],
+            "filename": "swig.js",
+            "lineno": 390,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000772",
+                "name": "remapBlocks",
+                "type": "FunctionDeclaration",
+                "paramnames": [
+                    "blocks",
+                    "tokens"
+                ]
+            },
+            "vars": {
+                "": null
+            }
+        },
+        "description": "Re-Map blocks within a list of tokens to the template's block objects.",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "array"
+                    ]
+                },
+                "description": "List of tokens for the parent object.",
+                "name": "tokens"
+            },
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                },
+                "description": "Current template that needs to be mapped to the  parent's block and token list.",
+                "name": "template"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "array"
+                    ]
+                }
+            }
+        ],
+        "access": "private",
+        "name": "remapBlocks",
+        "longname": "Swig~remapBlocks",
+        "kind": "function",
+        "memberof": "Swig",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                13309,
+                13353
+            ],
+            "filename": "swig.js",
+            "lineno": 392,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000787",
+                "name": "args",
+                "type": "ConditionalExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "args",
+        "longname": "<anonymous>~args",
+        "kind": "member",
+        "memberof": "<anonymous>",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                13415,
+                13435
+            ],
+            "filename": "swig.js",
+            "lineno": 394,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000813",
+                "name": "token",
+                "type": "MemberExpression",
+                "funcscope": "<anonymous>",
+                "value": "blocks[undefined]",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "token",
+        "longname": "<anonymous>~token",
+        "kind": "member",
+        "memberof": "<anonymous>",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                13504,
+                13554
+            ],
+            "filename": "swig.js",
+            "lineno": 397,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000830",
+                "name": "token.content",
+                "type": "CallExpression",
+                "funcscope": "<anonymous>",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "content",
+        "longname": "<anonymous>~token.content",
+        "kind": "member",
+        "memberof": "<anonymous>~token",
+        "scope": "static"
+    },
+    {
+        "comment": "/**\n   * Import block-level tags to the token list that are not actual block tags.\n   * @param  {array} blocks List of block-level tags.\n   * @param  {array} tokens List of tokens to render.\n   * @return {undefined}\n   * @private\n   */",
+        "meta": {
+            "range": [
+                13837,
+                14099
+            ],
+            "filename": "swig.js",
+            "lineno": 410,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000842",
+                "name": "importNonBlocks",
+                "type": "FunctionDeclaration",
+                "paramnames": [
+                    "blocks",
+                    "tokens"
+                ]
+            },
+            "vars": {
+                "temp": "Swig~importNonBlocks~temp",
+                "": null
+            }
+        },
+        "description": "Import block-level tags to the token list that are not actual block tags.",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "array"
+                    ]
+                },
+                "description": "List of block-level tags.",
+                "name": "blocks"
+            },
+            {
+                "type": {
+                    "names": [
+                        "array"
+                    ]
+                },
+                "description": "List of tokens to render.",
+                "name": "tokens"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "undefined"
+                    ]
+                }
+            }
+        ],
+        "access": "private",
+        "name": "importNonBlocks",
+        "longname": "Swig~importNonBlocks",
+        "kind": "function",
+        "memberof": "Swig",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                13888,
+                13897
+            ],
+            "filename": "swig.js",
+            "lineno": 411,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000848",
+                "name": "temp",
+                "type": "ArrayExpression",
+                "value": "[]"
+            }
+        },
+        "undocumented": true,
+        "name": "temp",
+        "longname": "Swig~importNonBlocks~temp",
+        "kind": "member",
+        "memberof": "Swig~importNonBlocks",
+        "scope": "inner"
+    },
+    {
+        "comment": "/**\n   * Recursively compile and get parents of given parsed token object.\n   *\n   * @param  {object} tokens    Parsed tokens from template.\n   * @param  {SwigOpts} [options={}]   Swig options object.\n   * @return {object}           Parsed tokens from parent templates.\n   * @private\n   */",
+        "meta": {
+            "range": [
+                14395,
+                15622
+            ],
+            "filename": "swig.js",
+            "lineno": 428,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000891",
+                "name": "getParents",
+                "type": "FunctionDeclaration",
+                "paramnames": [
+                    "tokens",
+                    "options"
+                ]
+            },
+            "vars": {
+                "parentName": "Swig~getParents~parentName",
+                "parentFiles": "Swig~getParents~parentFiles",
+                "parents": "Swig~getParents~parents",
+                "parentFile": "Swig~getParents~parentFile",
+                "parent": "Swig~getParents~parent",
+                "l": "Swig~getParents~l",
+                "parents[undefined].tokens": "Swig~getParents~parents.undefined].tokens"
+            }
+        },
+        "description": "Recursively compile and get parents of given parsed token object.",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                },
+                "description": "Parsed tokens from template.",
+                "name": "tokens"
+            },
+            {
+                "type": {
+                    "names": [
+                        "SwigOpts"
+                    ]
+                },
+                "optional": true,
+                "defaultvalue": "{}",
+                "description": "Swig options object.",
+                "name": "options"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                },
+                "description": "Parsed tokens from parent templates."
+            }
+        ],
+        "access": "private",
+        "name": "getParents",
+        "longname": "Swig~getParents",
+        "kind": "function",
+        "memberof": "Swig",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                14442,
+                14468
+            ],
+            "filename": "swig.js",
+            "lineno": 429,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000897",
+                "name": "parentName",
+                "type": "MemberExpression",
+                "value": "tokens.parent"
+            }
+        },
+        "undocumented": true,
+        "name": "parentName",
+        "longname": "Swig~getParents~parentName",
+        "kind": "member",
+        "memberof": "Swig~getParents",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                14476,
+                14492
+            ],
+            "filename": "swig.js",
+            "lineno": 430,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000902",
+                "name": "parentFiles",
+                "type": "ArrayExpression",
+                "value": "[]"
+            }
+        },
+        "undocumented": true,
+        "name": "parentFiles",
+        "longname": "Swig~getParents~parentFiles",
+        "kind": "member",
+        "memberof": "Swig~getParents",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                14500,
+                14512
+            ],
+            "filename": "swig.js",
+            "lineno": 431,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000905",
+                "name": "parents",
+                "type": "ArrayExpression",
+                "value": "[]"
+            }
+        },
+        "undocumented": true,
+        "name": "parents",
+        "longname": "Swig~getParents~parents",
+        "kind": "member",
+        "memberof": "Swig~getParents",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                14520,
+                14530
+            ],
+            "filename": "swig.js",
+            "lineno": 432,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000908",
+                "name": "parentFile"
+            }
+        },
+        "undocumented": true,
+        "name": "parentFile",
+        "longname": "Swig~getParents~parentFile",
+        "kind": "member",
+        "memberof": "Swig~getParents",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                14538,
+                14544
+            ],
+            "filename": "swig.js",
+            "lineno": 433,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000910",
+                "name": "parent"
+            }
+        },
+        "undocumented": true,
+        "name": "parent",
+        "longname": "Swig~getParents~parent",
+        "kind": "member",
+        "memberof": "Swig~getParents",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                14552,
+                14553
+            ],
+            "filename": "swig.js",
+            "lineno": 434,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000912",
+                "name": "l"
+            }
+        },
+        "undocumented": true,
+        "name": "l",
+        "longname": "Swig~getParents~l",
+        "kind": "member",
+        "memberof": "Swig~getParents",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                14744,
+                14787
+            ],
+            "filename": "swig.js",
+            "lineno": 441,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000935",
+                "name": "parentFile",
+                "type": "LogicalExpression",
+                "funcscope": "Swig~getParents",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "parentFile",
+        "longname": "Swig~getParents~parentFile",
+        "kind": "member",
+        "memberof": "Swig~getParents",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                14795,
+                14859
+            ],
+            "filename": "swig.js",
+            "lineno": 442,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000943",
+                "name": "parentFile",
+                "type": "CallExpression",
+                "funcscope": "Swig~getParents",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "parentFile",
+        "longname": "Swig~getParents~parentFile",
+        "kind": "member",
+        "memberof": "Swig~getParents",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                14867,
+                14988
+            ],
+            "filename": "swig.js",
+            "lineno": 443,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000956",
+                "name": "parent",
+                "type": "LogicalExpression",
+                "funcscope": "Swig~getParents",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "parent",
+        "longname": "Swig~getParents~parent",
+        "kind": "member",
+        "memberof": "Swig~getParents",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                14964,
+                14984
+            ],
+            "filename": "swig.js",
+            "lineno": 443,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000975",
+                "name": "filename",
+                "type": "Identifier",
+                "value": "parentFile"
+            }
+        },
+        "undocumented": true,
+        "name": "filename",
+        "longname": "filename",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                14996,
+                15022
+            ],
+            "filename": "swig.js",
+            "lineno": 444,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100000978",
+                "name": "parentName",
+                "type": "MemberExpression",
+                "funcscope": "Swig~getParents",
+                "value": "parent.parent",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "parentName",
+        "longname": "Swig~getParents~parentName",
+        "kind": "member",
+        "memberof": "Swig~getParents",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                15379,
+                15397
+            ],
+            "filename": "swig.js",
+            "lineno": 455,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001014",
+                "name": "l",
+                "type": "MemberExpression",
+                "funcscope": "Swig~getParents",
+                "value": "parents.length",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "l",
+        "longname": "Swig~getParents~l",
+        "kind": "member",
+        "memberof": "Swig~getParents",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                15408,
+                15430
+            ],
+            "filename": "swig.js",
+            "lineno": 456,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001020",
+                "name": "l",
+                "type": "BinaryExpression",
+                "funcscope": "Swig~getParents",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "l",
+        "longname": "Swig~getParents~l",
+        "kind": "member",
+        "memberof": "Swig~getParents",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                15440,
+                15446
+            ],
+            "filename": "swig.js",
+            "lineno": 456,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001030",
+                "name": "l",
+                "type": "Literal",
+                "funcscope": "Swig~getParents",
+                "value": 1,
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "l",
+        "longname": "Swig~getParents~l",
+        "kind": "member",
+        "memberof": "Swig~getParents",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                15456,
+                15529
+            ],
+            "filename": "swig.js",
+            "lineno": 457,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001035",
+                "name": "parents[undefined].tokens",
+                "type": "CallExpression",
+                "funcscope": "Swig~getParents",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "undefined].tokens",
+        "longname": "Swig~getParents~parents.undefined].tokens",
+        "kind": "member",
+        "memberof": "Swig~getParents~parents",
+        "scope": "static"
+    },
+    {
+        "comment": "/**\n   * Pre-compile a source string into a cache-able template function.\n   *\n   * @example\n   * swig.precompile('{{ tacos }}');\n   * // => {\n   * //      tpl: function (_swig, _locals, _filters, _utils, _fn) { ... },\n   * //      tokens: {\n   * //        name: undefined,\n   * //        parent: null,\n   * //        tokens: [...],\n   * //        blocks: {}\n   * //      }\n   * //    }\n   *\n   * In order to render a pre-compiled template, you must have access to filters and utils from Swig. <var>efn</var> is simply an empty function that does nothing.\n   *\n   * @param  {string} source  Swig template source string.\n   * @param  {SwigOpts} [options={}] Swig options object.\n   * @return {object}         Renderable function and tokens object.\n   */",
+        "meta": {
+            "range": [
+                16381,
+                17144
+            ],
+            "filename": "swig.js",
+            "lineno": 485,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001071",
+                "name": "this.precompile",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "source",
+                    "options"
+                ]
+            },
+            "vars": {
+                "tokens": "precompile~tokens",
+                "parents": "precompile~parents",
+                "tpl": "precompile~tpl",
+                "tokens.tokens": "precompile~tokens.tokens"
+            }
+        },
+        "description": "Pre-compile a source string into a cache-able template function.",
+        "examples": [
+            "swig.precompile('{{ tacos }}');\n// => {\n//      tpl: function (_swig, _locals, _filters, _utils, _fn) { ... },\n//      tokens: {\n//        name: undefined,\n//        parent: null,\n//        tokens: [...],\n//        blocks: {}\n//      }\n//    }\n\nIn order to render a pre-compiled template, you must have access to filters and utils from Swig. <var>efn</var> is simply an empty function that does nothing."
+        ],
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "description": "Swig template source string.",
+                "name": "source"
+            },
+            {
+                "type": {
+                    "names": [
+                        "SwigOpts"
+                    ]
+                },
+                "optional": true,
+                "defaultvalue": "{}",
+                "description": "Swig options object.",
+                "name": "options"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                },
+                "description": "Renderable function and tokens object."
+            }
+        ],
+        "name": "precompile",
+        "longname": "precompile",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                16436,
+                16472
+            ],
+            "filename": "swig.js",
+            "lineno": 486,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001080",
+                "name": "tokens",
+                "type": "CallExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "tokens",
+        "longname": "precompile~tokens",
+        "kind": "member",
+        "memberof": "precompile",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                16480,
+                16517
+            ],
+            "filename": "swig.js",
+            "lineno": 487,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001088",
+                "name": "parents",
+                "type": "CallExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "parents",
+        "longname": "precompile~parents",
+        "kind": "member",
+        "memberof": "precompile",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                16525,
+                16528
+            ],
+            "filename": "swig.js",
+            "lineno": 488,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001094",
+                "name": "tpl"
+            }
+        },
+        "undocumented": true,
+        "name": "tpl",
+        "longname": "precompile~tpl",
+        "kind": "member",
+        "memberof": "precompile",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                16644,
+                16705
+            ],
+            "filename": "swig.js",
+            "lineno": 492,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001102",
+                "name": "tokens.tokens",
+                "type": "CallExpression",
+                "funcscope": "precompile",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "tokens",
+        "longname": "precompile~tokens.tokens",
+        "kind": "member",
+        "memberof": "precompile~tokens",
+        "scope": "static"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                16783,
+                17022
+            ],
+            "filename": "swig.js",
+            "lineno": 497,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001128",
+                "name": "tpl",
+                "type": "NewExpression",
+                "funcscope": "precompile",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "tpl",
+        "longname": "precompile~tpl",
+        "kind": "member",
+        "memberof": "precompile",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                17113,
+                17121
+            ],
+            "filename": "swig.js",
+            "lineno": 507,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001165",
+                "name": "tpl",
+                "type": "Identifier",
+                "value": "tpl"
+            }
+        },
+        "undocumented": true,
+        "name": "tpl",
+        "longname": "tpl",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                17123,
+                17137
+            ],
+            "filename": "swig.js",
+            "lineno": 507,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001167",
+                "name": "tokens",
+                "type": "Identifier",
+                "value": "tokens"
+            }
+        },
+        "undocumented": true,
+        "name": "tokens",
+        "longname": "tokens",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "/**\n   * Compile and render a template string for final output.\n   *\n   * When rendering a source string, a file path should be specified in the options object in order for <var>extends</var>, <var>include</var>, and <var>import</var> to work properly. Do this by adding <code data-language=\"js\">{ filename: '/absolute/path/to/mytpl.html' }</code> to the options argument.\n   *\n   * @example\n   * swig.render('{{ tacos }}', { locals: { tacos: 'Tacos!!!!' }});\n   * // => Tacos!!!!\n   *\n   * @param  {string} source    Swig template source string.\n   * @param  {SwigOpts} [options={}] Swig options object.\n   * @return {string}           Rendered output.\n   */",
+        "meta": {
+            "range": [
+                17811,
+                17901
+            ],
+            "filename": "swig.js",
+            "lineno": 523,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001170",
+                "name": "this.render",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "source",
+                    "options"
+                ]
+            }
+        },
+        "description": "Compile and render a template string for final output.\n\nWhen rendering a source string, a file path should be specified in the options object in order for <var>extends</var>, <var>include</var>, and <var>import</var> to work properly. Do this by adding <code data-language=\"js\">{ filename: '/absolute/path/to/mytpl.html' }</code> to the options argument.",
+        "examples": [
+            "swig.render('{{ tacos }}', { locals: { tacos: 'Tacos!!!!' }});\n// => Tacos!!!!"
+        ],
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "description": "Swig template source string.",
+                "name": "source"
+            },
+            {
+                "type": {
+                    "names": [
+                        "SwigOpts"
+                    ]
+                },
+                "optional": true,
+                "defaultvalue": "{}",
+                "description": "Swig options object.",
+                "name": "options"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "description": "Rendered output."
+            }
+        ],
+        "name": "render",
+        "longname": "render",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "/**\n   * Compile and render a template file for final output. This is most useful for libraries like Express.js.\n   *\n   * @example\n   * swig.renderFile('./template.html', {}, function (err, output) {\n   *   if (err) {\n   *     throw err;\n   *   }\n   *   console.log(output);\n   * });\n   *\n   * @example\n   * swig.renderFile('./template.html', {});\n   * // => output\n   *\n   * @param  {string}   pathName    File location.\n   * @param  {object}   [locals={}] Template variable context.\n   * @param  {Function} [cb] Asyncronous callback function. If not provided, <var>compileFile</var> will run syncronously.\n   * @return {string}             Rendered output.\n   */",
+        "meta": {
+            "range": [
+                18574,
+                19012
+            ],
+            "filename": "swig.js",
+            "lineno": 547,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001187",
+                "name": "this.renderFile",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "pathName",
+                    "locals",
+                    "cb"
+                ]
+            },
+            "vars": {
+                "": null
+            }
+        },
+        "description": "Compile and render a template file for final output. This is most useful for libraries like Express.js.",
+        "examples": [
+            "swig.renderFile('./template.html', {}, function (err, output) {\n  if (err) {\n    throw err;\n  }\n  console.log(output);\n});",
+            "swig.renderFile('./template.html', {});\n// => output"
+        ],
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "description": "File location.",
+                "name": "pathName"
+            },
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                },
+                "optional": true,
+                "defaultvalue": "{}",
+                "description": "Template variable context.",
+                "name": "locals"
+            },
+            {
+                "type": {
+                    "names": [
+                        "function"
+                    ]
+                },
+                "optional": true,
+                "description": "Asyncronous callback function. If not provided, <var>compileFile</var> will run syncronously.",
+                "name": "cb"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "description": "Rendered output."
+            }
+        ],
+        "name": "renderFile",
+        "longname": "renderFile",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                18710,
+                18716
+            ],
+            "filename": "swig.js",
+            "lineno": 550,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001211",
+                "name": "result"
+            }
+        },
+        "undocumented": true,
+        "name": "result",
+        "longname": "<anonymous>~result",
+        "kind": "member",
+        "memberof": "<anonymous>",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                18810,
+                18829
+            ],
+            "filename": "swig.js",
+            "lineno": 558,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001224",
+                "name": "result",
+                "type": "CallExpression",
+                "funcscope": "<anonymous>",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "result",
+        "longname": "<anonymous>~result",
+        "kind": "member",
+        "memberof": "<anonymous>",
+        "scope": "inner"
+    },
+    {
+        "comment": "/**\n   * Compile string source into a renderable template function.\n   *\n   * @example\n   * var tpl = swig.compile('{{ tacos }}');\n   * // => {\n   * //      [Function: compiled]\n   * //      parent: null,\n   * //      tokens: [{ compile: [Function] }],\n   * //      blocks: {}\n   * //    }\n   * tpl({ tacos: 'Tacos!!!!' });\n   * // => Tacos!!!!\n   *\n   * When compiling a source string, a file path should be specified in the options object in order for <var>extends</var>, <var>include</var>, and <var>import</var> to work properly. Do this by adding <code data-language=\"js\">{ filename: '/absolute/path/to/mytpl.html' }</code> to the options argument.\n   *\n   * @param  {string} source    Swig template source string.\n   * @param  {SwigOpts} [options={}] Swig options object.\n   * @return {function}         Renderable function with keys for parent, blocks, and tokens.\n   */",
+        "meta": {
+            "range": [
+                19897,
+                20766
+            ],
+            "filename": "swig.js",
+            "lineno": 592,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001250",
+                "name": "this.compile",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "source",
+                    "options"
+                ]
+            },
+            "vars": {
+                "key": "compile~key",
+                "cached": "compile~cached",
+                "context": "compile~context",
+                "contextLength": "compile~contextLength",
+                "pre": "compile~pre",
+                "compiled": "compile~compiled"
+            }
+        },
+        "description": "Compile string source into a renderable template function.",
+        "examples": [
+            "var tpl = swig.compile('{{ tacos }}');\n// => {\n//      [Function: compiled]\n//      parent: null,\n//      tokens: [{ compile: [Function] }],\n//      blocks: {}\n//    }\ntpl({ tacos: 'Tacos!!!!' });\n// => Tacos!!!!\n\nWhen compiling a source string, a file path should be specified in the options object in order for <var>extends</var>, <var>include</var>, and <var>import</var> to work properly. Do this by adding <code data-language=\"js\">{ filename: '/absolute/path/to/mytpl.html' }</code> to the options argument."
+        ],
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "description": "Swig template source string.",
+                "name": "source"
+            },
+            {
+                "type": {
+                    "names": [
+                        "SwigOpts"
+                    ]
+                },
+                "optional": true,
+                "defaultvalue": "{}",
+                "description": "Swig options object.",
+                "name": "options"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "function"
+                    ]
+                },
+                "description": "Renderable function with keys for parent, blocks, and tokens."
+            }
+        ],
+        "name": "compile",
+        "longname": "compile",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                19949,
+                19988
+            ],
+            "filename": "swig.js",
+            "lineno": 593,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001259",
+                "name": "key",
+                "type": "ConditionalExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "key",
+        "longname": "compile~key",
+        "kind": "member",
+        "memberof": "compile",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                19996,
+                20040
+            ],
+            "filename": "swig.js",
+            "lineno": 594,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001267",
+                "name": "cached",
+                "type": "ConditionalExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "cached",
+        "longname": "compile~cached",
+        "kind": "member",
+        "memberof": "compile",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                20048,
+                20055
+            ],
+            "filename": "swig.js",
+            "lineno": 595,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001276",
+                "name": "context"
+            }
+        },
+        "undocumented": true,
+        "name": "context",
+        "longname": "compile~context",
+        "kind": "member",
+        "memberof": "compile",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                20063,
+                20076
+            ],
+            "filename": "swig.js",
+            "lineno": 596,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001278",
+                "name": "contextLength"
+            }
+        },
+        "undocumented": true,
+        "name": "contextLength",
+        "longname": "compile~contextLength",
+        "kind": "member",
+        "memberof": "compile",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                20084,
+                20087
+            ],
+            "filename": "swig.js",
+            "lineno": 597,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001280",
+                "name": "pre"
+            }
+        },
+        "undocumented": true,
+        "name": "pre",
+        "longname": "compile~pre",
+        "kind": "member",
+        "memberof": "compile",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                20140,
+                20168
+            ],
+            "filename": "swig.js",
+            "lineno": 603,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001288",
+                "name": "context",
+                "type": "CallExpression",
+                "funcscope": "compile",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "context",
+        "longname": "compile~context",
+        "kind": "member",
+        "memberof": "compile",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                20174,
+                20216
+            ],
+            "filename": "swig.js",
+            "lineno": 604,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001294",
+                "name": "contextLength",
+                "type": "MemberExpression",
+                "funcscope": "compile",
+                "value": ".length",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "contextLength",
+        "longname": "compile~contextLength",
+        "kind": "member",
+        "memberof": "compile",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                20222,
+                20260
+            ],
+            "filename": "swig.js",
+            "lineno": 605,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001304",
+                "name": "pre",
+                "type": "CallExpression",
+                "funcscope": "compile",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "pre",
+        "longname": "compile~pre",
+        "kind": "member",
+        "memberof": "compile",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                20267,
+                20637
+            ],
+            "filename": "swig.js",
+            "lineno": 607,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001312",
+                "name": "compiled",
+                "type": "FunctionDeclaration",
+                "paramnames": [
+                    "locals"
+                ]
+            },
+            "vars": {
+                "lcls": "compile~compiled~lcls"
+            }
+        },
+        "undocumented": true,
+        "name": "compiled",
+        "longname": "compile~compiled",
+        "kind": "function",
+        "memberof": "compile",
+        "scope": "inner",
+        "params": []
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                20305,
+                20309
+            ],
+            "filename": "swig.js",
+            "lineno": 608,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001317",
+                "name": "lcls"
+            }
+        },
+        "undocumented": true,
+        "name": "lcls",
+        "longname": "compile~compiled~lcls",
+        "kind": "member",
+        "memberof": "compile~compiled",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                20356,
+                20396
+            ],
+            "filename": "swig.js",
+            "lineno": 610,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001325",
+                "name": "lcls",
+                "type": "CallExpression",
+                "funcscope": "compile~compiled",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "lcls",
+        "longname": "compile~compiled~lcls",
+        "kind": "member",
+        "memberof": "compile~compiled",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                20451,
+                20464
+            ],
+            "filename": "swig.js",
+            "lineno": 612,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001341",
+                "name": "lcls",
+                "type": "Identifier",
+                "funcscope": "compile~compiled",
+                "value": "locals",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "lcls",
+        "longname": "compile~compiled~lcls",
+        "kind": "member",
+        "memberof": "compile~compiled",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                20519,
+                20533
+            ],
+            "filename": "swig.js",
+            "lineno": 614,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001351",
+                "name": "lcls",
+                "type": "Identifier",
+                "funcscope": "compile~compiled",
+                "value": "context",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "lcls",
+        "longname": "compile~compiled~lcls",
+        "kind": "member",
+        "memberof": "compile~compiled",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                20558,
+                20567
+            ],
+            "filename": "swig.js",
+            "lineno": 616,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001356",
+                "name": "lcls",
+                "type": "ObjectExpression",
+                "funcscope": "compile~compiled",
+                "value": "{}",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "lcls",
+        "longname": "compile~compiled~lcls",
+        "kind": "member",
+        "memberof": "compile~compiled",
+        "scope": "inner"
+    },
+    {
+        "comment": "/**\n   * Compile a source file into a renderable template function.\n   *\n   * @example\n   * var tpl = swig.compileFile('./mytpl.html');\n   * // => {\n   * //      [Function: compiled]\n   * //      parent: null,\n   * //      tokens: [{ compile: [Function] }],\n   * //      blocks: {}\n   * //    }\n   * tpl({ tacos: 'Tacos!!!!' });\n   * // => Tacos!!!!\n   *\n   * @example\n   * swig.compileFile('/myfile.txt', { varControls: ['<%=', '=%>'], tagControls: ['<%', '%>']});\n   * // => will compile 'myfile.txt' using the var and tag controls as specified.\n   *\n   * @param  {string} pathname  File location.\n   * @param  {SwigOpts} [options={}] Swig options object.\n   * @param  {Function} [cb] Asyncronous callback function. If not provided, <var>compileFile</var> will run syncronously.\n   * @return {function}         Renderable function with keys for parent, blocks, and tokens.\n   */",
+        "meta": {
+            "range": [
+                21654,
+                22554
+            ],
+            "filename": "swig.js",
+            "lineno": 653,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001390",
+                "name": "this.compileFile",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "pathname",
+                    "options",
+                    "cb"
+                ]
+            },
+            "vars": {
+                "src": "compileFile~src",
+                "cached": "compileFile~cached",
+                "options": "compileFile~options",
+                "pathname": "compileFile~pathname",
+                "": null
+            }
+        },
+        "description": "Compile a source file into a renderable template function.",
+        "examples": [
+            "var tpl = swig.compileFile('./mytpl.html');\n// => {\n//      [Function: compiled]\n//      parent: null,\n//      tokens: [{ compile: [Function] }],\n//      blocks: {}\n//    }\ntpl({ tacos: 'Tacos!!!!' });\n// => Tacos!!!!",
+            "swig.compileFile('/myfile.txt', { varControls: ['<%=', '=%>'], tagControls: ['<%', '%>']});\n// => will compile 'myfile.txt' using the var and tag controls as specified."
+        ],
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "description": "File location.",
+                "name": "pathname"
+            },
+            {
+                "type": {
+                    "names": [
+                        "SwigOpts"
+                    ]
+                },
+                "optional": true,
+                "defaultvalue": "{}",
+                "description": "Swig options object.",
+                "name": "options"
+            },
+            {
+                "type": {
+                    "names": [
+                        "function"
+                    ]
+                },
+                "optional": true,
+                "description": "Asyncronous callback function. If not provided, <var>compileFile</var> will run syncronously.",
+                "name": "cb"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "function"
+                    ]
+                },
+                "description": "Renderable function with keys for parent, blocks, and tokens."
+            }
+        ],
+        "name": "compileFile",
+        "longname": "compileFile",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                21716,
+                21719
+            ],
+            "filename": "swig.js",
+            "lineno": 654,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001400",
+                "name": "src"
+            }
+        },
+        "undocumented": true,
+        "name": "src",
+        "longname": "compileFile~src",
+        "kind": "member",
+        "memberof": "compileFile",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                21721,
+                21727
+            ],
+            "filename": "swig.js",
+            "lineno": 654,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001402",
+                "name": "cached"
+            }
+        },
+        "undocumented": true,
+        "name": "cached",
+        "longname": "compileFile~cached",
+        "kind": "member",
+        "memberof": "compileFile",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                21756,
+                21768
+            ],
+            "filename": "swig.js",
+            "lineno": 657,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001409",
+                "name": "options",
+                "type": "ObjectExpression",
+                "funcscope": "compileFile",
+                "value": "{}",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "options",
+        "longname": "compileFile~options",
+        "kind": "member",
+        "memberof": "compileFile",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                21781,
+                21850
+            ],
+            "filename": "swig.js",
+            "lineno": 660,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001413",
+                "name": "pathname",
+                "type": "CallExpression",
+                "funcscope": "compileFile",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "pathname",
+        "longname": "compileFile~pathname",
+        "kind": "member",
+        "memberof": "compileFile",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                21887,
+                21942
+            ],
+            "filename": "swig.js",
+            "lineno": 662,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001434",
+                "name": "options",
+                "type": "CallExpression",
+                "funcscope": "compileFile",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "options",
+        "longname": "compileFile~options",
+        "kind": "member",
+        "memberof": "compileFile",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                21912,
+                21930
+            ],
+            "filename": "swig.js",
+            "lineno": 662,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001441",
+                "name": "filename",
+                "type": "Identifier",
+                "value": "pathname"
+            }
+        },
+        "undocumented": true,
+        "name": "filename",
+        "longname": "filename",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                21954,
+                21990
+            ],
+            "filename": "swig.js",
+            "lineno": 664,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001445",
+                "name": "cached",
+                "type": "CallExpression",
+                "funcscope": "compileFile",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "cached",
+        "longname": "compileFile~cached",
+        "kind": "member",
+        "memberof": "compileFile",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                22260,
+                22268
+            ],
+            "filename": "swig.js",
+            "lineno": 680,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001491",
+                "name": "compiled"
+            }
+        },
+        "undocumented": true,
+        "name": "compiled",
+        "longname": "<anonymous>~compiled",
+        "kind": "member",
+        "memberof": "<anonymous>",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                22295,
+                22332
+            ],
+            "filename": "swig.js",
+            "lineno": 683,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001496",
+                "name": "compiled",
+                "type": "CallExpression",
+                "funcscope": "<anonymous>",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "compiled",
+        "longname": "<anonymous>~compiled",
+        "kind": "member",
+        "memberof": "<anonymous>",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                22470,
+                22510
+            ],
+            "filename": "swig.js",
+            "lineno": 694,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001517",
+                "name": "src",
+                "type": "CallExpression",
+                "funcscope": "compileFile",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "src",
+        "longname": "compileFile~src",
+        "kind": "member",
+        "memberof": "compileFile",
+        "scope": "inner"
+    },
+    {
+        "comment": "/**\n   * Run a pre-compiled template function. This is most useful in the browser when you've pre-compiled your templates with the Swig command-line tool.\n   *\n   * @example\n   * $ swig compile ./mytpl.html --wrap-start=\"var mytpl = \" > mytpl.js\n   * @example\n   * <script src=\"mytpl.js\"></script>\n   * <script>\n   *   swig.run(mytpl, {});\n   *   // => \"rendered template...\"\n   * </script>\n   *\n   * @param  {function} tpl       Pre-compiled Swig template function. Use the Swig CLI to compile your templates.\n   * @param  {object} [locals={}] Template variable context.\n   * @param  {string} [filepath]  Filename used for caching the template.\n   * @return {string}             Rendered output.\n   */",
+        "meta": {
+            "range": [
+                23264,
+                23475
+            ],
+            "filename": "swig.js",
+            "lineno": 715,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001536",
+                "name": "this.run",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "tpl",
+                    "locals",
+                    "filepath"
+                ]
+            },
+            "vars": {
+                "context": "run~context"
+            }
+        },
+        "description": "Run a pre-compiled template function. This is most useful in the browser when you've pre-compiled your templates with the Swig command-line tool.",
+        "examples": [
+            "$ swig compile ./mytpl.html --wrap-start=\"var mytpl = \" > mytpl.js",
+            "<script src=\"mytpl.js\"></script>\n<script>\n  swig.run(mytpl, {});\n  // => \"rendered template...\"\n</script>"
+        ],
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "function"
+                    ]
+                },
+                "description": "Pre-compiled Swig template function. Use the Swig CLI to compile your templates.",
+                "name": "tpl"
+            },
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                },
+                "optional": true,
+                "defaultvalue": "{}",
+                "description": "Template variable context.",
+                "name": "locals"
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "optional": true,
+                "description": "Filename used for caching the template.",
+                "name": "filepath"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "description": "Rendered output."
+            }
+        ],
+        "name": "run",
+        "longname": "run",
+        "kind": "function",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                23318,
+                23357
+            ],
+            "filename": "swig.js",
+            "lineno": 716,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001546",
+                "name": "context",
+                "type": "CallExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "context",
+        "longname": "run~context",
+        "kind": "member",
+        "memberof": "run",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                23340,
+                23354
+            ],
+            "filename": "swig.js",
+            "lineno": 716,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001551",
+                "name": "locals",
+                "type": "Identifier",
+                "value": "locals"
+            }
+        },
+        "undocumented": true,
+        "name": "locals",
+        "longname": "locals",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                23516,
+                23552
+            ],
+            "filename": "swig.js",
+            "lineno": 727,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001571",
+                "name": "defaultInstance",
+                "type": "NewExpression",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "defaultInstance",
+        "longname": "defaultInstance",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                23554,
+                23599
+            ],
+            "filename": "swig.js",
+            "lineno": 728,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001578",
+                "name": "exports.setFilter",
+                "type": "MemberExpression",
+                "value": "defaultInstance.setFilter",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "setFilter",
+        "longname": "setFilter",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                23601,
+                23640
+            ],
+            "filename": "swig.js",
+            "lineno": 729,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001586",
+                "name": "exports.setTag",
+                "type": "MemberExpression",
+                "value": "defaultInstance.setTag",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "setTag",
+        "longname": "setTag",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                23642,
+                23693
+            ],
+            "filename": "swig.js",
+            "lineno": 730,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001594",
+                "name": "exports.setExtension",
+                "type": "MemberExpression",
+                "value": "defaultInstance.setExtension",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "setExtension",
+        "longname": "setExtension",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                23695,
+                23740
+            ],
+            "filename": "swig.js",
+            "lineno": 731,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001602",
+                "name": "exports.parseFile",
+                "type": "MemberExpression",
+                "value": "defaultInstance.parseFile",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "parseFile",
+        "longname": "parseFile",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                23742,
+                23789
+            ],
+            "filename": "swig.js",
+            "lineno": 732,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001610",
+                "name": "exports.precompile",
+                "type": "MemberExpression",
+                "value": "defaultInstance.precompile",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "precompile",
+        "longname": "precompile",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                23791,
+                23832
+            ],
+            "filename": "swig.js",
+            "lineno": 733,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001618",
+                "name": "exports.compile",
+                "type": "MemberExpression",
+                "value": "defaultInstance.compile",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "compile",
+        "longname": "compile",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                23834,
+                23883
+            ],
+            "filename": "swig.js",
+            "lineno": 734,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001626",
+                "name": "exports.compileFile",
+                "type": "MemberExpression",
+                "value": "defaultInstance.compileFile",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "compileFile",
+        "longname": "compileFile",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                23885,
+                23924
+            ],
+            "filename": "swig.js",
+            "lineno": 735,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001634",
+                "name": "exports.render",
+                "type": "MemberExpression",
+                "value": "defaultInstance.render",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "render",
+        "longname": "render",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                23926,
+                23973
+            ],
+            "filename": "swig.js",
+            "lineno": 736,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001642",
+                "name": "exports.renderFile",
+                "type": "MemberExpression",
+                "value": "defaultInstance.renderFile",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "renderFile",
+        "longname": "renderFile",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                23975,
+                24008
+            ],
+            "filename": "swig.js",
+            "lineno": 737,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001650",
+                "name": "exports.run",
+                "type": "MemberExpression",
+                "value": "defaultInstance.run",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "run",
+        "longname": "run",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                24010,
+                24067
+            ],
+            "filename": "swig.js",
+            "lineno": 738,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001658",
+                "name": "exports.invalidateCache",
+                "type": "MemberExpression",
+                "value": "defaultInstance.invalidateCache",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "invalidateCache",
+        "longname": "invalidateCache",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                24069,
+                24094
+            ],
+            "filename": "swig.js",
+            "lineno": 739,
+            "path": "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib",
+            "code": {
+                "id": "astnode100001666",
+                "name": "exports.loaders",
+                "type": "Identifier",
+                "value": "loaders",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "loaders",
+        "longname": "loaders",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "kind": "package",
+        "longname": "package:undefined",
+        "files": [
+            "/Users/paulcpederson/Documents/Side-Projects/swig-templates/lib/swig.js"
+        ]
+    }
+]
