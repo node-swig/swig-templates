@@ -13,7 +13,7 @@ Checklist
 
 _Pull requests that fail to add test coverage, break tests, or fail linting standards will not be accepted._
 
-The swig codebase is [highly tested](http://paularmstrong.github.io/swig/coverage.html) and linted, as a way to guarantee functionality and keep all code written in a particular style for readability. No contributions will be accepted that do not pass all tests or throw any linter errors.
+The swig codebase is [highly tested](http://node-swig.github.io/swig-templates/coverage.html) and linted, as a way to guarantee functionality and keep all code written in a particular style for readability. No contributions will be accepted that do not pass all tests or throw any linter errors.
 
 Here's an example of a great pull request that followed the above checklist: [Pull Request 273 - Added patch and test case for object prototypal inheritance](https://github.com/paularmstrong/swig/pull/273).
 
@@ -24,7 +24,7 @@ All documentation for Swig is generated from [JSDoc](http://usejsdoc.org) commen
 
 ```sh
 # Clone the repo
-$ git clone git@github.com:paularmstrong/swig.git
+$ git clone git@github.com:node-swig/swig-templates.git
 $ cd swig
 ```
 
