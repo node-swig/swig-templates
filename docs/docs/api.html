@@ -51,7 +51,7 @@ data:
 {% endif %}
 {% endfor %}
 
-{% for prop in api %}
+{% for prop in data.api %}
 {% if prop.kind === 'member' and prop.undocumented !== true %}
   <section id="{{ prop.name }}" class="doc">
     <h2>swig.{{ prop.name }}</h2>
@@ -69,7 +69,7 @@ data:
 {% endif %}
 {% endfor %}
 
-{% for fn in api %}
+{% for fn in data.api %}
   {% if fn.access !== "private" and fn.kind === 'function' and fn.undocumented !== true %}
   <section id="{{ fn.name }}" class="doc">
     <h2>

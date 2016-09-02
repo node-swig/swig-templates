@@ -9,21 +9,21 @@ data:
 <div class="constrain trailer-4 leader-4">
   <h1 class="banner-title text-gray">A simple, powerful, and extendable JavaScript Template Engine.</h1>
   <p>
-    <a class="btn btn--large" href="{{ baseurl }}/js/swig.min.js" class="btn">Download {{ data.pkg.version }}</a>
+    <a class="btn btn--large" href="https://github.com/node-swig/swig-templates/releases/tag/v{{ data.pkg.version }}" class="btn">Download {{ data.pkg.version }}</a>
   </p>
 </div>
 
-<section class="bg-purple ">
-  <div class="constrain padding-leader-1 padding-trailer-3">
-    <h2>Super Quick Start</h2>
-    <p>For a more in-depth intro, check out the <a href="{{ baseurl }}/docs/">Getting Started docs</a>.</p>
-    <div class="2-up">
-    <h3>Install Swig</h3>
-    <pre><code>npm install swig --save</code></pre>
-    </div>
-    <div class="2-up">
-    <h3>Create Your Template</h3>
-    <pre><code data-language="swig">{% raw %}&lt;h1&gt;{{ pagename|title }}&lt;/h1&gt;
+<section class="bg-blue">
+  <div class="constrain padding-leader-1 padding-trailer-3 flex">
+    <div>
+      <h2>Super Quick Start</h2>
+      <p>For a more in-depth intro, check out the <a href="{{ baseurl }}/docs/">Getting Started docs</a>.</p>
+
+      <h3>Install Swig</h3>
+      <pre><code>npm install swig --save</code></pre>
+
+      <h3>Create Your Template</h3>
+      <pre><code data-language="swig">{% raw %}&lt;h1&gt;{{ pagename|title }}&lt;/h1&gt;
 &lt;ul&gt;
 {% for author in authors %}
   &lt;li{% if loop.first %} class="first"{% endif %}&gt;
@@ -31,50 +31,47 @@ data:
   &lt;/li&gt;
 {% endfor %}
 &lt;/ul&gt;{% endraw %}</code></pre>
-    </div>
-    <div class="2-up">
-    <h3>Render Your Template</h3>
-    <pre><code data-language="javascript">var swig  = require('swig');
+
+      <h3>Render Your Template</h3>
+      <pre><code data-language="javascript">var swig  = require('swig');
 swig.renderFile('/path/to/template.html', {
     pagename: 'awesome people',
     authors: ['Paul', 'Jim', 'Jane']
 });</code></pre>
-    </div>
-    <div class="2-up">
-    <h3>The End Result</h3>
-    <pre><code data-language="html">&lt;h1&gt;Awesome People&lt;/h1&gt;
+
+      <h3>The End Result</h3>
+      <pre><code data-language="html">&lt;h1&gt;Awesome People&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li class="first"&gt;Paul&lt;/li&gt;
   &lt;li&gt;Jim&lt;/li&gt;
   &lt;li&gt;Jane&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
   </div>
+  <div class="padding-left-3">
+
+    <h2>Features</h2>
+    <ul class="checklist">
+      <li><svg width="24px" height="24px"><use xlink:href="#checkbox"/></svg>Available for node.js <em>and</em> major web browsers!</li>
+      <li><svg width="24px" height="24px"><use xlink:href="#checkbox"/></svg>Similar to Django, Jinja2, and Twig template engines.</li>
+      <li><svg width="24px" height="24px"><use xlink:href="#checkbox"/></svg><a href="http://expressjs.com/">Express</a> compatible.</li>
+      <li><svg width="24px" height="24px"><use xlink:href="#checkbox"/></svg>Object-Oriented template inheritance.</li>
+      <li><svg width="24px" height="24px"><use xlink:href="#checkbox"/></svg>Apply filters and transformations to output in your templates.</li>
+      <li><svg width="24px" height="24px"><use xlink:href="#checkbox"/></svg>Automatically escapes all output for safe HTML rendering.</li>
+      <li><svg width="24px" height="24px"><use xlink:href="#checkbox"/></svg>Lots of iteration and conditionals supported.</li>
+      <li><svg width="24px" height="24px"><use xlink:href="#checkbox"/></svg>Robust without the bloat.</li>
+      <li><svg width="24px" height="24px"><use xlink:href="#checkbox"/></svg>Extendable and customizable.</li>
+      <li><svg width="24px" height="24px"><use xlink:href="#checkbox"/></svg>Great <a href="{{ baseurl }}/coverage.html">code coverage</a>.</li>
+    </ul>
+  </div>
 </section>
 
-<section class="constrain">
-  <h2>Features</h2>
-  <ul class="checklist">
-    <li><svg width="24px" height="24px"><use xlink:href="#checkbox"/></svg>Available for node.js <em>and</em> major web browsers!</li>
-    <li><svg width="24px" height="24px"><use xlink:href="#checkbox"/></svg>Uses similar methodologies as Django, Jinja2, and Twig template engines.</li>
-    <li><svg width="24px" height="24px"><use xlink:href="#checkbox"/></svg><a href="http://expressjs.com/">Express</a> compatible.</li>
-    <li><svg width="24px" height="24px"><use xlink:href="#checkbox"/></svg>Object-Oriented template inheritance.</li>
-    <li><svg width="24px" height="24px"><use xlink:href="#checkbox"/></svg>Apply filters and transformations to output in your templates.</li>
-    <li><svg width="24px" height="24px"><use xlink:href="#checkbox"/></svg>Automatically escapes all output for safe HTML rendering.</li>
-    <li><svg width="24px" height="24px"><use xlink:href="#checkbox"/></svg>Lots of iteration and conditionals supported.</li>
-    <li><svg width="24px" height="24px"><use xlink:href="#checkbox"/></svg>Robust without the bloat.</li>
-    <li><svg width="24px" height="24px"><use xlink:href="#checkbox"/></svg>Extendable and customizable.</li>
-    <li><svg width="24px" height="24px"><use xlink:href="#checkbox"/></svg>Great <a href="{{ baseurl }}/coverage.html">code coverage</a>.</li>
-  </ul>
-
-  <svg x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24">
-     <defs>
-      <path id="checkbox" fill="#1570D1" d="M12,0.649C5.731,0.649,0.649,5.731,0.649,12c0,6.269,5.082,11.351,11.351,11.351
-        c6.27,0,11.352-5.082,11.352-11.351C23.352,5.731,18.27,0.649,12,0.649z M10.16,18.628c-0.079,0.078-0.185,0.123-0.295,0.123
-        c-0.111,0-0.217-0.045-0.295-0.123l-5.28-5.281c-0.164-0.163-0.164-0.427,0-0.591l1.182-1.182c0.078-0.078,0.184-0.123,0.295-0.123
-        c0.111,0,0.217,0.044,0.295,0.123l3.803,3.804l8.725-8.726c0.156-0.157,0.435-0.157,0.591,0l1.182,1.182
-        c0.163,0.163,0.163,0.428,0,0.591L10.16,18.628z"/>
-      </defs>
-  </svg>
-
-</section>
+<svg x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24">
+   <defs>
+    <path id="checkbox" fill="#1570D1" d="M12,0.649C5.731,0.649,0.649,5.731,0.649,12c0,6.269,5.082,11.351,11.351,11.351
+      c6.27,0,11.352-5.082,11.352-11.351C23.352,5.731,18.27,0.649,12,0.649z M10.16,18.628c-0.079,0.078-0.185,0.123-0.295,0.123
+      c-0.111,0-0.217-0.045-0.295-0.123l-5.28-5.281c-0.164-0.163-0.164-0.427,0-0.591l1.182-1.182c0.078-0.078,0.184-0.123,0.295-0.123
+      c0.111,0,0.217,0.044,0.295,0.123l3.803,3.804l8.725-8.726c0.156-0.157,0.435-0.157,0.591,0l1.182,1.182
+      c0.163,0.163,0.163,0.428,0,0.591L10.16,18.628z"/>
+    </defs>
+</svg>
 {% endblock %}

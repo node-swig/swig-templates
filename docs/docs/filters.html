@@ -22,9 +22,9 @@ data:
 
 {% for fn in data.filters %}
   {% if fn.access !== "private" and fn.kind === 'function' and fn.undocumented !== true %}
-  <section id="{{ fn.name|replace('"', '', 'g')|replace('.', '') }}" class="doc">
+  <section id="{{ fn.name|replace('"', '', 'g')|replace('\.', '') }}" class="doc">
     <h2>
-      {{ fn.name|replace('"', '', 'g') -}}
+      {{ fn.name|replace('"', '', 'g')|replace('\.', '') -}}
       {%- for p in fn.params -%}
       {%- if loop.index === 2 %}({% endif -%}
       {%- if loop.index > 1 -%}
@@ -90,7 +90,7 @@ data:
 {% for fn in data.filters %}
   {% if fn.access !== "private" and fn.kind === 'function' %}
   <li>
-    <a href="#{{ fn.name|replace('"', '', 'g')|replace('.', '') }}">{{ fn.name|replace('"', '', 'g')|replace('.', '') }}</a>
+    <a href="#{{ fn.name|replace('"', '', 'g')|replace('\.', '') }}">{{ fn.name|replace('"', '', 'g')|replace('\.', '') }}</a>
   </li>
   {% endif %}
 {% endfor %}

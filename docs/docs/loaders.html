@@ -18,9 +18,6 @@ data:
     {% for l in builtin %}
       <section id="{{ name }}">
         <h3>{{ l.longname }}({{ l.meta.code.paramnames|join(', ') }})</h3>
-
-        {{ docmacro.source(l) }}
-
         {{ docmacro.description(l) }}
 
         <h4>Arguments</h4>
