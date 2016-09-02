@@ -50,8 +50,6 @@ data:
   {% endif %}{% endfor %}
 </section>
 
-<hr>
-
 <section id="tags">
   <h2>Custom Tags</h2>
 
@@ -171,11 +169,11 @@ data:
 {% endblock %}
 
 {% block extendingsubnav %}
-<ol>
+<ol class="list-plain">
   <li><a href="#filters">Custom Filters</a></li>
   <li>
     <a href="#tags">Custom Tags</a>
-    <ol>
+    <ol class="list-plain">
       <li><a href="#parse">parse</a></li>
       <li><a href="#compile">compile</a></li>
       <li><a href="#ends">ends</a></li>

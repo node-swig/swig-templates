@@ -59,7 +59,7 @@ data:
 {% endblock %}
 
 {% block tagsubnav %}
-<ol>
+<ol class="list-plain">
   {% for fn in data.tags %}
   {% if fn.access !== "private" and fn.kind === 'function' and fn.undocumented !== true %}
     <li>

@@ -5,5 +5,5 @@
 {% endmacro %}
 
 {% macro source(fn, line) %}
-<p class="source">Source: <a href="https://github.com/paularmstrong/swig/blob/{{ version }}/{{ fn.meta.path }}/{{ fn.meta.filename }}{% if line %}#L{{ fn.meta.lineno }}{% endif %}">{{ fn.meta.path }}/{{ fn.meta.filename }}{% if line %}#L{{ fn.meta.lineno }}{% endif %}</a></p>
+<p class="source">Source: <a href="https://github.com/node-swig/swig-templates/tree/master/lib/{{ fn.meta.filename }}{% if line %}#L{{ fn.meta.lineno }}{% endif %}">{{ fn.meta.filename }}{% if line %}#L{{ fn.meta.lineno }}{% endif %}</a></p>
 {% endmacro %}

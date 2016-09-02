@@ -20,11 +20,9 @@ data:
 
 <p>Swig comes pre-loaded with a set of useful filters:</p>
 
-<hr>
-
 {% for fn in data.filters %}
   {% if fn.access !== "private" and fn.kind === 'function' and fn.undocumented !== true %}
-  <section id="{{ fn.name|replace('"', '', 'g') }}" class="doc">
+  <section id="{{ fn.name|replace('"', '', 'g')|replace('.', '') }}" class="doc">
     <h2>
       {{ fn.name|replace('"', '', 'g') -}}
       {%- for p in fn.params -%}
@@ -88,11 +86,11 @@ data:
 {% endblock %}
 
 {% block filtersubnav %}
-<ol>
+<ol class="list-plain">
 {% for fn in data.filters %}
   {% if fn.access !== "private" and fn.kind === 'function' %}
   <li>
-    <a href="#{{ fn.name|replace('"', '', 'g') }}">{{ fn.name|replace('"', '', 'g') }}</a>
+    <a href="#{{ fn.name|replace('"', '', 'g')|replace('.', '') }}">{{ fn.name|replace('"', '', 'g')|replace('.', '') }}</a>
   </li>
   {% endif %}
 {% endfor %}

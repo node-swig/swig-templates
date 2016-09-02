@@ -130,7 +130,7 @@ data:
 {% endblock %}
 
 {% block apisubnav %}
-<ol>
+<ol class="list-plain">
 {% for obj in data.api %}
 {% if obj.access !== "private" and obj.undocumented !== true and obj.kind !== 'package' %}
   <li><a href="#{{ obj.name }}">{% if obj.kind === 'typedef' %}Object: {% elif obj.kind === 'function' or obj.kind === 'member' %}swig.{% endif %}{{ obj.name }}</a></li>
