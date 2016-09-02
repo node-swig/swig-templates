@@ -1,10 +1,10 @@
 # swig
-[![Build Status](http://img.shields.io/travis/node-swig/swig/master.svg?style=flat)](http://travis-ci.org/node-swig/swig) [![Dependency Status](http://img.shields.io/gemnasium/node-swig/swig.svg?style=flat)](https://gemnasium.com/node-swig/swig) [![NPM version](http://img.shields.io/npm/v/swig.svg?style=flat)](https://www.npmjs.org/package/swig) [![NPM Downloads](http://img.shields.io/npm/dm/swig.svg?style=flat)](https://www.npmjs.org/package/swig)
+[![Build Status](http://img.shields.io/travis/node-swig/swig/master.svg?style=flat)](http://travis-ci.org/node-swig/swig) [![Dependency Status](http://img.shields.io/gemnasium/node-swig/swig-templates.svg?style=flat)](https://gemnasium.com/node-swig/swig) [![NPM version](http://img.shields.io/npm/v/swig-templates.svg?style=flat)](https://www.npmjs.org/package/swig-templates) [![NPM Downloads](http://img.shields.io/npm/dm/swig-templates.svg?style=flat)](https://www.npmjs.org/package/swig-templates)
 
-[Swig](http://node-swig.github.io/swig/) is an awesome, Django/Jinja-like template engine for node.js.
+[Swig](http://node-swig.github.io/swig-templates/) is an awesome, Django/Jinja-like template engine for node.js.
 
 #### seeking maintainers
-Paul Armstrong has [stepped down](https://github.com/paularmstrong/swig/issues/628) as the primary swig maintainer.  Swig is a phenominal project and a template engine that quitely, but strongly, stands tall against the others in a domain full of template engines.  If you are interested in being a collaborator, check out the issues page, and let's discuss how to proceed.  Don't forget to thank Paul and previous swig collabs for their hard and excellent work!
+Paul Armstrong has [stepped down](https://web.archive.org/web/20160311170700/https://github.com/paularmstrong/swig/issues/628) as the primary swig maintainer.  Swig is a phenominal project and a template engine that quitely, but strongly, stands tall against the others in a domain full of template engines.  If you are interested in being a collaborator, check out the issues page, and let's discuss how to proceed.  Don't forget to thank Paul and previous swig collabs for their hard and excellent work!
 
 Features
 --------
@@ -17,14 +17,14 @@ Features
 * Lots of iteration and conditionals supported.
 * Robust without the bloat.
 * Extendable and customizable. See [Swig-Extras](https://github.com/paularmstrong/swig-extras) for some examples.
-* Great [code coverage](http://paularmstrong.github.io/swig/coverage.html).
+* Great [code coverage](http://node-swig.github.io/swig-templates/coverage.html).
 
 Need Help? Have Questions? Comments?
 ------------------------------------
 
 * [Mailing List/Google Group](http://groups.google.com/forum/#!forum/swig-templates)
 * [StackOverflow](http://stackoverflow.com/questions/tagged/swig-template)
-* [Migration Guide](https://github.com/paularmstrong/swig/wiki/Migrating-from-v0.x.x-to-v1.0.0)
+* [Migration Guide](https://github.com/node-swig/swig-templates/wiki/Migrating-from-v0.x.x-to-v1.0.0)
 
 Installation
 ------------
@@ -34,7 +34,7 @@ Installation
 Documentation
 -------------
 
-All documentation can be viewed online on the [Swig Website](http://paularmstrong.github.io/swig/).
+All documentation can be viewed online on the [Swig Website](http://node-swig.github.io/swig-templates/).
 
 Basic Example
 -------------
@@ -72,7 +72,7 @@ var output = template({
 </ul>
 ```
 
-For working example see [examples/basic](https://github.com/paularmstrong/swig/tree/master/examples/basic)
+For working example see [examples/basic](https://github.com/node-swig/swig-templates/tree/master/examples/basic)
 
 How it works
 ------------

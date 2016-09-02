@@ -1,7 +1,7 @@
 SHA := $(shell git rev-parse HEAD)
 THIS_BRANCH := $(shell git rev-parse --abbrev-ref HEAD)
 VERSION_REGEX = [0-9][0-9]*\.[0-9][0-9]*\.[0-9][0-9]*[^\" ]*
-VERSION := $(shell npm ls | grep "swig@" |  grep -Eo "${VERSION_REGEX}" -m 1)
+VERSION := $(shell npm ls | grep "swig-templates@" |  grep -Eo "${VERSION_REGEX}" -m 1)
 
 TMP = 'tmp'
 REMOTE = origin
