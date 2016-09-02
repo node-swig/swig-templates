@@ -50,14 +50,14 @@
     "prepublish": "npm prune && make build",
     "test": "make test reporter=spec && make test-browser && make coverage cov-reporter=travis-cov",
     "lint": "make lint",
-    "validate": "npm ls",
-    "travis-cov": {
-      "threshold": 95
-    }
+    "validate": "npm ls"
   },
   "config": {
     "blanket": {
       "pattern": "swig/lib"
+    },
+    "travis-cov": {
+      "threshold": 95
     }
   },
   "bugs": {
