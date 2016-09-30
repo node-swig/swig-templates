@@ -1,6 +1,8 @@
-{% extends "./layout.html" %}
+---
+title: Swig - CLI
+---
 
-{% block title %}{% parent %} &raquo; CLI{% endblock %}
+{% extends '../_layouts/documentation.html' %}
 
 {% block content %}
 <h1>Command-Line Interface</h1>
@@ -55,8 +57,9 @@ $ swig run [file...] [options]</code></pre>
 </section>
 {% endblock %}
 
+
 {% block clisubnav %}
-<ol>
+<ol class="list-plain">
   <li><a href="#install">Installation</a></li>
   <li><a href="#usage">Usage</a></li>
   <li><a href="#examples">Examples</a></li>

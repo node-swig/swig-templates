@@ -1,7 +1,11 @@
-{% extends "./layout.html" %}
-{% import "./includes/macros.html" as docmacro %}
+---
+title: Swig - Extending Swig
+data:
+  ext: data/extending.json
+---
 
-{% block title %}{% parent %} &raquo; Extending Swig{% endblock %}
+{% import "./_includes/macros.html" as docmacro %}
+{% extends '../_layouts/documentation.html' %}
 
 {% block content %}
 
@@ -10,7 +14,7 @@
 <section id="filters">
   <h2>Custom Filters</h2>
 
-  {% for t in ext %}
+  {% for t in data.ext %}
   {% if t.kind === 'typedef' and t.undocumented !== true and t.name === 'Filter' %}
   <section class="doc">
     {{ docmacro.description(t) }}
@@ -46,8 +50,6 @@
   {% endif %}{% endfor %}
 </section>
 
-<hr>
-
 <section id="tags">
   <h2>Custom Tags</h2>
 
@@ -56,7 +58,7 @@
   <p>All of Swig's tags are written using the same api (with a few exceptions for core modules, like <var>extends</var> and <var>block</var>). View a tag's source to see more examples to write your own custom tags.</p>
 
   {% set isMethod = ['parse', 'compile'] %}
-  {% for t in ext %}{% if t.undocumented !== true and t.kind === 'typedef' and isMethod.indexOf(t.name) !== -1 %}
+  {% for t in data.ext %}{% if t.undocumented !== true and t.kind === 'typedef' and isMethod.indexOf(t.name) !== -1 %}
   <section id="{{ t.name }}" class="doc">
     <h3>{{ t.name }}({% for p in t.params %}{{ p.name }}{% if not loop.last %}, {% endif %}{% endfor %})</h3>
 
@@ -121,7 +123,7 @@
 {% endblock %}{% endraw %}</code></pre>
    </section>
 
-  {% for prop in ext %}
+  {% for prop in data.ext %}
     {% if prop.isEnum %}
     <section id="{{ prop.name }}" class="doc">
       <h3>{{ prop.name }}</h3>
@@ -167,11 +169,11 @@
 {% endblock %}
 
 {% block extendingsubnav %}
-<ol>
+<ol class="list-plain">
   <li><a href="#filters">Custom Filters</a></li>
   <li>
     <a href="#tags">Custom Tags</a>
-    <ol>
+    <ol class="list-plain">
       <li><a href="#parse">parse</a></li>
       <li><a href="#compile">compile</a></li>
       <li><a href="#ends">ends</a></li>

@@ -1,4 +1,8 @@
-{% extends "./layout.html" %}
+---
+title: Swig - Documentation
+---
+
+{% extends '../_layouts/documentation.html' %}
 
 {% block content %}
 <h1>Getting Started</h1>
@@ -196,11 +200,10 @@ console.log('Application Started on http://localhost:1337/');
 </code></pre>
 
 </section>
-
 {% endblock %}
 
 {% block indexsubnav %}
-<ol>
+<ol class="list-plain">
   <li><a href="#install">Installation</a></li>
   <li><a href="#variables">Variables</a></li>
   <li><a href="#tags">Logic Tags</a></li>

@@ -1,0 +1,9 @@
+{% macro description(el) %}
+{% if el.description %}
+  <p>{{ el.description|replace('\n', '</p><p>', 'g')|safe }}</p>
+{% endif %}
+{% endmacro %}
+
+{% macro source(fn, line) %}
+<p class="source">Source: <a href="https://github.com/node-swig/swig-templates/tree/master/lib/{{ fn.meta.filename }}{% if line %}#L{{ fn.meta.lineno }}{% endif %}">{{ fn.meta.filename }}{% if line %}#L{{ fn.meta.lineno }}{% endif %}</a></p>
+{% endmacro %}

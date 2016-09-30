@@ -85,10 +85,6 @@ test:
 test-browser: FORCE clean browser/test/tests.js
 	@${BIN}/mocha-phantomjs browser/test/index.html --reporter ${reporter}
 
-lint:
-	@${BIN}/eslint lib/ tests/
-	@echo ""
-
 out = tests/coverage.html
 cov-reporter = html-cov
 coverage:
@@ -103,63 +99,9 @@ else
 	@echo
 endif
 
-docs/index.json: FORCE
-	@echo "Building $@..."
-	@sed -i.bak 's/v${VERSION_REGEX}/v${VERSION}/' $@
-	@rm $@.bak
-
-docs/docs.json: FORCE
-	@echo "Building $@..."
-	@sed -i.bak 's/v${VERSION_REGEX}/v${VERSION}/' $@
-	@rm $@.bak
-
 docs/coverage.html: FORCE
 	@echo "Building $@..."
 	@make coverage out=$@
-
-docs/docs/api.json: FORCE
-	@echo "Building $@..."
-	@echo '{ "api": ' > $@
-	@${BIN}/jsdoc lib/swig.js -X >> $@
-	@echo '}' >> $@
-
-docs/docs/filters.json: FORCE
-	@echo "Building $@..."
-	@echo '{ "filters": ' > $@
-	@${BIN}/jsdoc lib/filters.js -X >> $@
-	@echo '}' >> $@
-
-docs/docs/tags.json: FORCE
-	@echo "Building $@..."
-	@echo '{ "tags": ' > $@
-	@${BIN}/jsdoc lib/tags/ -X >> $@
-	@echo '}' >> $@
-
-docs/docs/loaders.json: FORCE
-	@echo "Building $@..."
-	@echo '{ "loaders": ' > $@
-	@${BIN}/jsdoc lib/loaders/ -X >> $@
-	@echo '}' >> $@
-
-docs/docs/extending.json: FORCE
-	@echo "Building $@..."
-	@echo '{ "ext": ' > $@
-	@${BIN}/jsdoc lib/parser.js lib/lexer.js -X >> $@
-	@echo '}' >> $@
-
-.SECONDARY build-docs: \
-	docs/index.json \
-	docs/docs.json
-
-.INTERMDIATE build-docs: \
-	docs/docs/api.json \
-	docs/docs/filters.json \
-	docs/docs/tags.json \
-	docs/docs/extending.json \
-	docs/docs/loaders.json
-
-build-docs: FORCE
-	@echo "Documentation built."
 
 gh-pages: clean build build-docs
 	@mkdir -p ${TMP}/js
@@ -179,10 +121,6 @@ ifeq (${THIS_BRANCH}, master)
 	@git checkout ${THIS_BRANCH}
 	@git clean -f -d docs/
 endif
-
-port = 3000
-docs: build build-docs
-	@${BIN}/still-server docs/ -p ${port} -o
 
 FORCE:
 

@@ -68,7 +68,6 @@
         href,
         $section,
         t;
-
       if (scrollY > top) {
         $sidebar.classList.add('fixed');
       } else if (scrollY < top) {
