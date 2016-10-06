@@ -1,12 +1,17 @@
-{% extends "./layout.html" %}
-{% import "./includes/macros.html" as docmacro %}
+---
+title: Swig - API
+data:
+  api: data/api.json
+---
 
-{% block title %}{% parent %} &raquo; API{% endblock %}
+{% import "./_includes/macros.html" as docmacro %}
+{% extends '../_layouts/documentation.html' %}
 
 {% block content %}
+
 <h1>Swig API</h1>
 
-{% for def in api %}
+{% for def in data.api %}
 {% if def.kind === 'typedef' and def.undocumented !== true %}
   <section id="{{ def.name }}" class="doc">
     <h2>Object Type: {{ def.name }}</h2>
@@ -46,7 +51,7 @@
 {% endif %}
 {% endfor %}
 
-{% for prop in api %}
+{% for prop in data.api %}
 {% if prop.kind === 'member' and prop.undocumented !== true %}
   <section id="{{ prop.name }}" class="doc">
     <h2>swig.{{ prop.name }}</h2>
@@ -64,7 +69,7 @@
 {% endif %}
 {% endfor %}
 
-{% for fn in api %}
+{% for fn in data.api %}
   {% if fn.access !== "private" and fn.kind === 'function' and fn.undocumented !== true %}
   <section id="{{ fn.name }}" class="doc">
     <h2>
@@ -122,12 +127,11 @@
   </section>
   {% endif %}
 {% endfor %}
-
 {% endblock %}
 
 {% block apisubnav %}
-<ol>
-{% for obj in api %}
+<ol class="list-plain">
+{% for obj in data.api %}
 {% if obj.access !== "private" and obj.undocumented !== true and obj.kind !== 'package' %}
   <li><a href="#{{ obj.name }}">{% if obj.kind === 'typedef' %}Object: {% elif obj.kind === 'function' or obj.kind === 'member' %}swig.{% endif %}{{ obj.name }}</a></li>
 {% endif %}

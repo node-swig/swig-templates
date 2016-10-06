@@ -7,9 +7,10 @@ lib-cov/*
 tests/coverage.html
 dist/*
 tmp_build/*
-docs/css/*
+docs/data/*
 browser/test/tests.js
 tests/browser.js
 tmp
 docs/docs/*.json
 docs/coverage.html
+build/

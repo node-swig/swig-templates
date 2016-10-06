@@ -1,10 +1,10 @@
-{% extends "../layouts/master.html" %}
+{% extends "master.html" %}
 
 {% block title %}{% parent %} » Documentation{% endblock %}
 
 {% block section_nav %}
-<nav>
-  <ol class="sidenav">
+<div class="sidenav-wrap">
+  <ol class="sidenav list-plain">
     <li>
       <a href="{{ baseurl }}/docs/">Getting Started</a>
       {% block indexsubnav %}{% endblock %}
@@ -37,7 +37,6 @@
       <a href="{{ baseurl }}/docs/extending/">Extending Swig</a>
       {% block extendingsubnav %}{% endblock %}
     </li>
-    <li><a href="{{ baseurl }}/docs/previous/">Older Versions</a></li>
   </ol>
-</nav>
+</div>
 {% endblock %}
