@@ -63,7 +63,11 @@
     "jsdoc": "npm-run-series jsdoc:swig jsdoc:filters jsdoc:tags jsdoc:loaders jsdoc:parser",
     "lint": "eslint lib/ tests/",
     "prepublish": "npm prune && make build",
+    "preversion": "git checkout master && git pull && npm ls",
     "predocs": "npm-run-series jsdoc copy html",
+    "publish-patch": "npm run preversion && npm version patch && git push origin master --tags && npm publish",
+    "publish-minor": "npm run preversion && npm version minor && git push origin master --tags && npm publish",
+    "publish-major": "npm run preversion && npm version major && git push origin master --tags && npm publish",
     "test": "make test reporter=spec && make test-browser && make coverage cov-reporter=travis-cov",
     "validate": "npm ls"
   },

@@ -91,6 +91,7 @@ coverage:
 ifeq (${cov-reporter}, travis-cov)
 	@${BIN}/mocha ${opts} ${tests} --require blanket -R ${cov-reporter}
 else
+	@echo "@${BIN}/mocha ${opts} ${tests} --require blanket -R ${cov-reporter} > ${out}"
 	@${BIN}/mocha ${opts} ${tests} --require blanket -R ${cov-reporter} > ${out}
 	@sed -i .bak -e "s/${PWD}//g" ${out}
 	@rm ${out}.bak
