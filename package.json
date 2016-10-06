@@ -47,7 +47,11 @@
     "swig": "./bin/swig.js"
   },
   "scripts": {
+    "preversion": "git checkout master && git pull && npm ls",
     "prepublish": "npm prune && make build",
+    "publish-patch": "npm run preversion && npm version patch && git push origin master --tags && npm publish",
+    "publish-minor": "npm run preversion && npm version minor && git push origin master --tags && npm publish",
+    "publish-major": "npm run preversion && npm version major && git push origin master --tags && npm publish",
     "test": "make test reporter=spec && make test-browser && make coverage cov-reporter=travis-cov",
     "lint": "make lint",
     "validate": "npm ls"
