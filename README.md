@@ -29,7 +29,7 @@ Need Help? Have Questions? Comments?
 Installation
 ------------
 
-    npm install swig
+    npm install swig-templates
 
 Documentation
 -------------
