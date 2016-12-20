@@ -53,7 +53,7 @@ Basic Example
 ### node.js code
 
 ```js
-var swig  = require('swig');
+var swig  = require('swig-templates');
 var template = swig.compileFile('/absolute/path/to/template.html');
 var output = template({
     pagename: 'awesome people',
