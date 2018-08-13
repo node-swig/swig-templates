@@ -1,6 +1,6 @@
 .DS_Store
 *.log
-node_modules/*
+node_modules
 tests/browser/swig.pack.js
 tests/browser/*.test.js
 lib-cov/*

@@ -1,3 +1,3 @@
 exports.benice = function (input) {
-  return input + ' please!';
-};
+  return input + ' please!'
+}

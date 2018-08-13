@@ -1,3 +1,3 @@
-exports.varControls = ['<=', '=>'];
-exports.tagControls = ['<%', '%>'];
-exports.cmtControls = ['<#', '#>'];
+exports.varControls = ['<=', '=>']
+exports.tagControls = ['<%', '%>']
+exports.cmtControls = ['<#', '#>']
