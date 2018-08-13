@@ -1,11 +1,16 @@
 language: node_js
 script: "make lint && make test reporter=spec && make test-browser reporter=spec && make coverage cov-reporter=travis-cov"
-matrix:
-  - node_js: "stable"
-    env: NODE_CACHE_BUST=stable
-  - node_js: "4.2"
-    env: NODE_CACHE_BUST=4.2
+sudo: required
+addons:
+  chrome: stable
 cache:
   yarn: true
   directories:
     - node_modules
+matrix:
+  include:
+  - node_js: "stable"
+    env: NODE_CACHE_BUST=stable
+  - node_js: "8.11.3"
+    env: NODE_CACHE_BUST=8.11.3
+

@@ -106,12 +106,18 @@ describe('bin/swig compile --method-name="foo"', function () {
     var p = fixPath(casedir + '/extends_1.test.html');
     runBin('compile ' + p + ' --method-name="foo"', function (err, stdout, stderr) {
       // Older versions of node compile the template differently than newer version, so either would be a passing test
-      var olderOutput = 'var foo = function (_swig,_ctx,_filters,_utils,_fn) {\n  var _ext = _swig.extensions,\n    _output = "";\n_output += "Hi,\\n\\n";\n_output += "This is the body.";\n_output += "\\n\\nSincerely,\\nMe\\n";\n\n  return _output;\n\n};\n',
-        newerOutput = 'var foo = function (_swig,_ctx,_filters,_utils,_fn\n/**/) {\n  var _ext = _swig.extensions,\n    _output = "";\n_output += "Hi,\\n\\n";\n_output += "This is the body.";\n_output += "\\n\\nSincerely,\\nMe\\n";\n\n  return _output;\n\n};\n',
-        node10Output = 'var foo = function (_swig,_ctx,_filters,_utils,_fn\n) {\n  var _ext = _swig.extensions,\n    _output = "";\n_output += "Hi,\\n\\n";\n_output += "This is the body.";\n_output += "\\n\\nSincerely,\\nMe\\n";\n\n  return _output;\n\n};\n';
-
+      var newerOutput = 'var foo = function (_swig,_ctx,_filters,_utils,_fn\n/**/) {\n  var _ext = _swig.extensions,\n    _output = "";\n_output += "Hi,\\n\\n";\n_output += "This is the body.";\n_output += "\\n\\nSincerely,\\nMe\\n";\n\n  return _output;\n\n};\n',
+        scrubbed8Output = 'var foo = function (_swig,_ctx,_filters,_utils,_fn /*``*/) { var _ext = _swig.extensions, _output = ""; _output += "Hi,\\n\\n"; _output += "This is the body."; _output += "\\n\\nSincerely,\\nMe\\n"; return _output; };',
+        scrubbed10Output = 'var foo = function (_swig,_ctx,_filters,_utils,_fn ) { var _ext = _swig.extensions, _output = ""; _output += "Hi,\\n\\n"; _output += "This is the body."; _output += "\\n\\nSincerely,\\nMe\\n"; return _output; };';
+      var scrub = function (str) {
+        return str.split('\n')
+          .map(function (part) { return part.trim(); })
+          .filter(function (part) { return !!part })
+          .join(' ');
+      }
       function wasCompiled(check) {
-        return check === olderOutput || check === newerOutput || check === node10Output;
+        var scrubbed = scrub(check)
+        return check === newerOutput || scrubbed === scrubbed8Output || scrubbed === scrubbed10Output;
       }
       expect(wasCompiled(stdout)).to.equal(true);
       done();
