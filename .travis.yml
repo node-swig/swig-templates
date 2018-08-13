@@ -1,8 +1,8 @@
 language: node_js
 script: "make lint && make test reporter=spec && make test-browser reporter=spec && make coverage cov-reporter=travis-cov"
-before_install:
-  - curl -o- -L https://yarnpkg.com/install.sh | bash
-  - export PATH="$HOME/.yarn/bin:$PATH"
+sudo: required
+addons:
+  chrome: stable
 cache:
   yarn: true
   directories:

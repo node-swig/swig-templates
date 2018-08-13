@@ -83,7 +83,7 @@ test:
 	@${BIN}/mocha --check-leaks --reporter ${reporter} ${opts} ${tests}
 
 test-browser: FORCE clean browser/test/tests.js
-	@${BIN}/mocha-phantomjs browser/test/index.html --reporter ${reporter}
+	${BIN}/mocha-chrome browser/test/index.html --reporter ${reporter}
 
 out = tests/coverage.html
 cov-reporter = html-cov
