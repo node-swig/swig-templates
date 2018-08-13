@@ -34,12 +34,6 @@ $ make
 ```
 
 ```sh
-# Ensure your $NODE_PATH is set
-# Place this in your ~/.bash_profile
-export NODE_PATH=$(npm -g root 2>/dev/null)
-```
-
-```sh
 # Run the documentation test environment
 $ make docs
 ```

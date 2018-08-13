@@ -1,5 +1,5 @@
 .DS_Store
-npm-debug.log
+*.log
 node_modules/*
 tests/browser/swig.pack.js
 tests/browser/*.test.js
