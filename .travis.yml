@@ -13,4 +13,8 @@ matrix:
     env: NODE_CACHE_BUST=stable
   - node_js: "8.11.3"
     env: NODE_CACHE_BUST=8.11.3
-
+deploy:
+  provider: script
+  skip_cleanup: true
+  script:
+    - npx travis-deploy-once "npx semantic-release"
