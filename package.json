@@ -81,7 +81,9 @@
   },
   "config": {
     "blanket": {
-      "pattern": ["swig-templates/lib"]
+      "pattern": [
+        "swig-templates/lib"
+      ]
     },
     "travis-cov": {
       "threshold": 95

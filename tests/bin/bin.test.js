@@ -107,9 +107,11 @@ describe('bin/swig compile --method-name="foo"', function () {
     runBin('compile ' + p + ' --method-name="foo"', function (err, stdout, stderr) {
       // Older versions of node compile the template differently than newer version, so either would be a passing test
       var olderOutput = 'var foo = function (_swig,_ctx,_filters,_utils,_fn) {\n  var _ext = _swig.extensions,\n    _output = "";\n_output += "Hi,\\n\\n";\n_output += "This is the body.";\n_output += "\\n\\nSincerely,\\nMe\\n";\n\n  return _output;\n\n};\n',
-        newerOutput = 'var foo = function (_swig,_ctx,_filters,_utils,_fn\n/**/) {\n  var _ext = _swig.extensions,\n    _output = "";\n_output += "Hi,\\n\\n";\n_output += "This is the body.";\n_output += "\\n\\nSincerely,\\nMe\\n";\n\n  return _output;\n\n};\n';
+        newerOutput = 'var foo = function (_swig,_ctx,_filters,_utils,_fn\n/**/) {\n  var _ext = _swig.extensions,\n    _output = "";\n_output += "Hi,\\n\\n";\n_output += "This is the body.";\n_output += "\\n\\nSincerely,\\nMe\\n";\n\n  return _output;\n\n};\n',
+        node10Output = 'var foo = function (_swig,_ctx,_filters,_utils,_fn\n) {\n  var _ext = _swig.extensions,\n    _output = "";\n_output += "Hi,\\n\\n";\n_output += "This is the body.";\n_output += "\\n\\nSincerely,\\nMe\\n";\n\n  return _output;\n\n};\n';
+
       function wasCompiled(check) {
-        return check === olderOutput || check === newerOutput;
+        return check === olderOutput || check === newerOutput || check === node10Output;
       }
       expect(wasCompiled(stdout)).to.equal(true);
       done();
