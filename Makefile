@@ -1,7 +1,7 @@
 SHA := $(shell git rev-parse HEAD)
 THIS_BRANCH := $(shell git rev-parse --abbrev-ref HEAD)
 VERSION_REGEX = [0-9][0-9]*\.[0-9][0-9]*\.[0-9][0-9]*[^\" ]*
-VERSION := $(shell npm ls | grep "swig-templates@" |  grep -Eo "${VERSION_REGEX}" -m 1)
+VERSION := $(shell cat package.json | jq -r .version)
 
 TMP = 'tmp'
 REMOTE = origin
@@ -11,8 +11,8 @@ PWD = $(shell pwd | sed -e 's/[\/&]/\\&/g')
 
 all:
 	@echo "Installing packages"
-	@npm install --depth=100 --loglevel=error
-	@npm link &>/dev/null
+	@yarn install --depth=100 --loglevel=error
+	@yarn link &>/dev/null
 	@cp scripts/githooks/* .git/hooks/
 	@chmod -R +x .git/hooks/
 
