@@ -23,6 +23,7 @@
   "devDependencies": {
     "@commitlint/cli": "^7.0.0",
     "@commitlint/config-conventional": "^7.0.1",
+    "@commitlint/travis-cli": "^7.0.0",
     "blanket": "~1.1",
     "browserify": "~2",
     "copyfiles": "^1.0.0",
