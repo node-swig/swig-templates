@@ -11,6 +11,6 @@ matrix:
   include:
   - node_js: "stable"
     env: NODE_CACHE_BUST=stable
-  - node_js: "4.2"
-    env: NODE_CACHE_BUST=4.2
+  - node_js: "8.11.3"
+    env: NODE_CACHE_BUST=8.11.3
 
