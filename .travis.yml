@@ -1,5 +1,5 @@
 language: node_js
-script: "yarn lint && make test reporter=spec && make test-browser reporter=spec && make coverage cov-reporter=travis-cov"
+script: "node_modules/.bin/commitlint-travis && yarn lint && make test reporter=spec && make test-browser reporter=spec && make coverage cov-reporter=travis-cov"
 sudo: required
 branches:
   only:
