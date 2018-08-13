@@ -26,22 +26,25 @@
     "blanket": "~1.1",
     "browserify": "~2",
     "copyfiles": "^1.0.0",
-    "eslint": "^2.2.0",
     "expect.js": "~0.2",
     "express": "~3",
     "file": "~0.2",
     "git-validate": "^2.1.4",
+    "husky": "^0.14.3",
     "jsdoc": "3.4.0",
     "less": "~1.4",
+    "lint-staged": "^7.2.2",
     "live-server": "^1.1.0",
     "lodash": "~1.3.1",
     "mocha": "^5.2.0",
     "mocha-chrome": "^1.1.0",
     "npm-run-all": "^4.1.3",
     "parallelshell": "^2.0.0",
+    "prettier-standard": "^8.0.1",
     "rerun-script": "^0.6.0",
     "rimraf": "^2.5.2",
     "semantic-release": "^15.9.8",
+    "standard": "^11.0.1",
     "static-site": "^1.3.1",
     "travis-cov": "~0.2"
   },
@@ -64,11 +67,12 @@
     "jsdoc:loaders": "jsdoc lib/loaders/ -X > docs/data/loaders.json",
     "jsdoc:parser": "jsdoc lib/parser.js lib/lexer.js -X > docs/data/extending.json",
     "jsdoc": "run-s jsdoc:swig jsdoc:filters jsdoc:tags jsdoc:loaders jsdoc:parser",
-    "lint": "eslint lib/ tests/",
-    "prepublish": "make build",
+    "lint": "standard 'lib/**/*.js' 'tests/**/*.js' 'scripts/**/*.js'",
     "predocs": "run-s jsdoc copy html",
     "test": "make test reporter=spec && make test-browser && make coverage cov-reporter=travis-cov",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "format": "prettier-standard 'lib/**/*.js' 'tests/**/*.js' 'scripts/**/*.js'",
+    "precommit": "lint-staged"
   },
   "watches": {
     "copy": "docs/**/*.{ico,css,js}",
@@ -91,9 +95,31 @@
   "bugs": {
     "url": "https://github.com/node-swig/swig-templates/issues"
   },
-  "pre-commit": [
-    "validate",
-    "lint",
-    "test"
-  ]
+  "standard": {
+    "env": [
+      "mocha"
+    ],
+    "ignore": [
+      "docs",
+      "dist",
+      "tmp",
+      "examples"
+    ]
+  },
+  "lint-staged": {
+    "linters": {
+      "lib/**/*.js": [
+        "prettier-standard",
+        "git add"
+      ],
+      "tests/**/*.js": [
+        "prettier-standard",
+        "git add"
+      ],
+      "scripts/**/*.js": [
+        "prettier-standard",
+        "git add"
+      ]
+    }
+  }
 }

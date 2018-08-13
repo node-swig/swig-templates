@@ -13,8 +13,6 @@ all:
 	@echo "Installing packages"
 	@yarn install --depth=100 --loglevel=error
 	@yarn link &>/dev/null
-	@cp scripts/githooks/* .git/hooks/
-	@chmod -R +x .git/hooks/
 
 .INTERMEDIATE version: \
 	browser/comments.js \

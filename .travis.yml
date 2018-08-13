@@ -1,6 +1,9 @@
 language: node_js
-script: "make lint && make test reporter=spec && make test-browser reporter=spec && make coverage cov-reporter=travis-cov"
+script: "yarn lint && make test reporter=spec && make test-browser reporter=spec && make coverage cov-reporter=travis-cov"
 sudo: required
+branches:
+  only:
+    - master
 addons:
   chrome: stable
 cache:

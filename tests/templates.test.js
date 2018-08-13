@@ -1,61 +1,67 @@
-var fs = require('fs'),
-  path = require('path'),
-  file = require('file'),
-  swig = require('../lib/swig'),
-  expect = require('expect.js'),
-  _ = require('lodash');
+var fs = require('fs')
+var path = require('path')
+var file = require('file')
+var swig = require('../lib/swig')
+var expect = require('expect.js')
+var _ = require('lodash')
 
-function isTest(f) {
-  return (/\.test\.html$/).test(f);
+function isTest (f) {
+  return /\.test\.html$/.test(f)
 }
 
-function isExpectation(f) {
-  return (/\.expectation\.html$/).test(f);
+function isExpectation (f) {
+  return /\.expectation\.html$/.test(f)
 }
 
 describe('Templates', function () {
-  var casefiles = [],
-    locals = {
-      alpha: 'Nachos',
-      first: 'Tacos',
-      second: 'Burritos',
-      includefile: "./includes.html",
-      bar: ["a", "b", "c"]
-    },
-    tests,
-    expectations,
-    cases;
+  var casefiles = []
+  var locals = {
+    alpha: 'Nachos',
+    first: 'Tacos',
+    second: 'Burritos',
+    includefile: './includes.html',
+    bar: ['a', 'b', 'c']
+  }
+  var tests
+  var expectations
+  var cases
 
-  file.walkSync(__dirname + '/cases/', function (start, dirs, files) {
+  file.walkSync(path.resolve(__dirname, 'cases'), function (start, dirs, files) {
     _.each(files, function (f) {
-      return casefiles.push(path.normalize(start + '/' + f));
-    });
-  });
+      return casefiles.push(path.resolve(start + '/' + f))
+    })
+  })
 
-  tests = _.filter(casefiles, isTest);
-  expectations = _.filter(casefiles, isExpectation);
+  tests = _.filter(casefiles, isTest)
+  expectations = _.filter(casefiles, isExpectation)
   cases = _.groupBy(tests.concat(expectations), function (f) {
-    return f.split('.')[0];
-  });
+    return f.split('.')[0]
+  })
 
   _.each(cases, function (files, c) {
-    var test = _.find(files, isTest),
-      expectation = fs.readFileSync(_.find(files, isExpectation), 'utf8');
+    var test = _.find(files, isTest)
+    var expectation = fs.readFileSync(_.find(files, isExpectation), 'utf8')
 
     it(c, function () {
-      expect(swig.compileFile(test)(locals)).to.equal(expectation);
-    });
-  });
+      expect(swig.compileFile(test)(locals)).to.equal(expectation)
+    })
+  })
 
   it('throw if circular extends are found', function () {
     expect(function () {
-      swig.compileFile(__dirname + '/cases-error/circular.test.html')();
-    }).to.throwError(/Illegal circular extends of ".*/);
-  });
+      swig.compileFile(
+        path.resolve(__dirname, 'cases-error/circular.test.html')
+      )()
+    }).to.throwError(/Illegal circular extends of ".*/)
+  })
 
   it('throw with filename reporting', function () {
     expect(function () {
-      swig.compileFile(__dirname + '/cases-error/report-filename.test.html')();
-    }).to.throwError(/in file .*tests\/cases-error\/report-filename-partial\.html/);
-  });
-});
+      swig.compileFile(
+        path.resolve(__dirname, 'cases-error/report-filename.test.html')
+      )()
+    }).to.throwError(
+      /in file .*tests\/cases-error\/report-filename-partial\.html/
+    )
+  })
+})
