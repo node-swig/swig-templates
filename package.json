@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "optimist": "~0.6",
-    "uglify-js": "2.6.0"
+    "uglify-js": "3.14.3"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.0.0",
