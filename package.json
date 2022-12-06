@@ -28,7 +28,7 @@
     "browserify": "~2",
     "copyfiles": "^1.0.0",
     "expect.js": "~0.2",
-    "express": "~3",
+    "express": "~4",
     "file": "~0.2",
     "git-validate": "^2.1.4",
     "husky": "^0.14.3",
