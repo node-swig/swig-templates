@@ -1,46 +1,51 @@
 # swig
 
-[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
- [![Build Status](http://img.shields.io/travis/node-swig/swig-templates/master.svg?style=flat)](http://travis-ci.org/node-swig/swig-templates) [![NPM version](http://img.shields.io/npm/v/swig-templates.svg?style=flat)](https://www.npmjs.org/package/swig-templates) [![NPM Downloads](http://img.shields.io/npm/dm/swig-templates.svg?style=flat)](https://www.npmjs.org/package/swig-templates) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+## unmaintained
 
+This library has not received regular service in some time. Until it receives
+regular upkeep, it is strongly recommended to instead:
+
+1. Use [template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) & [string interpolation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#string_interpolation)
+   1. node.js modules + ECMAScript strings provide 90% of the value that template engines once offered, sans a handy CLI for file generation
+2. If you're targeting templates for the browser, consider component-driven HTML generation, e.g. `React.renderToString(<MyPage data={...} />)`. React, Solid, Vue, & other frameworks all have string generation facilities and more powerful options.
+3. For remaining use cases, consider alternative node template engines (handlebars, mustache, etc).
+
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+[![Build Status](http://img.shields.io/travis/node-swig/swig-templates/master.svg?style=flat)](http://travis-ci.org/node-swig/swig-templates) [![NPM version](http://img.shields.io/npm/v/swig-templates.svg?style=flat)](https://www.npmjs.org/package/swig-templates) [![NPM Downloads](http://img.shields.io/npm/dm/swig-templates.svg?style=flat)](https://www.npmjs.org/package/swig-templates) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 [Swig](http://node-swig.github.io/swig-templates/) is an awesome, Django/Jinja-like template engine for node.js.
 
 #### seeking maintainers
-Paul Armstrong has [stepped down](https://web.archive.org/web/20160311170700/https://github.com/paularmstrong/swig/issues/628) as the primary swig maintainer.  Swig is a phenominal project and a template engine that quitely, but strongly, stands tall against the others in a domain full of template engines.  If you are interested in being a collaborator, check out the issues page, and let's discuss how to proceed.  Don't forget to thank Paul and previous swig collabs for their hard and excellent work!
 
-Features
---------
+Paul Armstrong has [stepped down](https://web.archive.org/web/20160311170700/https://github.com/paularmstrong/swig/issues/628) as the primary swig maintainer. Swig is a phenominal project and a template engine that quitely, but strongly, stands tall against the others in a domain full of template engines. If you are interested in being a collaborator, check out the issues page, and let's discuss how to proceed. Don't forget to thank Paul and previous swig collabs for their hard and excellent work!
 
-* Available for node.js **and** major web browsers!
-* [Express](http://expressjs.com/) compatible.
-* Object-Oriented template inheritance.
-* Apply filters and transformations to output in your templates.
-* Automatically escapes all output for safe HTML rendering.
-* Lots of iteration and conditionals supported.
-* Robust without the bloat.
-* Extendable and customizable. See [Swig-Extras](https://github.com/paularmstrong/swig-extras) for some examples.
-* Great [code coverage](http://node-swig.github.io/swig-templates/coverage.html).
+## Features
 
-Need Help? Have Questions? Comments?
-------------------------------------
+- Available for node.js **and** major web browsers!
+- [Express](http://expressjs.com/) compatible.
+- Object-Oriented template inheritance.
+- Apply filters and transformations to output in your templates.
+- Automatically escapes all output for safe HTML rendering.
+- Lots of iteration and conditionals supported.
+- Robust without the bloat.
+- Extendable and customizable. See [Swig-Extras](https://github.com/paularmstrong/swig-extras) for some examples.
+- Great [code coverage](http://node-swig.github.io/swig-templates/coverage.html).
 
-* [Mailing List/Google Group](http://groups.google.com/forum/#!forum/swig-templates)
-* [StackOverflow](http://stackoverflow.com/questions/tagged/swig-template)
-* [Migration Guide](https://github.com/node-swig/swig-templates/wiki/Migrating-from-v0.x.x-to-v1.0.0)
+## Need Help? Have Questions? Comments?
 
-Installation
-------------
+- [Mailing List/Google Group](http://groups.google.com/forum/#!forum/swig-templates)
+- [StackOverflow](http://stackoverflow.com/questions/tagged/swig-template)
+- [Migration Guide](https://github.com/node-swig/swig-templates/wiki/Migrating-from-v0.x.x-to-v1.0.0)
+
+## Installation
 
     npm install swig-templates
 
-Documentation
--------------
+## Documentation
 
 All documentation can be viewed online on the [Swig Website](http://node-swig.github.io/swig-templates/).
 
-Basic Example
--------------
+## Basic Example
 
 ### Template code
 
@@ -56,11 +61,11 @@ Basic Example
 ### node.js code
 
 ```js
-var swig  = require('swig-templates');
-var template = swig.compileFile('/absolute/path/to/template.html');
+var swig = require("swig-templates");
+var template = swig.compileFile("/absolute/path/to/template.html");
 var output = template({
-    pagename: 'awesome people',
-    authors: ['Paul', 'Jim', 'Jane']
+  pagename: "awesome people",
+  authors: ["Paul", "Jim", "Jane"],
 });
 ```
 
@@ -69,21 +74,19 @@ var output = template({
 ```html
 <h1>Awesome People</h1>
 <ul>
-    <li class="first">Paul</li>
-    <li>Jim</li>
-    <li>Jane</li>
+  <li class="first">Paul</li>
+  <li>Jim</li>
+  <li>Jane</li>
 </ul>
 ```
 
 For working example see [examples/basic](https://github.com/node-swig/swig-templates/tree/master/examples/basic)
 
-How it works
-------------
+## How it works
 
 Swig reads template files and translates them into cached javascript functions. When we later render a template we call the evaluated function, passing a context object as an argument.
 
-License
--------
+## License
 
 Copyright (c) 2010-2013 Paul Armstrong
 
