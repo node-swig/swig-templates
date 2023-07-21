@@ -7698,6 +7698,15 @@ uglify-js@2.6.0:
     uglify-to-browserify "~1.0.0"
     yargs "~3.10.0"
 
+uglify-js@2.8.6:
+  version "2.8.6"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-2.8.6.tgz#1eda564ce4fe4ddb82db834f78525fdeb76b4b99"
+  integrity sha1-HtpWTOT+TduC24NPeFJf3rdrS5k=
+  dependencies:
+    source-map "~0.5.1"
+    uglify-to-browserify "~1.0.0"
+    yargs "~3.10.0"
+
 uglify-js@^2.6:
   version "2.8.29"
   resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-2.8.29.tgz#29c5733148057bb4e1f75df35b7a9cb72e6a59dd"
